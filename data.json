@@ -1,0 +1,216 @@
+{
+  "project": "Kos UM 2 Lantai",
+  "start_date": "2026-05-16",
+  "transactions": [
+    {
+      "id": 1,
+      "date": "2026-05-16",
+      "category": "Upah",
+      "description": "2 kuli setengah hari",
+      "quantity": 2,
+      "unit": "orang",
+      "price_per_unit": 70000,
+      "total": 140000,
+      "notes": ""
+    },
+    {
+      "id": 2,
+      "date": "2026-05-18",
+      "category": "Lain-lain",
+      "description": "Jajan roti goreng",
+      "quantity": 1,
+      "unit": "item",
+      "price_per_unit": 15000,
+      "total": 15000,
+      "notes": ""
+    },
+    {
+      "id": 3,
+      "date": "2026-05-18",
+      "category": "Material",
+      "description": "Paku usuk 3dm",
+      "quantity": 1,
+      "unit": "kg",
+      "price_per_unit": 19000,
+      "total": 19000,
+      "notes": ""
+    },
+    {
+      "id": 4,
+      "date": "2026-05-18",
+      "category": "Material",
+      "description": "Paku reng",
+      "quantity": 1,
+      "unit": "kg",
+      "price_per_unit": 19000,
+      "total": 19000,
+      "notes": ""
+    },
+    {
+      "id": 5,
+      "date": "2026-05-18",
+      "category": "Material",
+      "description": "Bendrat",
+      "quantity": 5,
+      "unit": "kg",
+      "price_per_unit": 22000,
+      "total": 110000,
+      "notes": ""
+    },
+    {
+      "id": 6,
+      "date": "2026-05-18",
+      "category": "Material",
+      "description": "Resibon (box)",
+      "quantity": 1,
+      "unit": "box",
+      "price_per_unit": 75000,
+      "total": 75000,
+      "notes": ""
+    },
+    {
+      "id": 7,
+      "date": "2026-05-18",
+      "category": "Material",
+      "description": "Resibon",
+      "quantity": 2,
+      "unit": "pcs",
+      "price_per_unit": 4000,
+      "total": 8000,
+      "notes": ""
+    },
+    {
+      "id": 8,
+      "date": "2026-05-18",
+      "category": "Upah",
+      "subcategory": "Kuli",
+      "description": "3 kuli full day",
+      "quantity": 3,
+      "unit": "orang",
+      "price_per_unit": 120000,
+      "total": 360000,
+      "notes": ""
+    },
+    {
+      "id": 9,
+      "date": "2026-05-18",
+      "category": "Upah",
+      "subcategory": "Tukang",
+      "description": "1 tukang full day",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 135000,
+      "total": 135000,
+      "notes": ""
+    },
+    {
+      "id": 10,
+      "date": "2026-05-18",
+      "category": "Upah",
+      "subcategory": "Mandor",
+      "description": "1 mandor full day",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 150000,
+      "total": 150000,
+      "notes": ""
+    },
+    {
+      "id": 11,
+      "date": "2026-05-18",
+      "category": "Alat",
+      "description": "Linggis",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 80000,
+      "total": 80000,
+      "notes": ""
+    },
+    {
+      "id": 12,
+      "date": "2026-05-18",
+      "category": "Alat",
+      "description": "Pacul",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 50000,
+      "total": 50000,
+      "notes": ""
+    },
+    {
+      "id": 13,
+      "date": "2026-05-18",
+      "category": "Struktur Bangunan",
+      "description": "Beton Ulir TS-280 SNI 13 x 12",
+      "quantity": 42,
+      "unit": "BTG",
+      "price_per_unit": 124750,
+      "total": 5239500,
+      "notes": ""
+    },
+    {
+      "id": 14,
+      "date": "2026-05-18",
+      "category": "Struktur Bangunan",
+      "description": "Beton SNI 12 x 12",
+      "quantity": 30,
+      "unit": "BTG",
+      "price_per_unit": 105500,
+      "total": 3165000,
+      "notes": ""
+    },
+    {
+      "id": 15,
+      "date": "2026-05-18",
+      "category": "Struktur Bangunan",
+      "description": "Beton Ulir TS-280 SNI 10 x 12",
+      "quantity": 25,
+      "unit": "BTG",
+      "price_per_unit": 72500,
+      "total": 1812500,
+      "notes": ""
+    },
+    {
+      "id": 16,
+      "date": "2026-05-18",
+      "category": "Struktur Bangunan",
+      "description": "Beton SNI 8 x 12",
+      "quantity": 40,
+      "unit": "BTG",
+      "price_per_unit": 46000,
+      "total": 1840000,
+      "notes": ""
+    },
+    {
+      "id": 17,
+      "date": "2026-05-18",
+      "category": "Struktur Bangunan",
+      "description": "Beton SNI 6 x 12",
+      "quantity": 20,
+      "unit": "BTG",
+      "price_per_unit": 27250,
+      "total": 545000,
+      "notes": ""
+    }
+  ],
+  "summary": {
+    "total_spent": 13763000,
+    "by_category": {
+      "Upah": 785000,
+      "Material": 231000,
+      "Alat": 130000,
+      "Jajan": 15000,
+      "Struktur Bangunan": 12602000
+    },
+    "upah_breakdown": {
+      "Kuli": 500000,
+      "Tukang": 135000,
+      "Mandor": 150000
+    }
+  },
+  "wage_rates": {
+    "kuli_full_day": 120000,
+    "tukang_full_day": 135000,
+    "mandor_full_day": 150000
+  }
+}
