@@ -183,26 +183,51 @@ const html = `<!DOCTYPE html>
         }
         .category-card {
             background: white;
-            padding: 25px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
         }
-        .category-card h3 {
+        .category-header {
+            padding: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .category-header:hover {
+            background: #f8f9fa;
+        }
+        .category-header h3 {
             color: #667eea;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 10px;
+            justify-content: space-between;
         }
-        .category-card .total {
+        .category-header h3 .arrow {
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+        .category-header.active h3 .arrow {
+            transform: rotate(-180deg);
+        }
+        .category-header .total {
             font-size: 1.8em;
             font-weight: bold;
             color: #333;
             margin-bottom: 10px;
         }
-        .category-card .percentage {
+        .category-header .percentage {
             color: #666;
             font-size: 0.9em;
+        }
+        .category-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .category-details.active {
+            max-height: 1000px;
+            transition: max-height 0.5s ease-in;
         }
         .item-list {
             margin-top: 15px;
@@ -457,6 +482,16 @@ const html = `<!DOCTYPE html>
                 content.classList.toggle("active");
             });
         }
+
+        // Collapsible functionality for Category cards
+        var catHeaders = document.getElementsByClassName("category-header");
+        for (var i = 0; i < catHeaders.length; i++) {
+            catHeaders[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                content.classList.toggle("active");
+            });
+        }
     </script>
 </body>
 </html>`;
@@ -469,15 +504,22 @@ function generateCategoryCards() {
         const percentage = ((data.summary.by_category['Struktur Bangunan'] / data.summary.total_spent) * 100).toFixed(1);
         cards += `
                     <div class="category-card">
-                        <h3><span>🏗️</span> Struktur Bangunan</h3>
-                        <div class="total">${formatRupiah(data.summary.by_category['Struktur Bangunan'])}</div>
-                        <div class="percentage">${percentage}% dari total</div>
-                        <div class="item-list">
-                            ${categoryDetails['Struktur Bangunan'].map(tx => `
-                            <div class="item">
-                                <span>${tx.description} (${tx.quantity} ${tx.unit})</span>
-                                <strong>${formatRupiah(tx.total)}</strong>
-                            </div>`).join('')}
+                        <div class="category-header">
+                            <h3>
+                                <span>🏗️ Struktur Bangunan</span>
+                                <span class="arrow">▼</span>
+                            </h3>
+                            <div class="total">${formatRupiah(data.summary.by_category['Struktur Bangunan'])}</div>
+                            <div class="percentage">${percentage}% dari total</div>
+                        </div>
+                        <div class="category-details">
+                            <div class="item-list" style="padding: 0 25px 25px 25px;">
+                                ${categoryDetails['Struktur Bangunan'].map(tx => `
+                                <div class="item">
+                                    <span>${tx.description} (${tx.quantity} ${tx.unit})</span>
+                                    <strong>${formatRupiah(tx.total)}</strong>
+                                </div>`).join('')}
+                            </div>
                         </div>
                     </div>`;
     }
@@ -491,13 +533,20 @@ function generateCategoryCards() {
         
         cards += `
                     <div class="category-card">
-                        <h3><span>👷</span> Upah Pekerja</h3>
-                        <div class="total">${formatRupiah(data.summary.by_category.Upah)}</div>
-                        <div class="percentage">${percentage}% dari total</div>
-                        <div class="item-list">
-                            ${kuliTotal > 0 ? `<div class="item"><span>Kuli</span><strong>${formatRupiah(kuliTotal)}</strong></div>` : ''}
-                            ${tukangTotal > 0 ? `<div class="item"><span>Tukang</span><strong>${formatRupiah(tukangTotal)}</strong></div>` : ''}
-                            ${mandorTotal > 0 ? `<div class="item"><span>Mandor</span><strong>${formatRupiah(mandorTotal)}</strong></div>` : ''}
+                        <div class="category-header">
+                            <h3>
+                                <span>👷 Upah Pekerja</span>
+                                <span class="arrow">▼</span>
+                            </h3>
+                            <div class="total">${formatRupiah(data.summary.by_category.Upah)}</div>
+                            <div class="percentage">${percentage}% dari total</div>
+                        </div>
+                        <div class="category-details">
+                            <div class="item-list" style="padding: 0 25px 25px 25px;">
+                                ${kuliTotal > 0 ? `<div class="item"><span>Kuli</span><strong>${formatRupiah(kuliTotal)}</strong></div>` : ''}
+                                ${tukangTotal > 0 ? `<div class="item"><span>Tukang</span><strong>${formatRupiah(tukangTotal)}</strong></div>` : ''}
+                                ${mandorTotal > 0 ? `<div class="item"><span>Mandor</span><strong>${formatRupiah(mandorTotal)}</strong></div>` : ''}
+                            </div>
                         </div>
                     </div>`;
     }
@@ -507,15 +556,22 @@ function generateCategoryCards() {
         const percentage = ((data.summary.by_category.Material / data.summary.total_spent) * 100).toFixed(1);
         cards += `
                     <div class="category-card">
-                        <h3><span>🧱</span> Material</h3>
-                        <div class="total">${formatRupiah(data.summary.by_category.Material)}</div>
-                        <div class="percentage">${percentage}% dari total</div>
-                        <div class="item-list">
-                            ${categoryDetails.Material.map(tx => `
-                            <div class="item">
-                                <span>${tx.description} (${tx.quantity}${tx.unit})</span>
-                                <strong>${formatRupiah(tx.total)}</strong>
-                            </div>`).join('')}
+                        <div class="category-header">
+                            <h3>
+                                <span>🧱 Material</span>
+                                <span class="arrow">▼</span>
+                            </h3>
+                            <div class="total">${formatRupiah(data.summary.by_category.Material)}</div>
+                            <div class="percentage">${percentage}% dari total</div>
+                        </div>
+                        <div class="category-details">
+                            <div class="item-list" style="padding: 0 25px 25px 25px;">
+                                ${categoryDetails.Material.map(tx => `
+                                <div class="item">
+                                    <span>${tx.description} (${tx.quantity}${tx.unit})</span>
+                                    <strong>${formatRupiah(tx.total)}</strong>
+                                </div>`).join('')}
+                            </div>
                         </div>
                     </div>`;
     }
@@ -525,15 +581,22 @@ function generateCategoryCards() {
         const percentage = ((data.summary.by_category.Alat / data.summary.total_spent) * 100).toFixed(1);
         cards += `
                     <div class="category-card">
-                        <h3><span>🔧</span> Alat</h3>
-                        <div class="total">${formatRupiah(data.summary.by_category.Alat)}</div>
-                        <div class="percentage">${percentage}% dari total</div>
-                        <div class="item-list">
-                            ${categoryDetails.Alat.map(tx => `
-                            <div class="item">
-                                <span>${tx.description}</span>
-                                <strong>${formatRupiah(tx.total)}</strong>
-                            </div>`).join('')}
+                        <div class="category-header">
+                            <h3>
+                                <span>🔧 Alat</span>
+                                <span class="arrow">▼</span>
+                            </h3>
+                            <div class="total">${formatRupiah(data.summary.by_category.Alat)}</div>
+                            <div class="percentage">${percentage}% dari total</div>
+                        </div>
+                        <div class="category-details">
+                            <div class="item-list" style="padding: 0 25px 25px 25px;">
+                                ${categoryDetails.Alat.map(tx => `
+                                <div class="item">
+                                    <span>${tx.description}</span>
+                                    <strong>${formatRupiah(tx.total)}</strong>
+                                </div>`).join('')}
+                            </div>
                         </div>
                     </div>`;
     }
@@ -543,15 +606,22 @@ function generateCategoryCards() {
         const percentage = ((data.summary.by_category.Jajan / data.summary.total_spent) * 100).toFixed(1);
         cards += `
                     <div class="category-card">
-                        <h3><span>🍔</span> Jajan & Minuman</h3>
-                        <div class="total">${formatRupiah(data.summary.by_category.Jajan)}</div>
-                        <div class="percentage">${percentage}% dari total</div>
-                        <div class="item-list">
-                            ${categoryDetails.Jajan.map(tx => `
-                            <div class="item">
-                                <span>${tx.description}</span>
-                                <strong>${formatRupiah(tx.total)}</strong>
-                            </div>`).join('')}
+                        <div class="category-header">
+                            <h3>
+                                <span>🍔 Jajan & Minuman</span>
+                                <span class="arrow">▼</span>
+                            </h3>
+                            <div class="total">${formatRupiah(data.summary.by_category.Jajan)}</div>
+                            <div class="percentage">${percentage}% dari total</div>
+                        </div>
+                        <div class="category-details">
+                            <div class="item-list" style="padding: 0 25px 25px 25px;">
+                                ${categoryDetails.Jajan.map(tx => `
+                                <div class="item">
+                                    <span>${tx.description}</span>
+                                    <strong>${formatRupiah(tx.total)}</strong>
+                                </div>`).join('')}
+                            </div>
                         </div>
                     </div>`;
     }
