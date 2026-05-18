@@ -90,6 +90,14 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             border-radius: 10px;
             overflow: hidden;
+            overflow-x: auto;
+            display: block;
+        }
+        table thead,
+        table tbody {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
         }
         th {
             background: #667eea;
@@ -142,8 +150,21 @@
         .item {
             display: flex;
             justify-content: space-between;
+            align-items: flex-start;
             padding: 8px 0;
             color: #666;
+            gap: 10px;
+        }
+        .item span {
+            flex: 1;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        .item strong {
+            flex-shrink: 0;
+            white-space: nowrap;
+            text-align: right;
+            min-width: 120px;
         }
         .footer {
             background: #f8f9fa;
@@ -158,6 +179,19 @@
             }
             .stats {
                 grid-template-columns: 1fr;
+            }
+            .category-breakdown {
+                grid-template-columns: 1fr;
+            }
+            table {
+                font-size: 0.85em;
+            }
+            th, td {
+                padding: 10px 5px;
+            }
+            .item strong {
+                min-width: 100px;
+                font-size: 0.9em;
             }
         }
     </style>
