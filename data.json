@@ -191,15 +191,37 @@
       "price_per_unit": 27250,
       "total": 545000,
       "notes": ""
+    },
+    {
+      "id": 18,
+      "date": "2026-05-18",
+      "category": "Jajan",
+      "description": "Kopi",
+      "quantity": 1,
+      "unit": "kg",
+      "price_per_unit": 140000,
+      "total": 140000,
+      "notes": ""
+    },
+    {
+      "id": 19,
+      "date": "2026-05-18",
+      "category": "Jajan",
+      "description": "Galon isi ulang",
+      "quantity": 1,
+      "unit": "galon",
+      "price_per_unit": 5000,
+      "total": 5000,
+      "notes": ""
     }
   ],
   "summary": {
-    "total_spent": 13763000,
+    "total_spent": 13908000,
     "by_category": {
       "Upah": 785000,
       "Material": 231000,
       "Alat": 130000,
-      "Jajan": 15000,
+      "Jajan": 160000,
       "Struktur Bangunan": 12602000
     },
     "upah_breakdown": {
