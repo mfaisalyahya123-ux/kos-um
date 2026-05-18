@@ -367,7 +367,7 @@ const html = `<!DOCTYPE html>
     <div class="container">
         <div class="header">
             <h1>🏗️ Pembangunan Kos UM 2 Lantai</h1>
-            <p>Periode: ${formatDate(data.start_date)} - Sekarang</p>
+            <p>Periode: ${formatDate(data.start_date)} - ${formatDate(sortedDates[0])}</p>
         </div>
 
         <div class="stats">
