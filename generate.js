@@ -395,11 +395,9 @@ const html = `<!DOCTYPE html>
 
         <div class="content">
             <div class="section">
-                <button class="collapsible">📊 Breakdown per Kategori</button>
-                <div class="collapsible-content">
+                <h2>📊 Breakdown per Kategori</h2>
                 <div class="category-breakdown">
                     ${generateCategoryCards()}
-                </div>
                 </div>
             </div>
 
