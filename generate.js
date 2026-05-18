@@ -563,6 +563,7 @@ function generateDateSections() {
     sortedDates.forEach(date => {
         const transactions = transactionsByDate[date];
         const dateTotal = transactions.reduce((sum, tx) => sum + tx.total, 0);
+        const workDescription = data.daily_work && data.daily_work[date] ? data.daily_work[date] : '';
         
         // Group by category
         const byCategory = {};
@@ -578,6 +579,15 @@ function generateDateSections() {
                     <span class="arrow">▼</span>
                 </div>
                 <div class="date-content">`;
+        
+        // Add work description if exists
+        if (workDescription) {
+            sections += `
+                    <div style="padding: 15px 20px; margin-bottom: 20px; background: #f0f7ff; border-left: 4px solid #667eea; border-radius: 8px;">
+                        <h4 style="color: #667eea; margin-bottom: 8px; font-size: 1em;">📋 Pekerjaan Hari Ini:</h4>
+                        <p style="color: #333; margin: 0; line-height: 1.6;">${workDescription}</p>
+                    </div>`;
+        }
         
         // Generate category sections
         Object.keys(byCategory).forEach(category => {

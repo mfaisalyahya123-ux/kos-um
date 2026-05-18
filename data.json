@@ -1,6 +1,11 @@
 {
   "project": "Kos UM 2 Lantai",
   "start_date": "2026-05-16",
+  "daily_work": {
+    "2026-05-16": "Angkat-angkat barang, memindahkan ke belakang",
+    "2026-05-18": "Menebang pohon mangga, membongkar pagar bagian selatan",
+    "2026-05-19": ""
+  },
   "transactions": [
     {
       "id": 1,
