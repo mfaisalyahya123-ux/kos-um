@@ -703,11 +703,14 @@ function generateDateSections() {
 }
 
 function generateTransactionRows() {
-    return data.transactions.map((tx, index) => {
+    // Reverse transactions to show newest first
+    const reversedTransactions = [...data.transactions].reverse();
+    return reversedTransactions.map((tx, index) => {
         const category = tx.subcategory ? `${tx.category} - ${tx.subcategory}` : tx.category;
+        const rowNumber = data.transactions.length - index; // Keep original numbering
         return `
                         <tr>
-                            <td>${index + 1}</td>
+                            <td>${rowNumber}</td>
                             <td>${formatDate(tx.date)}</td>
                             <td>${category}</td>
                             <td>${tx.description}</td>
