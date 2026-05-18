@@ -24,8 +24,8 @@ data.transactions.forEach(tx => {
     transactionsByDate[tx.date].push(tx);
 });
 
-// Sort dates
-const sortedDates = Object.keys(transactionsByDate).sort();
+// Sort dates (newest first)
+const sortedDates = Object.keys(transactionsByDate).sort().reverse();
 
 // Format date to Indonesian
 function formatDate(dateStr) {
