@@ -254,15 +254,26 @@
       "price_per_unit": 150000,
       "total": 150000,
       "notes": "auto-generated"
+    },
+    {
+      "id": 23,
+      "date": "2026-05-19",
+      "category": "Jajan",
+      "description": "Minuman dingin",
+      "quantity": 1,
+      "unit": "item",
+      "price_per_unit": 30000,
+      "total": 30000,
+      "notes": ""
     }
   ],
   "summary": {
-    "total_spent": 14553000,
+    "total_spent": 14583000,
     "by_category": {
       "Upah": 1430000,
       "Material": 231000,
       "Alat": 130000,
-      "Jajan": 160000,
+      "Jajan": 190000,
       "Struktur Bangunan": 12602000
     },
     "upah_breakdown": {
