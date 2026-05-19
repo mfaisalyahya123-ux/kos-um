@@ -265,15 +265,92 @@
       "price_per_unit": 30000,
       "total": 30000,
       "notes": ""
+    },
+    {
+      "id": 24,
+      "date": "2026-05-19",
+      "category": "Jajan",
+      "description": "Minyak goreng 2L",
+      "quantity": 1,
+      "unit": "btl",
+      "price_per_unit": 41900,
+      "total": 41900,
+      "notes": ""
+    },
+    {
+      "id": 25,
+      "date": "2026-05-19",
+      "category": "Jajan",
+      "description": "Gula pasir 1kg",
+      "quantity": 1,
+      "unit": "kg",
+      "price_per_unit": 17500,
+      "total": 17500,
+      "notes": ""
+    },
+    {
+      "id": 26,
+      "date": "2026-05-19",
+      "category": "Jajan",
+      "description": "Tepung 1kg",
+      "quantity": 1,
+      "unit": "kg",
+      "price_per_unit": 11390,
+      "total": 11390,
+      "notes": ""
+    },
+    {
+      "id": 27,
+      "date": "2026-05-19",
+      "category": "Jajan",
+      "description": "Wortel",
+      "quantity": 1.094,
+      "unit": "kg",
+      "price_per_unit": 17500,
+      "total": 19145,
+      "notes": ""
+    },
+    {
+      "id": 28,
+      "date": "2026-05-19",
+      "category": "Jajan",
+      "description": "Kol putih",
+      "quantity": 1.16,
+      "unit": "kg",
+      "price_per_unit": 17900,
+      "total": 20765,
+      "notes": ""
+    },
+    {
+      "id": 29,
+      "date": "2026-05-19",
+      "category": "Jajan",
+      "description": "Bawang putih",
+      "quantity": 0.3,
+      "unit": "kg",
+      "price_per_unit": 44900,
+      "total": 13470,
+      "notes": ""
+    },
+    {
+      "id": 30,
+      "date": "2026-05-19",
+      "category": "Jajan",
+      "description": "Bumbu masak",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 9900,
+      "total": 9900,
+      "notes": ""
     }
   ],
   "summary": {
-    "total_spent": 14583000,
+    "total_spent": 14717070,
     "by_category": {
       "Upah": 1430000,
       "Material": 231000,
       "Alat": 130000,
-      "Jajan": 190000,
+      "Jajan": 324070,
       "Struktur Bangunan": 12602000
     },
     "upah_breakdown": {
