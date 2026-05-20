@@ -743,21 +743,40 @@ function generateFundingSourceBreakdown() {
     
     const totalAll = data.summary.total_spent;
     
-    let html = '<table><thead><tr><th>Sumber Dana</th><th>Total</th><th>Persentase</th></tr></thead><tbody>';
+    let html = '<div class="category-breakdown">';
     
     Object.keys(byFundingSource).sort().forEach(source => {
         const total = byFundingSource[source].total;
         const percentage = ((total / totalAll) * 100).toFixed(1);
         const bgColor = source === 'Uang Ayah' ? '#e3f2fd' : '#fff3e0';
+        const transactions = byFundingSource[source].transactions;
+        
         html += `
-        <tr>
-            <td><span style="padding: 4px 8px; background: ${bgColor}; border-radius: 4px;">${source}</span></td>
-            <td><strong>${formatRupiah(total)}</strong></td>
-            <td>${percentage}%</td>
-        </tr>`;
+                    <div class="category-card">
+                        <div class="category-header">
+                            <h3>
+                                <span style="padding: 6px 12px; background: ${bgColor}; border-radius: 6px;">${source}</span>
+                                <span class="arrow">▼</span>
+                            </h3>
+                            <div class="total">${formatRupiah(total)}</div>
+                            <div class="percentage">${percentage}% dari total</div>
+                        </div>
+                        <div class="category-details">
+                            <div class="item-list" style="padding: 0 25px 25px 25px;">
+                                ${transactions.map(tx => {
+                                    const category = tx.subcategory ? `${tx.category} - ${tx.subcategory}` : tx.category;
+                                    return `
+                                    <div class="item">
+                                        <span>${formatDate(tx.date)} | ${category} | ${tx.description}</span>
+                                        <strong>${formatRupiah(tx.total)}</strong>
+                                    </div>`;
+                                }).join('')}
+                            </div>
+                        </div>
+                    </div>`;
     });
     
-    html += '</tbody></table>';
+    html += '</div>';
     return html;
 }
 
