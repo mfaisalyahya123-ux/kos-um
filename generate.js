@@ -454,6 +454,11 @@ const html = `<!DOCTYPE html>
                     </tbody>
                 </table>
             </div>
+
+            <div class="section">
+                <h2>💰 Pengeluaran per Sumber Dana</h2>
+                ${generateFundingSourceBreakdown()}
+            </div>
         </div>
 
         <div class="footer">
@@ -722,6 +727,38 @@ function generateTransactionRows() {
                             <td><span style="padding: 4px 8px; background: ${fundingSource === 'Uang Ayah' ? '#e3f2fd' : '#fff3e0'}; border-radius: 4px; font-size: 0.9em;">${fundingSource}</span></td>
                         </tr>`;
     }).join('');
+}
+
+function generateFundingSourceBreakdown() {
+    // Calculate total per funding source
+    const byFundingSource = {};
+    data.transactions.forEach(tx => {
+        const source = tx.funding_source || 'Kas UM';
+        if (!byFundingSource[source]) {
+            byFundingSource[source] = { total: 0, transactions: [] };
+        }
+        byFundingSource[source].total += tx.total;
+        byFundingSource[source].transactions.push(tx);
+    });
+    
+    const totalAll = data.summary.total_spent;
+    
+    let html = '<table><thead><tr><th>Sumber Dana</th><th>Total</th><th>Persentase</th></tr></thead><tbody>';
+    
+    Object.keys(byFundingSource).sort().forEach(source => {
+        const total = byFundingSource[source].total;
+        const percentage = ((total / totalAll) * 100).toFixed(1);
+        const bgColor = source === 'Uang Ayah' ? '#e3f2fd' : '#fff3e0';
+        html += `
+        <tr>
+            <td><span style="padding: 4px 8px; background: ${bgColor}; border-radius: 4px;">${source}</span></td>
+            <td><strong>${formatRupiah(total)}</strong></td>
+            <td>${percentage}%</td>
+        </tr>`;
+    });
+    
+    html += '</tbody></table>';
+    return html;
 }
 
 // Write HTML file
