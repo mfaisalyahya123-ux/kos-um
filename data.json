@@ -400,16 +400,93 @@
       "price_per_unit": 25000,
       "total": 25000,
       "notes": ""
+    },
+    {
+      "id": 36,
+      "date": "2026-05-20",
+      "category": "Material",
+      "description": "Terpal 4x6",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 175000,
+      "total": 175000,
+      "notes": ""
+    },
+    {
+      "id": 37,
+      "date": "2026-05-20",
+      "category": "Material",
+      "description": "Triplek 9mm",
+      "quantity": 3,
+      "unit": "lembar",
+      "price_per_unit": 90000,
+      "total": 270000,
+      "notes": ""
+    },
+    {
+      "id": 38,
+      "date": "2026-05-20",
+      "category": "Material",
+      "description": "Semen MP",
+      "quantity": 10,
+      "unit": "sak",
+      "price_per_unit": 46000,
+      "total": 460000,
+      "notes": ""
+    },
+    {
+      "id": 39,
+      "date": "2026-05-20",
+      "category": "Material",
+      "description": "Pasir Pasang",
+      "quantity": 1,
+      "unit": "p",
+      "price_per_unit": 150000,
+      "total": 150000,
+      "notes": ""
+    },
+    {
+      "id": 40,
+      "date": "2026-05-20",
+      "category": "Struktur Bangunan",
+      "description": "Truk Pasir Hitam",
+      "quantity": 1,
+      "unit": "truk",
+      "price_per_unit": 1750000,
+      "total": 1750000,
+      "notes": ""
+    },
+    {
+      "id": 41,
+      "date": "2026-05-20",
+      "category": "Struktur Bangunan",
+      "description": "Usuk 4x6 (104 pcs)",
+      "quantity": 1,
+      "unit": "m³",
+      "price_per_unit": 2400000,
+      "total": 2400000,
+      "notes": ""
+    },
+    {
+      "id": 42,
+      "date": "2026-05-20",
+      "category": "Struktur Bangunan",
+      "description": "Usuk 5x7 (72 pcs)",
+      "quantity": 1,
+      "unit": "m³",
+      "price_per_unit": 2600000,
+      "total": 2600000,
+      "notes": ""
     }
   ],
   "summary": {
-    "total_spent": 15489070,
+    "total_spent": 23294070,
     "by_category": {
       "Upah": 1940000,
-      "Material": 263000,
+      "Material": 1318000,
       "Alat": 360000,
       "Jajan": 324070,
-      "Struktur Bangunan": 12602000
+      "Struktur Bangunan": 19352000
     },
     "upah_breakdown": {
       "Kuli": 1100000,
