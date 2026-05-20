@@ -419,6 +419,7 @@ const html = `<!DOCTYPE html>
                             <th>Qty</th>
                             <th>Harga Satuan</th>
                             <th>Total</th>
+                            <th>Sumber Dana</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -708,6 +709,7 @@ function generateTransactionRows() {
     return reversedTransactions.map((tx, index) => {
         const category = tx.subcategory ? `${tx.category} - ${tx.subcategory}` : tx.category;
         const rowNumber = data.transactions.length - index; // Keep original numbering
+        const fundingSource = tx.funding_source || 'Kas UM'; // default
         return `
                         <tr>
                             <td>${rowNumber}</td>
@@ -717,6 +719,7 @@ function generateTransactionRows() {
                             <td>${tx.quantity} ${tx.unit}</td>
                             <td>${formatRupiah(tx.price_per_unit)}</td>
                             <td><strong>${formatRupiah(tx.total)}</strong></td>
+                            <td><span style="padding: 4px 8px; background: ${fundingSource === 'Uang Ayah' ? '#e3f2fd' : '#fff3e0'}; border-radius: 4px; font-size: 0.9em;">${fundingSource}</span></td>
                         </tr>`;
     }).join('');
 }
