@@ -767,7 +767,8 @@ function generateFundingSourceBreakdown() {
         const total = byFundingSource[source].total;
         const percentage = ((total / totalAll) * 100).toFixed(1);
         const bgColor = source === 'Uang Ayah' ? '#e3f2fd' : '#fff3e0';
-        const transactions = byFundingSource[source].transactions;
+        // Sort transactions by total (descending)
+        const transactions = byFundingSource[source].transactions.sort((a, b) => b.total - a.total);
         
         html += `
                     <div class="category-card">
