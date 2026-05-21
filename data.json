@@ -596,15 +596,27 @@
       "total": 160000,
       "notes": "",
       "funding_source": ""
+    },
+    {
+      "id": 49,
+      "date": "2026-05-21",
+      "category": "Jajan",
+      "description": "Galon isi ulang",
+      "quantity": 1,
+      "unit": "galon",
+      "price_per_unit": 5000,
+      "total": 5000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
-    "total_spent": 24712070,
+    "total_spent": 24717070,
     "by_category": {
       "Upah": 3315000,
       "Material": 1361000,
       "Alat": 360000,
-      "Jajan": 324070,
+      "Jajan": 329070,
       "Struktur Bangunan": 19352000
     },
     "upah_breakdown": {
