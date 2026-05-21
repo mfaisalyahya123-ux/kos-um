@@ -1608,9 +1608,92 @@
                     </div>
                     <div class="category-details">
                         <div class="item-list" style="padding: 0 25px 25px 25px;">
-                            <div class="item"><span>Kuli (4 hari)</span><strong>Rp 1.440.000</strong></div>
-                            <div class="item"><span>Tukang (3 hari)</span><strong>Rp 405.000</strong></div>
-                            <div class="item"><span>Mandor (4 hari)</span><strong>Rp 600.000</strong></div>
+                            <div class="category-card" style="margin-bottom: 10px;">
+                                <div class="category-header" style="padding: 10px 15px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                        <span>Kuli (12 Absensi × Rp 120.000)</span>
+                                        <strong>Rp 1.440.000</strong>
+                                        <span class="arrow" style="margin-left: 10px;">▼</span>
+                                    </div>
+                                </div>
+                                <div class="category-details">
+                                    <div style="padding: 10px 15px; font-size: 0.9em;">
+                                        
+                                        <div class="item" style="padding: 5px 0;">
+                                            <span>Senin, 18 Mei 2026: 3 kuli</span>
+                                            <strong>Rp 360.000</strong>
+                                        </div>
+                                        <div class="item" style="padding: 5px 0;">
+                                            <span>Selasa, 19 Mei 2026: 3 kuli</span>
+                                            <strong>Rp 360.000</strong>
+                                        </div>
+                                        <div class="item" style="padding: 5px 0;">
+                                            <span>Rabu, 20 Mei 2026: 2 kuli</span>
+                                            <strong>Rp 240.000</strong>
+                                        </div>
+                                        <div class="item" style="padding: 5px 0;">
+                                            <span>Kamis, 21 Mei 2026: 4 kuli</span>
+                                            <strong>Rp 480.000</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category-card" style="margin-bottom: 10px;">
+                                <div class="category-header" style="padding: 10px 15px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                        <span>Tukang (3 Absensi × Rp 135.000)</span>
+                                        <strong>Rp 405.000</strong>
+                                        <span class="arrow" style="margin-left: 10px;">▼</span>
+                                    </div>
+                                </div>
+                                <div class="category-details">
+                                    <div style="padding: 10px 15px; font-size: 0.9em;">
+                                        
+                                        <div class="item" style="padding: 5px 0;">
+                                            <span>Senin, 18 Mei 2026: 1 tukang</span>
+                                            <strong>Rp 135.000</strong>
+                                        </div>
+                                        <div class="item" style="padding: 5px 0;">
+                                            <span>Selasa, 19 Mei 2026: 1 tukang</span>
+                                            <strong>Rp 135.000</strong>
+                                        </div>
+                                        <div class="item" style="padding: 5px 0;">
+                                            <span>Kamis, 21 Mei 2026: 1 tukang</span>
+                                            <strong>Rp 135.000</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="category-card" style="margin-bottom: 10px;">
+                                <div class="category-header" style="padding: 10px 15px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                        <span>Mandor (4 Absensi × Rp 150.000)</span>
+                                        <strong>Rp 600.000</strong>
+                                        <span class="arrow" style="margin-left: 10px;">▼</span>
+                                    </div>
+                                </div>
+                                <div class="category-details">
+                                    <div style="padding: 10px 15px; font-size: 0.9em;">
+                                        
+                                        <div class="item" style="padding: 5px 0;">
+                                            <span>Senin, 18 Mei 2026: 1 mandor</span>
+                                            <strong>Rp 150.000</strong>
+                                        </div>
+                                        <div class="item" style="padding: 5px 0;">
+                                            <span>Selasa, 19 Mei 2026: 1 mandor</span>
+                                            <strong>Rp 150.000</strong>
+                                        </div>
+                                        <div class="item" style="padding: 5px 0;">
+                                            <span>Rabu, 20 Mei 2026: 1 mandor</span>
+                                            <strong>Rp 150.000</strong>
+                                        </div>
+                                        <div class="item" style="padding: 5px 0;">
+                                            <span>Kamis, 21 Mei 2026: 1 mandor</span>
+                                            <strong>Rp 150.000</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1625,9 +1708,6 @@
                     </div>
                     <div class="category-details">
                         <div class="item-list" style="padding: 0 25px 25px 25px;">
-                            
-                            
-                            
                         </div>
                     </div>
                 </div>
@@ -1664,6 +1744,17 @@
         var catHeaders = document.getElementsByClassName("category-header");
         for (var i = 0; i < catHeaders.length; i++) {
             catHeaders[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                content.classList.toggle("active");
+            });
+        }
+
+        // Collapsible functionality for Wage detail items
+        var wageItems = document.getElementsByClassName("wage-item-header");
+        for (var i = 0; i < wageItems.length; i++) {
+            wageItems[i].addEventListener("click", function(e) {
+                e.stopPropagation();
                 this.classList.toggle("active");
                 var content = this.nextElementSibling;
                 content.classList.toggle("active");
