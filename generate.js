@@ -550,6 +550,7 @@ function generateCategoryCards() {
         const kuliTotal = categoryDetails.Upah.Kuli.reduce((sum, tx) => sum + tx.total, 0);
         const tukangTotal = categoryDetails.Upah.Tukang.reduce((sum, tx) => sum + tx.total, 0);
         const mandorTotal = categoryDetails.Upah.Mandor.reduce((sum, tx) => sum + tx.total, 0);
+        const harianTotal = categoryDetails.Upah.Harian ? categoryDetails.Upah.Harian.reduce((sum, tx) => sum + tx.total, 0) : 0;
         
         cards += `
                     <div class="category-card">
@@ -566,6 +567,7 @@ function generateCategoryCards() {
                                 ${kuliTotal > 0 ? `<div class="item"><span>Kuli</span><strong>${formatRupiah(kuliTotal)}</strong></div>` : ''}
                                 ${tukangTotal > 0 ? `<div class="item"><span>Tukang</span><strong>${formatRupiah(tukangTotal)}</strong></div>` : ''}
                                 ${mandorTotal > 0 ? `<div class="item"><span>Mandor</span><strong>${formatRupiah(mandorTotal)}</strong></div>` : ''}
+                                ${harianTotal > 0 ? `<div class="item"><span>Harian (Jasa)</span><strong>${formatRupiah(harianTotal)}</strong></div>` : ''}
                             </div>
                         </div>
                     </div>`;
