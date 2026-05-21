@@ -537,11 +537,11 @@
       "date": "2026-05-21",
       "category": "Upah",
       "subcategory": "Kuli",
-      "description": "3 kuli full day",
-      "quantity": 3,
+      "description": "4 kuli full day",
+      "quantity": 4,
       "unit": "orang",
       "price_per_unit": 120000,
-      "total": 360000,
+      "total": 480000,
       "notes": "auto-generated",
       "funding_source": "Uang Ayah"
     },
@@ -585,16 +585,16 @@
     }
   ],
   "summary": {
-    "total_spent": 24432070,
+    "total_spent": 24552070,
     "by_category": {
-      "Upah": 2585000,
+      "Upah": 2705000,
       "Material": 1361000,
       "Alat": 810000,
       "Jajan": 324070,
       "Struktur Bangunan": 19352000
     },
     "upah_breakdown": {
-      "Kuli": 1460000,
+      "Kuli": 1580000,
       "Tukang": 405000,
       "Mandor": 600000
     }
