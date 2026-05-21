@@ -582,14 +582,26 @@
       "total": 450000,
       "notes": "",
       "funding_source": "Kas UM"
+    },
+    {
+      "id": 48,
+      "date": "2026-05-21",
+      "category": "Alat",
+      "description": "Potong kayu dan akar",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 160000,
+      "total": 160000,
+      "notes": "",
+      "funding_source": ""
     }
   ],
   "summary": {
-    "total_spent": 24552070,
+    "total_spent": 24712070,
     "by_category": {
       "Upah": 2705000,
       "Material": 1361000,
-      "Alat": 810000,
+      "Alat": 970000,
       "Jajan": 324070,
       "Struktur Bangunan": 19352000
     },
