@@ -503,21 +503,9 @@
       "category": "Struktur Bangunan",
       "description": "Usuk 4x6 (104 pcs)",
       "quantity": 1,
-      "unit": "m³",
+      "unit": "m3",
       "price_per_unit": 2400000,
       "total": 2400000,
-      "notes": "",
-      "funding_source": "Uang Ayah"
-    },
-    {
-      "id": 42,
-      "date": "2026-05-20",
-      "category": "Struktur Bangunan",
-      "description": "Usuk 5x7 (72 pcs)",
-      "quantity": 1,
-      "unit": "m³",
-      "price_per_unit": 2600000,
-      "total": 2600000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -612,13 +600,13 @@
     }
   ],
   "summary": {
-    "total_spent": 24717070,
+    "total_spent": 22117070,
     "by_category": {
       "Upah": 3315000,
       "Material": 1361000,
       "Alat": 360000,
       "Jajan": 329070,
-      "Struktur Bangunan": 19352000
+      "Struktur Bangunan": 16752000
     },
     "upah_breakdown": {
       "Kuli": 1580000,
