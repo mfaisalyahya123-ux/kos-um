@@ -519,13 +519,25 @@
       "total": 2600000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 43,
+      "date": "2026-05-20",
+      "category": "Material",
+      "description": "Lem PVC Trilliun 400gr",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 43000,
+      "total": 43000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
-    "total_spent": 23294070,
+    "total_spent": 23337070,
     "by_category": {
       "Upah": 1940000,
-      "Material": 1318000,
+      "Material": 1361000,
       "Alat": 360000,
       "Jajan": 324070,
       "Struktur Bangunan": 19352000
