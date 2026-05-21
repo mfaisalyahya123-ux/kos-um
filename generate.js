@@ -819,19 +819,28 @@ function generateWeeklyPayroll() {
         const kuliDays = week.kuli.length;
         const tukangDays = week.tukang.length;
         const mandorDays = week.mandor.length;
+        
+        // Format tanggal singkat (DD Mei)
+        const mondayDate = monday.getDate();
+        const saturdayDate = saturday.getDate();
+        const monthName = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'][saturday.getMonth()];
+        
         html += `
-                <div style="background: white; padding: 25px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 20px;">
-                    <h3 style="color: #667eea; margin-bottom: 15px; font-size: 1.2em;">
-                        Minggu ${sortedWeeks.length - index} (${formatDate(monday.toISOString().split('T')[0])} - ${formatDate(saturdayStr)})
-                    </h3>
-                    <div style="padding-left: 20px;">
-                        ${kuliTotal > 0 ? `<div class="item"><span>Kuli (${kuliDays} hari)</span><strong>${formatRupiah(kuliTotal)}</strong></div>` : ''}
-                        ${tukangTotal > 0 ? `<div class="item"><span>Tukang (${tukangDays} hari)</span><strong>${formatRupiah(tukangTotal)}</strong></div>` : ''}
-                        ${mandorTotal > 0 ? `<div class="item"><span>Mandor (${mandorDays} hari)</span><strong>${formatRupiah(mandorTotal)}</strong></div>` : ''}
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>
+                            <span>📅 Minggu ${sortedWeeks.length - index} (${mondayDate}-${saturdayDate} ${monthName})</span>
+                            <span class="arrow">▼</span>
+                        </h3>
+                        <div class="total">${formatRupiah(weekTotal)}</div>
+                        <div class="percentage">Dibayar Sabtu ${saturdayDate} ${monthName}</div>
                     </div>
-                    <div style="margin-top: 15px; padding-top: 15px; border-top: 2px solid #667eea; text-align: right;">
-                        <strong style="font-size: 1.2em; color: #667eea;">Total Gajian: ${formatRupiah(weekTotal)}</strong>
-                        <div style="color: #666; font-size: 0.9em; margin-top: 5px;">Dibayar Sabtu ${formatDate(saturdayStr)}</div>
+                    <div class="category-details">
+                        <div class="item-list" style="padding: 0 25px 25px 25px;">
+                            ${kuliTotal > 0 ? `<div class="item"><span>Kuli (${kuliDays} hari)</span><strong>${formatRupiah(kuliTotal)}</strong></div>` : ''}
+                            ${tukangTotal > 0 ? `<div class="item"><span>Tukang (${tukangDays} hari)</span><strong>${formatRupiah(tukangTotal)}</strong></div>` : ''}
+                            ${mandorTotal > 0 ? `<div class="item"><span>Mandor (${mandorDays} hari)</span><strong>${formatRupiah(mandorTotal)}</strong></div>` : ''}
+                        </div>
                     </div>
                 </div>`;
     });
