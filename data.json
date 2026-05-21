@@ -574,7 +574,8 @@
     {
       "id": 47,
       "date": "2026-05-21",
-      "category": "Alat",
+      "category": "Upah",
+      "subcategory": "Harian",
       "description": "Buang pohon 2x pickup",
       "quantity": 2,
       "unit": "pickup",
@@ -586,10 +587,11 @@
     {
       "id": 48,
       "date": "2026-05-21",
-      "category": "Alat",
+      "category": "Upah",
+      "subcategory": "Harian",
       "description": "Potong kayu dan akar",
       "quantity": 1,
-      "unit": "pcs",
+      "unit": "hari",
       "price_per_unit": 160000,
       "total": 160000,
       "notes": "",
@@ -599,16 +601,17 @@
   "summary": {
     "total_spent": 24712070,
     "by_category": {
-      "Upah": 2705000,
+      "Upah": 3315000,
       "Material": 1361000,
-      "Alat": 970000,
+      "Alat": 360000,
       "Jajan": 324070,
       "Struktur Bangunan": 19352000
     },
     "upah_breakdown": {
       "Kuli": 1580000,
       "Tukang": 405000,
-      "Mandor": 600000
+      "Mandor": 600000,
+      "Harian": 610000
     }
   },
   "wage_rates": {
