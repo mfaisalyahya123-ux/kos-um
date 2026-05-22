@@ -597,21 +597,60 @@
       "total": 5000,
       "notes": "",
       "funding_source": "Kas UM"
+    },
+    {
+      "id": 50,
+      "date": "2026-05-22",
+      "category": "Upah",
+      "subcategory": "Kuli",
+      "description": "3 kuli full day",
+      "quantity": 3,
+      "unit": "orang",
+      "price_per_unit": 120000,
+      "total": 360000,
+      "notes": "1 kuli tidak masuk",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 51,
+      "date": "2026-05-22",
+      "category": "Upah",
+      "subcategory": "Tukang",
+      "description": "1 tukang full day",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 135000,
+      "total": 135000,
+      "notes": "auto-generated",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 52,
+      "date": "2026-05-22",
+      "category": "Upah",
+      "subcategory": "Mandor",
+      "description": "1 mandor full day",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 150000,
+      "total": 150000,
+      "notes": "auto-generated",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
-    "total_spent": 22117070,
+    "total_spent": 22762070,
     "by_category": {
-      "Upah": 3315000,
+      "Upah": 3960000,
       "Material": 1361000,
       "Alat": 360000,
       "Jajan": 329070,
       "Struktur Bangunan": 16752000
     },
     "upah_breakdown": {
-      "Kuli": 1580000,
-      "Tukang": 405000,
-      "Mandor": 600000,
+      "Kuli": 1940000,
+      "Tukang": 540000,
+      "Mandor": 750000,
       "Harian": 610000
     }
   },
