@@ -660,15 +660,27 @@
       "total": 9000,
       "notes": "",
       "funding_source": "Kas UM"
+    },
+    {
+      "id": 55,
+      "date": "2026-05-22",
+      "category": "Jajan",
+      "description": "Bahan masak",
+      "quantity": 1,
+      "unit": "item",
+      "price_per_unit": 40000,
+      "total": 40000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
-    "total_spent": 22788570,
+    "total_spent": 22828570,
     "by_category": {
       "Upah": 3960000,
       "Material": 1361000,
       "Alat": 360000,
-      "Jajan": 355570,
+      "Jajan": 395570,
       "Struktur Bangunan": 16752000
     },
     "upah_breakdown": {
