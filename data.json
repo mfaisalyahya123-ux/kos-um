@@ -636,15 +636,39 @@
       "total": 150000,
       "notes": "auto-generated",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 53,
+      "date": "2026-05-22",
+      "category": "Jajan",
+      "description": "Gula pasir 1kg",
+      "quantity": 1,
+      "unit": "kg",
+      "price_per_unit": 17500,
+      "total": 17500,
+      "notes": "",
+      "funding_source": "Kas UM"
+    },
+    {
+      "id": 54,
+      "date": "2026-05-22",
+      "category": "Jajan",
+      "description": "Club 1 liter",
+      "quantity": 2,
+      "unit": "pcs",
+      "price_per_unit": 4500,
+      "total": 9000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
-    "total_spent": 22762070,
+    "total_spent": 22788570,
     "by_category": {
       "Upah": 3960000,
       "Material": 1361000,
       "Alat": 360000,
-      "Jajan": 329070,
+      "Jajan": 355570,
       "Struktur Bangunan": 16752000
     },
     "upah_breakdown": {
