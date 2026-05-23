@@ -950,117 +950,180 @@ function generateWeeklyPayroll() {
 function generateWorkersList() {
     if (!data.workers) return '';
     
-    let html = '<div class="category-breakdown">';
+    // Get all unique dates from all workers
+    const allDates = new Set();
+    ['mandor', 'tukang', 'kuli'].forEach(role => {
+        if (data.workers[role]) {
+            data.workers[role].forEach(worker => {
+                Object.keys(worker.attendance).forEach(date => allDates.add(date));
+            });
+        }
+    });
     
-    // Mandor
-    if (data.workers.mandor && data.workers.mandor.length > 0) {
-        data.workers.mandor.forEach(worker => {
-            const dates = Object.keys(worker.attendance).sort();
-            const hadirCount = dates.filter(d => worker.attendance[d] === 'hadir').length;
-            const totalGaji = hadirCount * worker.rate;
-            
-            html += `
-                <div class="category-card">
-                    <div class="category-header">
-                        <h3>
-                            <span style="background: #e3f2fd; padding: 6px 12px; border-radius: 6px; font-weight: bold;">MANDOR: ${worker.name}</span>
-                            <span class="arrow">?</span>
-                        </h3>
-                        <div class="total">${formatRupiah(totalGaji)}</div>
-                        <div class="percentage">${hadirCount} hari x ${formatRupiah(worker.rate)}</div>
-                    </div>
-                    <div class="category-details">
-                        <div class="item-list" style="padding: 0 25px 25px 25px;">
-                            ${dates.map(date => `
-                            <div class="item" style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
-                                <span>${formatDate(date)}</span>
-                                <strong>
-                                    <span style="padding: 4px 12px; border-radius: 4px; background: ${worker.attendance[date] === 'hadir' ? '#e8f5e9' : '#ffebee'}; color: ${worker.attendance[date] === 'hadir' ? '#2e7d32' : '#c62828'}; font-size: 0.9em;">
-                                        ${worker.attendance[date] === 'hadir' ? 'HADIR' : 'IZIN'}
-                                    </span>
-                                </strong>
-                            </div>`).join('')}
+    // Group dates by week
+    const weeks = {};
+    Array.from(allDates).forEach(dateStr => {
+        const date = new Date(dateStr);
+        const dayOfWeek = date.getDay();
+        const daysUntilSaturday = dayOfWeek === 0 ? 6 : (6 - dayOfWeek);
+        const saturday = new Date(date);
+        saturday.setDate(date.getDate() + daysUntilSaturday);
+        const saturdayStr = saturday.toISOString().split('T')[0];
+        
+        if (!weeks[saturdayStr]) {
+            weeks[saturdayStr] = [];
+        }
+        weeks[saturdayStr].push(dateStr);
+    });
+    
+    const sortedWeeks = Object.keys(weeks).sort().reverse();
+    let html = '';
+    
+    sortedWeeks.forEach((saturdayStr, index) => {
+        const saturday = new Date(saturdayStr);
+        const monday = new Date(saturday);
+        monday.setDate(saturday.getDate() - 5);
+        
+        const mondayDate = monday.getDate();
+        const saturdayDate = saturday.getDate();
+        const monthName = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'][saturday.getMonth()];
+        
+        const weekDates = weeks[saturdayStr].sort();
+        
+        html += `
+            <div class="category-card" style="margin-bottom: 20px;">
+                <div class="category-header">
+                    <h3>
+                        <span>Minggu ${sortedWeeks.length - index} (${mondayDate}-${saturdayDate} ${monthName})</span>
+                        <span class="arrow">?</span>
+                    </h3>
+                </div>
+                <div class="category-details">
+                    <div style="padding: 0 25px 25px 25px;">
+                        <div class="category-breakdown">`;
+        
+        // Mandor
+        if (data.workers.mandor && data.workers.mandor.length > 0) {
+            data.workers.mandor.forEach(worker => {
+                const weekAttendance = weekDates.filter(d => worker.attendance[d]);
+                if (weekAttendance.length > 0) {
+                    const hadirCount = weekAttendance.filter(d => worker.attendance[d] === 'hadir').length;
+                    const totalGaji = hadirCount * worker.rate;
+                    
+                    html += `
+                        <div class="category-card">
+                            <div class="category-header">
+                                <h3>
+                                    <span style="background: #e3f2fd; padding: 6px 12px; border-radius: 6px; font-weight: bold;">MANDOR: ${worker.name}</span>
+                                    <span class="arrow">?</span>
+                                </h3>
+                                <div class="total">${formatRupiah(totalGaji)}</div>
+                                <div class="percentage">${hadirCount} hari x ${formatRupiah(worker.rate)}</div>
+                            </div>
+                            <div class="category-details">
+                                <div class="item-list" style="padding: 0 25px 25px 25px;">
+                                    ${weekAttendance.map(date => `
+                                    <div class="item" style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                                        <span>${formatDate(date)}</span>
+                                        <strong>
+                                            <span style="padding: 4px 12px; border-radius: 4px; background: ${worker.attendance[date] === 'hadir' ? '#e8f5e9' : '#ffebee'}; color: ${worker.attendance[date] === 'hadir' ? '#2e7d32' : '#c62828'}; font-size: 0.9em;">
+                                                ${worker.attendance[date] === 'hadir' ? 'HADIR' : 'IZIN'}
+                                            </span>
+                                        </strong>
+                                    </div>`).join('')}
+                                </div>
+                            </div>
+                        </div>`;
+                }
+            });
+        }
+        
+        // Tukang
+        if (data.workers.tukang && data.workers.tukang.length > 0) {
+            data.workers.tukang.forEach(worker => {
+                const weekAttendance = weekDates.filter(d => worker.attendance[d]);
+                if (weekAttendance.length > 0) {
+                    const hadirCount = weekAttendance.filter(d => worker.attendance[d] === 'hadir').length;
+                    const totalGaji = hadirCount * worker.rate;
+                    
+                    html += `
+                        <div class="category-card">
+                            <div class="category-header">
+                                <h3>
+                                    <span style="background: #fff3e0; padding: 6px 12px; border-radius: 6px; font-weight: bold;">TUKANG: ${worker.name}</span>
+                                    <span class="arrow">?</span>
+                                </h3>
+                                <div class="total">${formatRupiah(totalGaji)}</div>
+                                <div class="percentage">${hadirCount} hari x ${formatRupiah(worker.rate)}</div>
+                            </div>
+                            <div class="category-details">
+                                <div class="item-list" style="padding: 0 25px 25px 25px;">
+                                    ${weekAttendance.map(date => `
+                                    <div class="item" style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                                        <span>${formatDate(date)}</span>
+                                        <strong>
+                                            <span style="padding: 4px 12px; border-radius: 4px; background: ${worker.attendance[date] === 'hadir' ? '#e8f5e9' : '#ffebee'}; color: ${worker.attendance[date] === 'hadir' ? '#2e7d32' : '#c62828'}; font-size: 0.9em;">
+                                                ${worker.attendance[date] === 'hadir' ? 'HADIR' : 'IZIN'}
+                                            </span>
+                                        </strong>
+                                    </div>`).join('')}
+                                </div>
+                            </div>
+                        </div>`;
+                }
+            });
+        }
+        
+        // Kuli
+        if (data.workers.kuli && data.workers.kuli.length > 0) {
+            data.workers.kuli.forEach(worker => {
+                const weekAttendance = weekDates.filter(d => worker.attendance[d]);
+                if (weekAttendance.length > 0) {
+                    const hadirCount = weekAttendance.filter(d => worker.attendance[d] === 'hadir').length;
+                    const totalGaji = hadirCount * worker.rate;
+                    
+                    html += `
+                        <div class="category-card">
+                            <div class="category-header">
+                                <h3>
+                                    <span style="background: #f3e5f5; padding: 6px 12px; border-radius: 6px; font-weight: bold;">KULI: ${worker.name}</span>
+                                    <span class="arrow">?</span>
+                                </h3>
+                                <div class="total">${formatRupiah(totalGaji)}</div>
+                                <div class="percentage">${hadirCount} hari x ${formatRupiah(worker.rate)}</div>
+                            </div>
+                            <div class="category-details">
+                                <div class="item-list" style="padding: 0 25px 25px 25px;">
+                                    ${weekAttendance.map(date => `
+                                    <div class="item" style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
+                                        <span>${formatDate(date)}</span>
+                                        <strong>
+                                            <span style="padding: 4px 12px; border-radius: 4px; background: ${worker.attendance[date] === 'hadir' ? '#e8f5e9' : '#ffebee'}; color: ${worker.attendance[date] === 'hadir' ? '#2e7d32' : '#c62828'}; font-size: 0.9em;">
+                                                ${worker.attendance[date] === 'hadir' ? 'HADIR' : 'IZIN'}
+                                            </span>
+                                        </strong>
+                                    </div>`).join('')}
+                                </div>
+                            </div>
+                        </div>`;
+                }
+            });
+        }
+        
+        html += `
                         </div>
                     </div>
-                </div>`;
-        });
-    }
+                </div>
+            </div>`;
+    });
     
-    // Tukang
-    if (data.workers.tukang && data.workers.tukang.length > 0) {
-        data.workers.tukang.forEach(worker => {
-            const dates = Object.keys(worker.attendance).sort();
-            const hadirCount = dates.filter(d => worker.attendance[d] === 'hadir').length;
-            const totalGaji = hadirCount * worker.rate;
-            
-            html += `
-                <div class="category-card">
-                    <div class="category-header">
-                        <h3>
-                            <span style="background: #fff3e0; padding: 6px 12px; border-radius: 6px; font-weight: bold;">TUKANG: ${worker.name}</span>
-                            <span class="arrow">?</span>
-                        </h3>
-                        <div class="total">${formatRupiah(totalGaji)}</div>
-                        <div class="percentage">${hadirCount} hari x ${formatRupiah(worker.rate)}</div>
-                    </div>
-                    <div class="category-details">
-                        <div class="item-list" style="padding: 0 25px 25px 25px;">
-                            ${dates.map(date => `
-                            <div class="item" style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
-                                <span>${formatDate(date)}</span>
-                                <strong>
-                                    <span style="padding: 4px 12px; border-radius: 4px; background: ${worker.attendance[date] === 'hadir' ? '#e8f5e9' : '#ffebee'}; color: ${worker.attendance[date] === 'hadir' ? '#2e7d32' : '#c62828'}; font-size: 0.9em;">
-                                        ${worker.attendance[date] === 'hadir' ? 'HADIR' : 'IZIN'}
-                                    </span>
-                                </strong>
-                            </div>`).join('')}
-                        </div>
-                    </div>
-                </div>`;
-        });
-    }
-    
-    // Kuli
-    if (data.workers.kuli && data.workers.kuli.length > 0) {
-        data.workers.kuli.forEach(worker => {
-            const dates = Object.keys(worker.attendance).sort();
-            const hadirCount = dates.filter(d => worker.attendance[d] === 'hadir').length;
-            const totalGaji = hadirCount * worker.rate;
-            
-            html += `
-                <div class="category-card">
-                    <div class="category-header">
-                        <h3>
-                            <span style="background: #f3e5f5; padding: 6px 12px; border-radius: 6px; font-weight: bold;">KULI: ${worker.name}</span>
-                            <span class="arrow">?</span>
-                        </h3>
-                        <div class="total">${formatRupiah(totalGaji)}</div>
-                        <div class="percentage">${hadirCount} hari x ${formatRupiah(worker.rate)}</div>
-                    </div>
-                    <div class="category-details">
-                        <div class="item-list" style="padding: 0 25px 25px 25px;">
-                            ${dates.map(date => `
-                            <div class="item" style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
-                                <span>${formatDate(date)}</span>
-                                <strong>
-                                    <span style="padding: 4px 12px; border-radius: 4px; background: ${worker.attendance[date] === 'hadir' ? '#e8f5e9' : '#ffebee'}; color: ${worker.attendance[date] === 'hadir' ? '#2e7d32' : '#c62828'}; font-size: 0.9em;">
-                                        ${worker.attendance[date] === 'hadir' ? 'HADIR' : 'IZIN'}
-                                    </span>
-                                </strong>
-                            </div>`).join('')}
-                        </div>
-                    </div>
-                </div>`;
-        });
-    }
-    
-    html += '</div>';
     return html;
 }
 
 // Write HTML file
 fs.writeFileSync(path.join(__dirname, 'index.html'), html);
 console.log('✅ index.html generated successfully!');
+
 
 
 
