@@ -950,7 +950,7 @@ function generateWeeklyPayroll() {
 function generateWorkersList() {
     if (!data.workers) return '';
     
-    let html = '<div class=\""category-breakdown\"">';
+    let html = '<div class="category-breakdown">';
     
     // Mandor
     if (data.workers.mandor && data.workers.mandor.length > 0) {
@@ -960,21 +960,25 @@ function generateWorkersList() {
             const totalGaji = hadirCount * worker.rate;
             
             html += `
-                <div class=\""category-card\"">
-                    <div class=\""category-header\"">
+                <div class="category-card">
+                    <div class="category-header">
                         <h3>
-                            <span>?? Mandor ${worker.name}</span>
-                            <span class=\""arrow\"">?</span>
+                            <span style="background: #e3f2fd; padding: 6px 12px; border-radius: 6px; font-weight: bold;">MANDOR: ${worker.name}</span>
+                            <span class="arrow">?</span>
                         </h3>
-                        <div class=\""total\"">${formatRupiah(totalGaji)}</div>
-                        <div class=\""percentage\"">${hadirCount} hari × ${formatRupiah(worker.rate)}</div>
+                        <div class="total">${formatRupiah(totalGaji)}</div>
+                        <div class="percentage">${hadirCount} hari x ${formatRupiah(worker.rate)}</div>
                     </div>
-                    <div class=\""category-details\"">
-                        <div class=\""item-list\"" style=\""padding: 0 25px 25px 25px;\"">
+                    <div class="category-details">
+                        <div class="item-list" style="padding: 0 25px 25px 25px;">
                             ${dates.map(date => `
-                            <div class=\""item\"">
+                            <div class="item" style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
                                 <span>${formatDate(date)}</span>
-                                <strong style=\""color: ${worker.attendance[date] === 'hadir' ? '#4caf50' : '#f44336'};\""> </strong>
+                                <strong>
+                                    <span style="padding: 4px 12px; border-radius: 4px; background: ${worker.attendance[date] === 'hadir' ? '#e8f5e9' : '#ffebee'}; color: ${worker.attendance[date] === 'hadir' ? '#2e7d32' : '#c62828'}; font-size: 0.9em;">
+                                        ${worker.attendance[date] === 'hadir' ? 'HADIR' : 'IZIN'}
+                                    </span>
+                                </strong>
                             </div>`).join('')}
                         </div>
                     </div>
@@ -990,21 +994,25 @@ function generateWorkersList() {
             const totalGaji = hadirCount * worker.rate;
             
             html += `
-                <div class=\""category-card\"">
-                    <div class=\""category-header\"">
+                <div class="category-card">
+                    <div class="category-header">
                         <h3>
-                            <span>?? Tukang ${worker.name}</span>
-                            <span class=\""arrow\"">?</span>
+                            <span style="background: #fff3e0; padding: 6px 12px; border-radius: 6px; font-weight: bold;">TUKANG: ${worker.name}</span>
+                            <span class="arrow">?</span>
                         </h3>
-                        <div class=\""total\"">${formatRupiah(totalGaji)}</div>
-                        <div class=\""percentage\"">${hadirCount} hari × ${formatRupiah(worker.rate)}</div>
+                        <div class="total">${formatRupiah(totalGaji)}</div>
+                        <div class="percentage">${hadirCount} hari x ${formatRupiah(worker.rate)}</div>
                     </div>
-                    <div class=\""category-details\"">
-                        <div class=\""item-list\"" style=\""padding: 0 25px 25px 25px;\"">
+                    <div class="category-details">
+                        <div class="item-list" style="padding: 0 25px 25px 25px;">
                             ${dates.map(date => `
-                            <div class=\""item\"">
+                            <div class="item" style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
                                 <span>${formatDate(date)}</span>
-                                <strong style=\""color: ${worker.attendance[date] === 'hadir' ? '#4caf50' : '#f44336'};\""> </strong>
+                                <strong>
+                                    <span style="padding: 4px 12px; border-radius: 4px; background: ${worker.attendance[date] === 'hadir' ? '#e8f5e9' : '#ffebee'}; color: ${worker.attendance[date] === 'hadir' ? '#2e7d32' : '#c62828'}; font-size: 0.9em;">
+                                        ${worker.attendance[date] === 'hadir' ? 'HADIR' : 'IZIN'}
+                                    </span>
+                                </strong>
                             </div>`).join('')}
                         </div>
                     </div>
@@ -1020,21 +1028,25 @@ function generateWorkersList() {
             const totalGaji = hadirCount * worker.rate;
             
             html += `
-                <div class=\""category-card\"">
-                    <div class=\""category-header\"">
+                <div class="category-card">
+                    <div class="category-header">
                         <h3>
-                            <span>?? Kuli ${worker.name}</span>
-                            <span class=\""arrow\"">?</span>
+                            <span style="background: #f3e5f5; padding: 6px 12px; border-radius: 6px; font-weight: bold;">KULI: ${worker.name}</span>
+                            <span class="arrow">?</span>
                         </h3>
-                        <div class=\""total\"">${formatRupiah(totalGaji)}</div>
-                        <div class=\""percentage\"">${hadirCount} hari × ${formatRupiah(worker.rate)}</div>
+                        <div class="total">${formatRupiah(totalGaji)}</div>
+                        <div class="percentage">${hadirCount} hari x ${formatRupiah(worker.rate)}</div>
                     </div>
-                    <div class=\""category-details\"">
-                        <div class=\""item-list\"" style=\""padding: 0 25px 25px 25px;\"">
+                    <div class="category-details">
+                        <div class="item-list" style="padding: 0 25px 25px 25px;">
                             ${dates.map(date => `
-                            <div class=\""item\"">
+                            <div class="item" style="padding: 10px 0; border-bottom: 1px solid #f0f0f0;">
                                 <span>${formatDate(date)}</span>
-                                <strong style=\""color: ${worker.attendance[date] === 'hadir' ? '#4caf50' : '#f44336'};\""> </strong>
+                                <strong>
+                                    <span style="padding: 4px 12px; border-radius: 4px; background: ${worker.attendance[date] === 'hadir' ? '#e8f5e9' : '#ffebee'}; color: ${worker.attendance[date] === 'hadir' ? '#2e7d32' : '#c62828'}; font-size: 0.9em;">
+                                        ${worker.attendance[date] === 'hadir' ? 'HADIR' : 'IZIN'}
+                                    </span>
+                                </strong>
                             </div>`).join('')}
                         </div>
                     </div>
@@ -1049,5 +1061,7 @@ function generateWorkersList() {
 // Write HTML file
 fs.writeFileSync(path.join(__dirname, 'index.html'), html);
 console.log('âœ… index.html generated successfully!');
+
+
 
 
