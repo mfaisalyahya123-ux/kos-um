@@ -464,6 +464,11 @@ const html = `<!DOCTYPE html>
                 <h2>ðŸ“… Summary Gajian Mingguan</h2>
                 ${generateWeeklyPayroll()}
             </div>
+
+            <div class="section">
+                <h2>ðŸ‘¥ Daftar Pekerja & Absensi</h2>
+                ${generateWorkersList()}
+            </div>
         </div>
 
         <div class="footer">
@@ -941,7 +946,108 @@ function generateWeeklyPayroll() {
 }
 
 
+
+function generateWorkersList() {
+    if (!data.workers) return '';
+    
+    let html = '<div class=\""category-breakdown\"">';
+    
+    // Mandor
+    if (data.workers.mandor && data.workers.mandor.length > 0) {
+        data.workers.mandor.forEach(worker => {
+            const dates = Object.keys(worker.attendance).sort();
+            const hadirCount = dates.filter(d => worker.attendance[d] === 'hadir').length;
+            const totalGaji = hadirCount * worker.rate;
+            
+            html += `
+                <div class=\""category-card\"">
+                    <div class=\""category-header\"">
+                        <h3>
+                            <span>?? Mandor ${worker.name}</span>
+                            <span class=\""arrow\"">?</span>
+                        </h3>
+                        <div class=\""total\"">${formatRupiah(totalGaji)}</div>
+                        <div class=\""percentage\"">${hadirCount} hari × ${formatRupiah(worker.rate)}</div>
+                    </div>
+                    <div class=\""category-details\"">
+                        <div class=\""item-list\"" style=\""padding: 0 25px 25px 25px;\"">
+                            ${dates.map(date => `
+                            <div class=\""item\"">
+                                <span>${formatDate(date)}</span>
+                                <strong style=\""color: ${worker.attendance[date] === 'hadir' ? '#4caf50' : '#f44336'};\""> </strong>
+                            </div>`).join('')}
+                        </div>
+                    </div>
+                </div>`;
+        });
+    }
+    
+    // Tukang
+    if (data.workers.tukang && data.workers.tukang.length > 0) {
+        data.workers.tukang.forEach(worker => {
+            const dates = Object.keys(worker.attendance).sort();
+            const hadirCount = dates.filter(d => worker.attendance[d] === 'hadir').length;
+            const totalGaji = hadirCount * worker.rate;
+            
+            html += `
+                <div class=\""category-card\"">
+                    <div class=\""category-header\"">
+                        <h3>
+                            <span>?? Tukang ${worker.name}</span>
+                            <span class=\""arrow\"">?</span>
+                        </h3>
+                        <div class=\""total\"">${formatRupiah(totalGaji)}</div>
+                        <div class=\""percentage\"">${hadirCount} hari × ${formatRupiah(worker.rate)}</div>
+                    </div>
+                    <div class=\""category-details\"">
+                        <div class=\""item-list\"" style=\""padding: 0 25px 25px 25px;\"">
+                            ${dates.map(date => `
+                            <div class=\""item\"">
+                                <span>${formatDate(date)}</span>
+                                <strong style=\""color: ${worker.attendance[date] === 'hadir' ? '#4caf50' : '#f44336'};\""> </strong>
+                            </div>`).join('')}
+                        </div>
+                    </div>
+                </div>`;
+        });
+    }
+    
+    // Kuli
+    if (data.workers.kuli && data.workers.kuli.length > 0) {
+        data.workers.kuli.forEach(worker => {
+            const dates = Object.keys(worker.attendance).sort();
+            const hadirCount = dates.filter(d => worker.attendance[d] === 'hadir').length;
+            const totalGaji = hadirCount * worker.rate;
+            
+            html += `
+                <div class=\""category-card\"">
+                    <div class=\""category-header\"">
+                        <h3>
+                            <span>?? Kuli ${worker.name}</span>
+                            <span class=\""arrow\"">?</span>
+                        </h3>
+                        <div class=\""total\"">${formatRupiah(totalGaji)}</div>
+                        <div class=\""percentage\"">${hadirCount} hari × ${formatRupiah(worker.rate)}</div>
+                    </div>
+                    <div class=\""category-details\"">
+                        <div class=\""item-list\"" style=\""padding: 0 25px 25px 25px;\"">
+                            ${dates.map(date => `
+                            <div class=\""item\"">
+                                <span>${formatDate(date)}</span>
+                                <strong style=\""color: ${worker.attendance[date] === 'hadir' ? '#4caf50' : '#f44336'};\""> </strong>
+                            </div>`).join('')}
+                        </div>
+                    </div>
+                </div>`;
+        });
+    }
+    
+    html += '</div>';
+    return html;
+}
+
 // Write HTML file
 fs.writeFileSync(path.join(__dirname, 'index.html'), html);
 console.log('âœ… index.html generated successfully!');
+
 

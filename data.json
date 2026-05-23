@@ -770,5 +770,82 @@
     "kuli_full_day": 120000,
     "tukang_full_day": 135000,
     "mandor_full_day": 150000
+  },
+  "workers": {
+    "mandor": [
+      {
+        "name": "Heri",
+        "rate": 150000,
+        "attendance": {
+          "2026-05-18": "hadir",
+          "2026-05-19": "hadir",
+          "2026-05-20": "hadir",
+          "2026-05-21": "hadir",
+          "2026-05-22": "hadir",
+          "2026-05-23": "hadir"
+        }
+      }
+    ],
+    "tukang": [
+      {
+        "name": "Tohir",
+        "rate": 135000,
+        "attendance": {
+          "2026-05-18": "hadir",
+          "2026-05-19": "hadir",
+          "2026-05-20": "izin",
+          "2026-05-21": "hadir",
+          "2026-05-22": "hadir",
+          "2026-05-23": "hadir"
+        }
+      }
+    ],
+    "kuli": [
+      {
+        "name": "Zaky",
+        "rate": 120000,
+        "attendance": {
+          "2026-05-18": "hadir",
+          "2026-05-19": "hadir",
+          "2026-05-20": "izin",
+          "2026-05-21": "hadir",
+          "2026-05-22": "hadir",
+          "2026-05-23": "hadir"
+        }
+      },
+      {
+        "name": "Rizky",
+        "rate": 120000,
+        "attendance": {
+          "2026-05-18": "hadir",
+          "2026-05-19": "hadir",
+          "2026-05-20": "hadir",
+          "2026-05-21": "hadir",
+          "2026-05-22": "hadir",
+          "2026-05-23": "hadir"
+        }
+      },
+      {
+        "name": "Rudi",
+        "rate": 120000,
+        "attendance": {
+          "2026-05-18": "hadir",
+          "2026-05-19": "hadir",
+          "2026-05-20": "hadir",
+          "2026-05-21": "hadir",
+          "2026-05-22": "izin",
+          "2026-05-23": "hadir"
+        }
+      },
+      {
+        "name": "Adit",
+        "rate": 120000,
+        "attendance": {
+          "2026-05-21": "hadir",
+          "2026-05-22": "hadir",
+          "2026-05-23": "hadir"
+        }
+      }
+    ]
   }
 }
