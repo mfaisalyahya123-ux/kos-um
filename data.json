@@ -697,15 +697,27 @@
       "total": 26000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 58,
+      "date": "2026-05-23",
+      "category": "Jajan",
+      "description": "Tepung Superindo 2kg",
+      "quantity": 2,
+      "unit": "kg",
+      "price_per_unit": 11500,
+      "total": 23000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
-    "total_spent": 23401370,
+    "total_spent": 23424370,
     "by_category": {
       "Upah": 3960000,
       "Material": 1933800,
       "Alat": 360000,
-      "Jajan": 395570,
+      "Jajan": 418570,
       "Struktur Bangunan": 16752000
     },
     "upah_breakdown": {
