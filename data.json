@@ -760,15 +760,27 @@
       "total": 5000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 63,
+      "date": "2026-05-23",
+      "category": "Jajan",
+      "description": "Es batu",
+      "quantity": 1,
+      "unit": "item",
+      "price_per_unit": 5000,
+      "total": 5000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
-    "total_spent": 24194370,
+    "total_spent": 24199370,
     "by_category": {
       "Upah": 4725000,
       "Material": 1933800,
       "Alat": 360000,
-      "Jajan": 423570,
+      "Jajan": 428570,
       "Struktur Bangunan": 16752000
     },
     "upah_breakdown": {
