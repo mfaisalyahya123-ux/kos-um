@@ -772,6 +772,18 @@
       "total": 5000,
       "notes": "",
       "funding_source": "Kas UM"
+    },
+    {
+      "id": 64,
+      "date": "2026-05-24",
+      "category": "Material",
+      "description": "Semen",
+      "quantity": 3,
+      "unit": "sak",
+      "price_per_unit": 16000,
+      "total": 48000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
