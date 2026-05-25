@@ -811,6 +811,18 @@
       "total": 35160,
       "notes": "",
       "funding_source": "Kas UM"
+    },
+    {
+      "id": 67,
+      "date": "2026-05-25",
+      "category": "Lain-lain",
+      "description": "Jasa buang bongkaran",
+      "quantity": 1,
+      "unit": "jasa",
+      "price_per_unit": 130000,
+      "total": 130000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
