@@ -823,6 +823,18 @@
       "total": 130000,
       "notes": "",
       "funding_source": "Kas UM"
+    },
+    {
+      "id": 68,
+      "date": "2026-05-25",
+      "category": "Material",
+      "description": "Karung",
+      "quantity": 10,
+      "unit": "biji",
+      "price_per_unit": 2000,
+      "total": 20000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
