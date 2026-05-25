@@ -799,6 +799,18 @@
       "total": 150000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 66,
+      "date": "2026-05-25",
+      "category": "Jajan",
+      "description": "Royco Ayam 220gr",
+      "quantity": 5,
+      "unit": "pcs",
+      "price_per_unit": 7032,
+      "total": 35160,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
