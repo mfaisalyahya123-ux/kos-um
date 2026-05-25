@@ -760,6 +760,45 @@
       "total": 5000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 63,
+      "date": "2026-05-25",
+      "category": "Upah",
+      "subcategory": "Kuli",
+      "description": "3 kuli full day (Zaky, Rizky, Adit)",
+      "quantity": 3,
+      "unit": "orang",
+      "price_per_unit": 120000,
+      "total": 360000,
+      "notes": "Rudi izin",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 64,
+      "date": "2026-05-25",
+      "category": "Upah",
+      "subcategory": "Tukang",
+      "description": "2 tukang full day (Tohir, Tukang Baru)",
+      "quantity": 2,
+      "unit": "orang",
+      "price_per_unit": 135000,
+      "total": 270000,
+      "notes": "Tukang baru mulai hari ini",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 65,
+      "date": "2026-05-25",
+      "category": "Upah",
+      "subcategory": "Mandor",
+      "description": "1 mandor full day (Heri)",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 150000,
+      "total": 150000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
@@ -808,7 +847,8 @@
           "2026-05-20": "izin",
           "2026-05-21": "hadir",
           "2026-05-22": "hadir",
-          "2026-05-23": "hadir"
+          "2026-05-23": "hadir",
+          "2026-05-25": "hadir"
         }
       }
     ],
@@ -822,7 +862,8 @@
           "2026-05-20": "izin",
           "2026-05-21": "hadir",
           "2026-05-22": "hadir",
-          "2026-05-23": "hadir"
+          "2026-05-23": "hadir",
+          "2026-05-25": "hadir"
         }
       },
       {
@@ -834,7 +875,8 @@
           "2026-05-20": "hadir",
           "2026-05-21": "hadir",
           "2026-05-22": "hadir",
-          "2026-05-23": "hadir"
+          "2026-05-23": "hadir",
+          "2026-05-25": "hadir"
         }
       },
       {
@@ -846,7 +888,8 @@
           "2026-05-20": "hadir",
           "2026-05-21": "hadir",
           "2026-05-22": "izin",
-          "2026-05-23": "hadir"
+          "2026-05-23": "hadir",
+          "2026-05-25": "izin"
         }
       },
       {
@@ -855,7 +898,17 @@
         "attendance": {
           "2026-05-21": "hadir",
           "2026-05-22": "hadir",
-          "2026-05-23": "hadir"
+          "2026-05-23": "hadir",
+          "2026-05-25": "hadir"
+        }
+      }
+    ],
+    "tukang_baru": [
+      {
+        "name": "Tukang Baru",
+        "rate": 135000,
+        "attendance": {
+          "2026-05-25": "hadir"
         }
       }
     ]
