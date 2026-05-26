@@ -876,6 +876,18 @@
       "total": 150000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 72,
+      "date": "2026-05-26",
+      "category": "Jajan",
+      "description": "Es batu",
+      "quantity": 1,
+      "unit": "item",
+      "price_per_unit": 5000,
+      "total": 5000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
