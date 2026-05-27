@@ -889,6 +889,18 @@
       "total": 5000,
       "notes": "",
       "funding_source": "Kas UM"
+    },
+    {
+      "id": 73,
+      "date": "2026-05-27",
+      "category": "Jajan",
+      "description": "Tepung 2kg",
+      "quantity": 2,
+      "unit": "kg",
+      "price_per_unit": 11500,
+      "total": 23000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
