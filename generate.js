@@ -467,6 +467,7 @@ const html = `<!DOCTYPE html>
                             <th>Harga Satuan</th>
                             <th>Total</th>
                             <th>Sumber Dana</th>
+                            <th>Keterangan</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -876,6 +877,7 @@ function generateTransactionRows() {
                             <td>${category}</td>
                             <td>${tx.description}</td>
                             <td>${tx.quantity} ${tx.unit}</td>
+                            <td>${tx.notes || '-'}</td>
                             <td>${formatRupiah(tx.price_per_unit)}</td>
                             <td><strong>${formatRupiah(tx.total)}</strong></td>
                             <td><span style="padding: 4px 8px; background: ${fundingSource === 'Uang Ayah' ? '#e3f2fd' : '#fff3e0'}; border-radius: 4px; font-size: 0.9em;">${fundingSource}</span></td>
