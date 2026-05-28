@@ -467,7 +467,6 @@ const html = `<!DOCTYPE html>
                             <th>Harga Satuan</th>
                             <th>Total</th>
                             <th>Sumber Dana</th>
-                            <th>Keterangan</th>
                         </tr>
                     </thead>
                     <tbody>
