@@ -659,61 +659,120 @@ function generateCategoryCards() {
 function generateDateSections() {
     let sections = '';
     
+    // Helper: get Monday of the week for a given date
+    function getWeekStart(dateStr) {
+        const d = new Date(dateStr);
+        const day = d.getDay();
+        const diff = day === 0 ? 1 : (1 - day);
+        const mon = new Date(d);
+        mon.setDate(d.getDate() + diff);
+        return mon.toISOString().split('T')[0];
+    }
+    
+    // Group dates into weeks
+    const weekGroups = {};
     sortedDates.forEach(date => {
-        const transactions = transactionsByDate[date];
-        const dateTotal = transactions.reduce((sum, tx) => sum + tx.total, 0);
-        const workDescription = data.daily_work && data.daily_work[date] ? data.daily_work[date] : '';
+        const wk = getWeekStart(date);
+        if (!weekGroups[wk]) weekGroups[wk] = [];
+        weekGroups[wk].push(date);
+    });
+    
+    // Sort weeks (newest first)
+    const sortedWeeks = Object.keys(weekGroups).sort().reverse();
+    
+    sortedWeeks.forEach((weekStart, idx) => {
+        const dates = weekGroups[weekStart].sort();
+        const weekNum = sortedWeeks.length - idx;
         
-        // Group by category
-        const byCategory = {};
-        transactions.forEach(tx => {
-            const cat = tx.category === 'Lain-lain' ? 'Jajan' : tx.category;
-            if (!byCategory[cat]) byCategory[cat] = [];
-            byCategory[cat].push(tx);
+        // Calculate week total and count
+        let weekTotal = 0;
+        let txCount = 0;
+        dates.forEach(d => {
+            transactionsByDate[d].forEach(tx => {
+                weekTotal += tx.total;
+                txCount++;
+            });
         });
         
+        // Format date range
+        const firstDate = new Date(dates[0]);
+        const lastDate = new Date(dates[dates.length - 1]);
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+        let dateRange;
+        if (dates.length === 1) {
+            dateRange = `${firstDate.getDate()} ${months[firstDate.getMonth()]}`;
+        } else {
+            dateRange = `${firstDate.getDate()}-${lastDate.getDate()} ${months[lastDate.getMonth()]}`;
+        }
+        
+        // Week header
         sections += `
-                <div class="date-collapsible">
-                    <h3>📆 ${formatDate(date)}</h3>
-                    <span class="arrow">▼</span>
+                <div class="date-collapsible" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                    <div style="text-align: left;">
+                        <h3 style="color: white; margin: 0;">📅 Minggu ${weekNum} (${dateRange})</h3>
+                        <span style="font-size: 0.85em; opacity: 0.9;">${txCount} transaksi · ${dates.length} hari</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <strong style="font-size: 1.2em;">${formatRupiah(weekTotal)}</strong>
+                        <span class="arrow" style="color: white;">▼</span>
+                    </div>
                 </div>
                 <div class="date-content">`;
         
-        // Add work description if exists
-        if (workDescription) {
-            sections += `
-                    <div style="padding: 15px 20px; margin-bottom: 20px; background: #f0f7ff; border-left: 4px solid #667eea; border-radius: 8px;">
-                        <h4 style="color: #667eea; margin-bottom: 8px; font-size: 1em;">📋 Pekerjaan Hari Ini:</h4>
-                        <p style="color: #333; margin: 0; line-height: 1.6;">${workDescription}</p>
-                    </div>`;
-        }
-        
-        // Generate category sections
-        Object.keys(byCategory).forEach(category => {
-            const icon = {
-                'Jajan': '🍔',
-                'Material': '🧱',
-                'Upah': '💰',
-                'Alat': '🔧',
-                'Struktur Bangunan': '🏗️'
-            }[category] || '📦';
+        // Per-date breakdown (oldest first)
+        dates.reverse().forEach(date => {
+            const transactions = transactionsByDate[date];
+            const dateTotal = transactions.reduce((sum, tx) => sum + tx.total, 0);
+            const workDescription = data.daily_work && data.daily_work[date] ? data.daily_work[date] : '';
+            
+            // Group by category
+            const byCategory = {};
+            transactions.forEach(tx => {
+                const cat = tx.category === 'Lain-lain' ? 'Jajan' : tx.category;
+                if (!byCategory[cat]) byCategory[cat] = [];
+                byCategory[cat].push(tx);
+            });
             
             sections += `
-                    <div style="padding-left: 20px; margin-bottom: 20px;">
-                        <h4 style="color: #764ba2; margin-bottom: 10px;">${icon} ${category}</h4>`;
+                    <div style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
+                        <h4 style="color: #667eea; margin-bottom: 10px; font-size: 1em;">📆 ${formatDate(date)} — <span style="color: #764ba2;">${formatRupiah(dateTotal)}</span></h4>`;
             
-            byCategory[category].forEach(tx => {
-                let desc = tx.description;
-                if (tx.subcategory) {
-                    desc = `${tx.quantity} ${tx.subcategory.toLowerCase()} ${tx.description.includes('full day') ? 'full day' : tx.description} (${tx.quantity} orang @ ${formatRupiah(tx.price_per_unit)})`;
-                } else if (tx.quantity > 1 || tx.unit !== 'item') {
-                    desc = `${tx.description} (${tx.quantity} ${tx.unit}${tx.price_per_unit ? ' @ ' + formatRupiah(tx.price_per_unit) : ''})`;
-                }
+            if (workDescription) {
+                sections += `
+                        <div style="padding: 8px 12px; margin-bottom: 12px; background: #f0f7ff; border-radius: 6px; font-size: 0.9em;">
+                            📋 <strong>Pekerjaan:</strong> ${workDescription}
+                        </div>`;
+            }
+            
+            Object.keys(byCategory).forEach(category => {
+                const icon = {
+                    'Jajan': '🍔',
+                    'Material': '🧱',
+                    'Upah': '💰',
+                    'Alat': '🔧',
+                    'Struktur Bangunan': '🏗️'
+                }[category] || '📦';
                 
                 sections += `
-                        <div class="item">
-                            <span>${desc}</span>
-                            <strong>${formatRupiah(tx.total)}</strong>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">${icon} ${category}</h5>`;
+                
+                byCategory[category].forEach(tx => {
+                    let desc = tx.description;
+                    if (tx.subcategory) {
+                        desc = `${tx.quantity} ${tx.subcategory.toLowerCase()} ${tx.description.includes('full day') ? 'full day' : tx.description} (${tx.quantity} orang @ ${formatRupiah(tx.price_per_unit)})`;
+                    } else if (tx.quantity > 1 || tx.unit !== 'item') {
+                        desc = `${tx.description} (${tx.quantity} ${tx.unit}${tx.price_per_unit ? ' @ ' + formatRupiah(tx.price_per_unit) : ''})`;
+                    }
+                    
+                    sections += `
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>${desc}</span>
+                                <strong>${formatRupiah(tx.total)}</strong>
+                            </div>`;
+                });
+                
+                sections += `
                         </div>`;
             });
             
@@ -721,9 +780,11 @@ function generateDateSections() {
                     </div>`;
         });
         
+        // Week total footer
         sections += `
-                    <div style="margin-top: 15px; padding-top: 15px; border-top: 2px solid #667eea; text-align: right;">
-                        <strong style="font-size: 1.2em; color: #667eea;">Subtotal: ${formatRupiah(dateTotal)}</strong>
+                    <div style="margin-top: 5px; padding: 12px 15px; background: #667eea10; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #667eea; font-weight: 600;">Total Minggu ${weekNum}</span>
+                        <strong style="font-size: 1.1em; color: #667eea;">${formatRupiah(weekTotal)}</strong>
                     </div>
                 </div>`;
     });
