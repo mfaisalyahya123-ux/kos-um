@@ -271,6 +271,53 @@
             transition: max-height 0.5s ease-in;
             padding: 0 25px 25px 25px;
         }
+
+        .date-inner-collapsible {
+            background: #f8f9fa;
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid #667eea;
+        }
+        .date-inner-collapsible:hover {
+            background: #e8ecf1;
+        }
+        .date-inner-collapsible h4 {
+            color: #667eea;
+            font-size: 1em;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .date-inner-collapsible .arrow {
+            color: #667eea;
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
+        .date-inner-collapsible.active .arrow {
+            transform: rotate(-180deg);
+        }
+        .date-inner-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: #fdfdfd;
+            border-radius: 0 0 10px 10px;
+            margin-top: -4px;
+            margin-bottom: 8px;
+        }
+        .date-inner-content.active {
+            max-height: 2000px;
+            transition: max-height 0.5s ease-in;
+            padding: 15px 20px 15px 20px;
+        }
+
         .footer {
             background: #f8f9fa;
             padding: 20px;
@@ -610,7 +657,7 @@
                 
                 <div class="date-collapsible" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
                     <div style="text-align: left;">
-                        <h3 style="color: white; margin: 0;">📅 Minggu 3 (25-28 Mei)</h3>
+                        <h3 style="color: white; margin: 0;">📅 Minggu 1 (25-28 Mei)</h3>
                         <span style="font-size: 0.85em; opacity: 0.9;">15 transaksi · 4 hari</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 15px;">
@@ -619,76 +666,20 @@
                     </div>
                 </div>
                 <div class="date-content">
-                    <div style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
-                        <h4 style="color: #667eea; margin-bottom: 10px; font-size: 1em;">📆 Kamis, 28 Mei 2026 — <span style="color: #764ba2;">Rp 906.000</span></h4>
-                        <div style="padding: 8px 12px; margin-bottom: 12px; background: #f0f7ff; border-radius: 6px; font-size: 0.9em;">
-                            📋 <strong>Pekerjaan:</strong> Semua pekerja hadir
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>4 kuli full day (4 orang @ Rp 120.000)</span>
-                                <strong>Rp 480.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>2 tukang full day (2 orang @ Rp 135.000)</span>
-                                <strong>Rp 270.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>1 mandor full day (1 orang @ Rp 150.000)</span>
-                                <strong>Rp 150.000</strong>
-                            </div>
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🍔 Jajan</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Cleo 1 liter (2 pcs @ Rp 3.000)</span>
-                                <strong>Rp 6.000</strong>
-                            </div>
+                    <div class="date-inner-collapsible">
+                        <h4>
+                            <span>📆 Senin, 25 Mei 2026</span>
+                            <span style="font-size: 0.8em; color: #888;">6 tx</span>
+                            <span style="font-size: 0.8em; color: #999;">3u, 2j, 1m 🔨</span>
+                        </h4>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <strong style="color: #764ba2; font-size: 0.95em;">Rp 965.160</strong>
+                            <span class="arrow">▼</span>
                         </div>
                     </div>
-                    <div style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
-                        <h4 style="color: #667eea; margin-bottom: 10px; font-size: 1em;">📆 Rabu, 27 Mei 2026 — <span style="color: #764ba2;">Rp 23.000</span></h4>
-                        <div style="padding: 8px 12px; margin-bottom: 12px; background: #f0f7ff; border-radius: 6px; font-size: 0.9em;">
-                            📋 <strong>Pekerjaan:</strong> Libur
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🍔 Jajan</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Tepung 2kg (2 kg @ Rp 11.500)</span>
-                                <strong>Rp 23.000</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
-                        <h4 style="color: #667eea; margin-bottom: 10px; font-size: 1em;">📆 Selasa, 26 Mei 2026 — <span style="color: #764ba2;">Rp 905.000</span></h4>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>4 kuli full day (4 orang @ Rp 120.000)</span>
-                                <strong>Rp 480.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>2 tukang full day (2 orang @ Rp 135.000)</span>
-                                <strong>Rp 270.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>1 mandor full day (1 orang @ Rp 150.000)</span>
-                                <strong>Rp 150.000</strong>
-                            </div>
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🍔 Jajan</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Es batu</span>
-                                <strong>Rp 5.000</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
-                        <h4 style="color: #667eea; margin-bottom: 10px; font-size: 1em;">📆 Senin, 25 Mei 2026 — <span style="color: #764ba2;">Rp 965.160</span></h4>
-                        <div style="padding: 8px 12px; margin-bottom: 12px; background: #f0f7ff; border-radius: 6px; font-size: 0.9em;">
-                            📋 <strong>Pekerjaan:</strong> Mandor rakit begel. 2 tukang rakit besi. 2 kuli gali pondasi, 1 kuli usung material keluar.
+                    <div class="date-inner-content">
+                        <div style="padding: 10px 15px; margin-bottom: 12px; background: #f0f7ff; border-left: 4px solid #667eea; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9em;">📋 <strong>Pekerjaan:</strong> Mandor rakit begel. 2 tukang rakit besi. 2 kuli gali pondasi, 1 kuli usung material keluar.</p>
                         </div>
                         <div style="padding-left: 10px; margin-bottom: 8px;">
                             <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
@@ -724,8 +715,104 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin-top: 5px; padding: 12px 15px; background: #667eea10; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
-                        <span style="color: #667eea; font-weight: 600;">Total Minggu 3</span>
+                    <div class="date-inner-collapsible">
+                        <h4>
+                            <span>📆 Selasa, 26 Mei 2026</span>
+                            <span style="font-size: 0.8em; color: #888;">4 tx</span>
+                            <span style="font-size: 0.8em; color: #999;">3u, 1j</span>
+                        </h4>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <strong style="color: #764ba2; font-size: 0.95em;">Rp 905.000</strong>
+                            <span class="arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="date-inner-content">
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>4 kuli full day (4 orang @ Rp 120.000)</span>
+                                <strong>Rp 480.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>2 tukang full day (2 orang @ Rp 135.000)</span>
+                                <strong>Rp 270.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>1 mandor full day (1 orang @ Rp 150.000)</span>
+                                <strong>Rp 150.000</strong>
+                            </div>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🍔 Jajan</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Es batu</span>
+                                <strong>Rp 5.000</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-inner-collapsible">
+                        <h4>
+                            <span>📆 Rabu, 27 Mei 2026</span>
+                            <span style="font-size: 0.8em; color: #888;">1 tx</span>
+                            <span style="font-size: 0.8em; color: #999;">1j 🔨</span>
+                        </h4>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <strong style="color: #764ba2; font-size: 0.95em;">Rp 23.000</strong>
+                            <span class="arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="date-inner-content">
+                        <div style="padding: 10px 15px; margin-bottom: 12px; background: #f0f7ff; border-left: 4px solid #667eea; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9em;">📋 <strong>Pekerjaan:</strong> Libur</p>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🍔 Jajan</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Tepung 2kg (2 kg @ Rp 11.500)</span>
+                                <strong>Rp 23.000</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-inner-collapsible">
+                        <h4>
+                            <span>📆 Kamis, 28 Mei 2026</span>
+                            <span style="font-size: 0.8em; color: #888;">4 tx</span>
+                            <span style="font-size: 0.8em; color: #999;">3u, 1j 🔨</span>
+                        </h4>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <strong style="color: #764ba2; font-size: 0.95em;">Rp 906.000</strong>
+                            <span class="arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="date-inner-content">
+                        <div style="padding: 10px 15px; margin-bottom: 12px; background: #f0f7ff; border-left: 4px solid #667eea; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9em;">📋 <strong>Pekerjaan:</strong> Semua pekerja hadir</p>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>4 kuli full day (4 orang @ Rp 120.000)</span>
+                                <strong>Rp 480.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>2 tukang full day (2 orang @ Rp 135.000)</span>
+                                <strong>Rp 270.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>1 mandor full day (1 orang @ Rp 150.000)</span>
+                                <strong>Rp 150.000</strong>
+                            </div>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🍔 Jajan</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Cleo 1 liter (2 pcs @ Rp 3.000)</span>
+                                <strong>Rp 6.000</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px; padding: 12px 15px; background: #667eea10; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #667eea; font-weight: 600;">Total Minggu 1</span>
                         <strong style="font-size: 1.1em; color: #667eea;">Rp 2.799.160</strong>
                     </div>
                 </div>
@@ -740,247 +827,20 @@
                     </div>
                 </div>
                 <div class="date-content">
-                    <div style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
-                        <h4 style="color: #667eea; margin-bottom: 10px; font-size: 1em;">📆 Sabtu, 23 Mei 2026 — <span style="color: #764ba2;">Rp 793.000</span></h4>
-                        <div style="padding: 8px 12px; margin-bottom: 12px; background: #f0f7ff; border-radius: 6px; font-size: 0.9em;">
-                            📋 <strong>Pekerjaan:</strong> Mandor, tukang dan kuli 1 rakit besi. 2 kuli menggali pondasi, 1 kuli usung material keluar.
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🍔 Jajan</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Tepung Superindo 2kg (2 kg @ Rp 11.500)</span>
-                                <strong>Rp 23.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Galon isi ulang (1 galon @ Rp 5.000)</span>
-                                <strong>Rp 5.000</strong>
-                            </div>
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>4 kuli full day (4 orang @ Rp 120.000)</span>
-                                <strong>Rp 480.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>1 tukang full day (1 orang @ Rp 135.000)</span>
-                                <strong>Rp 135.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>1 mandor full day (1 orang @ Rp 150.000)</span>
-                                <strong>Rp 150.000</strong>
-                            </div>
+                    <div class="date-inner-collapsible">
+                        <h4>
+                            <span>📆 Senin, 18 Mei 2026</span>
+                            <span style="font-size: 0.8em; color: #888;">18 tx</span>
+                            <span style="font-size: 0.8em; color: #999;">3j, 5m, 3u, 2a, 5s 🔨</span>
+                        </h4>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <strong style="color: #764ba2; font-size: 0.95em;">Rp 13.768.000</strong>
+                            <span class="arrow">▼</span>
                         </div>
                     </div>
-                    <div style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
-                        <h4 style="color: #667eea; margin-bottom: 10px; font-size: 1em;">📆 Jumat, 22 Mei 2026 — <span style="color: #764ba2;">Rp 1.284.300</span></h4>
-                        <div style="padding: 8px 12px; margin-bottom: 12px; background: #f0f7ff; border-radius: 6px; font-size: 0.9em;">
-                            📋 <strong>Pekerjaan:</strong> Mandor dan tukang rakit besi. 2 kuli menggali pondasi, 1 kuli usung material keluar.
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>3 kuli full day (3 orang @ Rp 120.000)</span>
-                                <strong>Rp 360.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>1 tukang full day (1 orang @ Rp 135.000)</span>
-                                <strong>Rp 135.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>1 mandor full day (1 orang @ Rp 150.000)</span>
-                                <strong>Rp 150.000</strong>
-                            </div>
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🍔 Jajan</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Gula pasir 1kg (1 kg @ Rp 17.500)</span>
-                                <strong>Rp 17.500</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Club 1 liter (2 pcs @ Rp 4.500)</span>
-                                <strong>Rp 9.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Bahan masak</span>
-                                <strong>Rp 40.000</strong>
-                            </div>
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🧱 Material</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Bendrat Sinarmas 40kg (40 kg @ Rp 13.670)</span>
-                                <strong>Rp 546.800</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Ongkir bendrat</span>
-                                <strong>Rp 26.000</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
-                        <h4 style="color: #667eea; margin-bottom: 10px; font-size: 1em;">📆 Kamis, 21 Mei 2026 — <span style="color: #764ba2;">Rp 1.380.000</span></h4>
-                        <div style="padding: 8px 12px; margin-bottom: 12px; background: #f0f7ff; border-radius: 6px; font-size: 0.9em;">
-                            📋 <strong>Pekerjaan:</strong> 1 kuli membuang pasir keluar. 3 kuli membuat lubang galian buat pondasi. 2 tukang membuat begel.
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>4 kuli full day (4 orang @ Rp 120.000)</span>
-                                <strong>Rp 480.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>1 tukang full day (1 orang @ Rp 135.000)</span>
-                                <strong>Rp 135.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>1 mandor full day (1 orang @ Rp 150.000)</span>
-                                <strong>Rp 150.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>2 harian Buang pohon 2x pickup (2 orang @ Rp 225.000)</span>
-                                <strong>Rp 450.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>1 harian Potong kayu dan akar (1 orang @ Rp 160.000)</span>
-                                <strong>Rp 160.000</strong>
-                            </div>
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🍔 Jajan</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Galon isi ulang (1 galon @ Rp 5.000)</span>
-                                <strong>Rp 5.000</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
-                        <h4 style="color: #667eea; margin-bottom: 10px; font-size: 1em;">📆 Rabu, 20 Mei 2026 — <span style="color: #764ba2;">Rp 5.670.000</span></h4>
-                        <div style="padding: 8px 12px; margin-bottom: 12px; background: #f0f7ff; border-radius: 6px; font-size: 0.9em;">
-                            📋 <strong>Pekerjaan:</strong> Gali tanah kiri dan kanan. Terhambat karena tukang 1 dan kuli 1 gk masuk.
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>2 kuli full day (2 orang @ Rp 120.000)</span>
-                                <strong>Rp 240.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>1 mandor full day (1 orang @ Rp 150.000)</span>
-                                <strong>Rp 150.000</strong>
-                            </div>
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🧱 Material</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Benang putih (1 pcs @ Rp 7.000)</span>
-                                <strong>Rp 7.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Tali timbang 10m (1 pcs @ Rp 25.000)</span>
-                                <strong>Rp 25.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Terpal 4x6 (1 pcs @ Rp 175.000)</span>
-                                <strong>Rp 175.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Triplek 9mm (3 lembar @ Rp 90.000)</span>
-                                <strong>Rp 270.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Semen MP (10 sak @ Rp 46.000)</span>
-                                <strong>Rp 460.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Pasir Pasang (1 p @ Rp 150.000)</span>
-                                <strong>Rp 150.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Lem PVC Trilliun 400gr (1 pcs @ Rp 43.000)</span>
-                                <strong>Rp 43.000</strong>
-                            </div>
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🏗️ Struktur Bangunan</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Truk Pasir Hitam (1 truk @ Rp 1.750.000)</span>
-                                <strong>Rp 1.750.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Usuk 4x6 (104 pcs) (1 m3 @ Rp 2.400.000)</span>
-                                <strong>Rp 2.400.000</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
-                        <h4 style="color: #667eea; margin-bottom: 10px; font-size: 1em;">📆 Selasa, 19 Mei 2026 — <span style="color: #764ba2;">Rp 1.039.070</span></h4>
-                        <div style="padding: 8px 12px; margin-bottom: 12px; background: #f0f7ff; border-radius: 6px; font-size: 0.9em;">
-                            📋 <strong>Pekerjaan:</strong> Bongkar akar dan batang pohon mangga. Dedel pager kiri dan kanan.
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>3 kuli full day (3 orang @ Rp 120.000)</span>
-                                <strong>Rp 360.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>1 tukang full day (1 orang @ Rp 135.000)</span>
-                                <strong>Rp 135.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>1 mandor full day (1 orang @ Rp 150.000)</span>
-                                <strong>Rp 150.000</strong>
-                            </div>
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🍔 Jajan</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Minuman dingin</span>
-                                <strong>Rp 30.000</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Minyak goreng 2L (1 btl @ Rp 41.900)</span>
-                                <strong>Rp 41.900</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Gula pasir 1kg (1 kg @ Rp 17.500)</span>
-                                <strong>Rp 17.500</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Tepung 1kg (1 kg @ Rp 11.390)</span>
-                                <strong>Rp 11.390</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Wortel (1.094 kg @ Rp 17.500)</span>
-                                <strong>Rp 19.145</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Kol putih (1.16 kg @ Rp 17.900)</span>
-                                <strong>Rp 20.765</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Bawang putih (0.3 kg @ Rp 44.900)</span>
-                                <strong>Rp 13.470</strong>
-                            </div>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Bumbu masak (1 pcs @ Rp 9.900)</span>
-                                <strong>Rp 9.900</strong>
-                            </div>
-                        </div>
-                        <div style="padding-left: 10px; margin-bottom: 8px;">
-                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🔧 Alat</h5>
-                            <div class="item" style="font-size: 0.85em;">
-                                <span>Gunting pemotong besi 36 inch Allefix (1 pcs @ Rp 230.000)</span>
-                                <strong>Rp 230.000</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
-                        <h4 style="color: #667eea; margin-bottom: 10px; font-size: 1em;">📆 Senin, 18 Mei 2026 — <span style="color: #764ba2;">Rp 13.768.000</span></h4>
-                        <div style="padding: 8px 12px; margin-bottom: 12px; background: #f0f7ff; border-radius: 6px; font-size: 0.9em;">
-                            📋 <strong>Pekerjaan:</strong> Menebang pohon mangga, membongkar pagar bagian selatan
+                    <div class="date-inner-content">
+                        <div style="padding: 10px 15px; margin-bottom: 12px; background: #f0f7ff; border-left: 4px solid #667eea; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9em;">📋 <strong>Pekerjaan:</strong> Menebang pohon mangga, membongkar pagar bagian selatan</p>
                         </div>
                         <div style="padding-left: 10px; margin-bottom: 8px;">
                             <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🍔 Jajan</h5>
@@ -1070,14 +930,301 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin-top: 5px; padding: 12px 15px; background: #667eea10; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                    <div class="date-inner-collapsible">
+                        <h4>
+                            <span>📆 Selasa, 19 Mei 2026</span>
+                            <span style="font-size: 0.8em; color: #888;">12 tx</span>
+                            <span style="font-size: 0.8em; color: #999;">3u, 8j, 1a 🔨</span>
+                        </h4>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <strong style="color: #764ba2; font-size: 0.95em;">Rp 1.039.070</strong>
+                            <span class="arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="date-inner-content">
+                        <div style="padding: 10px 15px; margin-bottom: 12px; background: #f0f7ff; border-left: 4px solid #667eea; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9em;">📋 <strong>Pekerjaan:</strong> Bongkar akar dan batang pohon mangga. Dedel pager kiri dan kanan.</p>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>3 kuli full day (3 orang @ Rp 120.000)</span>
+                                <strong>Rp 360.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>1 tukang full day (1 orang @ Rp 135.000)</span>
+                                <strong>Rp 135.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>1 mandor full day (1 orang @ Rp 150.000)</span>
+                                <strong>Rp 150.000</strong>
+                            </div>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🍔 Jajan</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Minuman dingin</span>
+                                <strong>Rp 30.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Minyak goreng 2L (1 btl @ Rp 41.900)</span>
+                                <strong>Rp 41.900</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Gula pasir 1kg (1 kg @ Rp 17.500)</span>
+                                <strong>Rp 17.500</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Tepung 1kg (1 kg @ Rp 11.390)</span>
+                                <strong>Rp 11.390</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Wortel (1.094 kg @ Rp 17.500)</span>
+                                <strong>Rp 19.145</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Kol putih (1.16 kg @ Rp 17.900)</span>
+                                <strong>Rp 20.765</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Bawang putih (0.3 kg @ Rp 44.900)</span>
+                                <strong>Rp 13.470</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Bumbu masak (1 pcs @ Rp 9.900)</span>
+                                <strong>Rp 9.900</strong>
+                            </div>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🔧 Alat</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Gunting pemotong besi 36 inch Allefix (1 pcs @ Rp 230.000)</span>
+                                <strong>Rp 230.000</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-inner-collapsible">
+                        <h4>
+                            <span>📆 Rabu, 20 Mei 2026</span>
+                            <span style="font-size: 0.8em; color: #888;">11 tx</span>
+                            <span style="font-size: 0.8em; color: #999;">2u, 7m, 2s 🔨</span>
+                        </h4>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <strong style="color: #764ba2; font-size: 0.95em;">Rp 5.670.000</strong>
+                            <span class="arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="date-inner-content">
+                        <div style="padding: 10px 15px; margin-bottom: 12px; background: #f0f7ff; border-left: 4px solid #667eea; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9em;">📋 <strong>Pekerjaan:</strong> Gali tanah kiri dan kanan. Terhambat karena tukang 1 dan kuli 1 gk masuk.</p>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>2 kuli full day (2 orang @ Rp 120.000)</span>
+                                <strong>Rp 240.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>1 mandor full day (1 orang @ Rp 150.000)</span>
+                                <strong>Rp 150.000</strong>
+                            </div>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🧱 Material</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Benang putih (1 pcs @ Rp 7.000)</span>
+                                <strong>Rp 7.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Tali timbang 10m (1 pcs @ Rp 25.000)</span>
+                                <strong>Rp 25.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Terpal 4x6 (1 pcs @ Rp 175.000)</span>
+                                <strong>Rp 175.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Triplek 9mm (3 lembar @ Rp 90.000)</span>
+                                <strong>Rp 270.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Semen MP (10 sak @ Rp 46.000)</span>
+                                <strong>Rp 460.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Pasir Pasang (1 p @ Rp 150.000)</span>
+                                <strong>Rp 150.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Lem PVC Trilliun 400gr (1 pcs @ Rp 43.000)</span>
+                                <strong>Rp 43.000</strong>
+                            </div>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🏗️ Struktur Bangunan</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Truk Pasir Hitam (1 truk @ Rp 1.750.000)</span>
+                                <strong>Rp 1.750.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Usuk 4x6 (104 pcs) (1 m3 @ Rp 2.400.000)</span>
+                                <strong>Rp 2.400.000</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-inner-collapsible">
+                        <h4>
+                            <span>📆 Kamis, 21 Mei 2026</span>
+                            <span style="font-size: 0.8em; color: #888;">6 tx</span>
+                            <span style="font-size: 0.8em; color: #999;">5u, 1j 🔨</span>
+                        </h4>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <strong style="color: #764ba2; font-size: 0.95em;">Rp 1.380.000</strong>
+                            <span class="arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="date-inner-content">
+                        <div style="padding: 10px 15px; margin-bottom: 12px; background: #f0f7ff; border-left: 4px solid #667eea; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9em;">📋 <strong>Pekerjaan:</strong> 1 kuli membuang pasir keluar. 3 kuli membuat lubang galian buat pondasi. 2 tukang membuat begel.</p>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>4 kuli full day (4 orang @ Rp 120.000)</span>
+                                <strong>Rp 480.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>1 tukang full day (1 orang @ Rp 135.000)</span>
+                                <strong>Rp 135.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>1 mandor full day (1 orang @ Rp 150.000)</span>
+                                <strong>Rp 150.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>2 harian Buang pohon 2x pickup (2 orang @ Rp 225.000)</span>
+                                <strong>Rp 450.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>1 harian Potong kayu dan akar (1 orang @ Rp 160.000)</span>
+                                <strong>Rp 160.000</strong>
+                            </div>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🍔 Jajan</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Galon isi ulang (1 galon @ Rp 5.000)</span>
+                                <strong>Rp 5.000</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-inner-collapsible">
+                        <h4>
+                            <span>📆 Jumat, 22 Mei 2026</span>
+                            <span style="font-size: 0.8em; color: #888;">8 tx</span>
+                            <span style="font-size: 0.8em; color: #999;">3u, 3j, 2m 🔨</span>
+                        </h4>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <strong style="color: #764ba2; font-size: 0.95em;">Rp 1.284.300</strong>
+                            <span class="arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="date-inner-content">
+                        <div style="padding: 10px 15px; margin-bottom: 12px; background: #f0f7ff; border-left: 4px solid #667eea; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9em;">📋 <strong>Pekerjaan:</strong> Mandor dan tukang rakit besi. 2 kuli menggali pondasi, 1 kuli usung material keluar.</p>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>3 kuli full day (3 orang @ Rp 120.000)</span>
+                                <strong>Rp 360.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>1 tukang full day (1 orang @ Rp 135.000)</span>
+                                <strong>Rp 135.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>1 mandor full day (1 orang @ Rp 150.000)</span>
+                                <strong>Rp 150.000</strong>
+                            </div>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🍔 Jajan</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Gula pasir 1kg (1 kg @ Rp 17.500)</span>
+                                <strong>Rp 17.500</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Club 1 liter (2 pcs @ Rp 4.500)</span>
+                                <strong>Rp 9.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Bahan masak</span>
+                                <strong>Rp 40.000</strong>
+                            </div>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🧱 Material</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Bendrat Sinarmas 40kg (40 kg @ Rp 13.670)</span>
+                                <strong>Rp 546.800</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Ongkir bendrat</span>
+                                <strong>Rp 26.000</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-inner-collapsible">
+                        <h4>
+                            <span>📆 Sabtu, 23 Mei 2026</span>
+                            <span style="font-size: 0.8em; color: #888;">5 tx</span>
+                            <span style="font-size: 0.8em; color: #999;">2j, 3u 🔨</span>
+                        </h4>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <strong style="color: #764ba2; font-size: 0.95em;">Rp 793.000</strong>
+                            <span class="arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="date-inner-content">
+                        <div style="padding: 10px 15px; margin-bottom: 12px; background: #f0f7ff; border-left: 4px solid #667eea; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9em;">📋 <strong>Pekerjaan:</strong> Mandor, tukang dan kuli 1 rakit besi. 2 kuli menggali pondasi, 1 kuli usung material keluar.</p>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">🍔 Jajan</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Tepung Superindo 2kg (2 kg @ Rp 11.500)</span>
+                                <strong>Rp 23.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>Galon isi ulang (1 galon @ Rp 5.000)</span>
+                                <strong>Rp 5.000</strong>
+                            </div>
+                        </div>
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>4 kuli full day (4 orang @ Rp 120.000)</span>
+                                <strong>Rp 480.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>1 tukang full day (1 orang @ Rp 135.000)</span>
+                                <strong>Rp 135.000</strong>
+                            </div>
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>1 mandor full day (1 orang @ Rp 150.000)</span>
+                                <strong>Rp 150.000</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px; padding: 12px 15px; background: #667eea10; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
                         <span style="color: #667eea; font-weight: 600;">Total Minggu 2</span>
                         <strong style="font-size: 1.1em; color: #667eea;">Rp 23.934.370</strong>
                     </div>
                 </div>
                 <div class="date-collapsible" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
                     <div style="text-align: left;">
-                        <h3 style="color: white; margin: 0;">📅 Minggu 1 (16 Mei)</h3>
+                        <h3 style="color: white; margin: 0;">📅 Minggu 3 (16 Mei)</h3>
                         <span style="font-size: 0.85em; opacity: 0.9;">1 transaksi · 1 hari</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 15px;">
@@ -1086,10 +1233,20 @@
                     </div>
                 </div>
                 <div class="date-content">
-                    <div style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
-                        <h4 style="color: #667eea; margin-bottom: 10px; font-size: 1em;">📆 Sabtu, 16 Mei 2026 — <span style="color: #764ba2;">Rp 140.000</span></h4>
-                        <div style="padding: 8px 12px; margin-bottom: 12px; background: #f0f7ff; border-radius: 6px; font-size: 0.9em;">
-                            📋 <strong>Pekerjaan:</strong> Angkat-angkat barang, memindahkan ke belakang
+                    <div class="date-inner-collapsible">
+                        <h4>
+                            <span>📆 Sabtu, 16 Mei 2026</span>
+                            <span style="font-size: 0.8em; color: #888;">1 tx</span>
+                            <span style="font-size: 0.8em; color: #999;">1u 🔨</span>
+                        </h4>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <strong style="color: #764ba2; font-size: 0.95em;">Rp 140.000</strong>
+                            <span class="arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="date-inner-content">
+                        <div style="padding: 10px 15px; margin-bottom: 12px; background: #f0f7ff; border-left: 4px solid #667eea; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9em;">📋 <strong>Pekerjaan:</strong> Angkat-angkat barang, memindahkan ke belakang</p>
                         </div>
                         <div style="padding-left: 10px; margin-bottom: 8px;">
                             <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">💰 Upah</h5>
@@ -1099,8 +1256,8 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin-top: 5px; padding: 12px 15px; background: #667eea10; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
-                        <span style="color: #667eea; font-weight: 600;">Total Minggu 1</span>
+                    <div style="margin-top: 10px; padding: 12px 15px; background: #667eea10; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #667eea; font-weight: 600;">Total Minggu 3</span>
                         <strong style="font-size: 1.1em; color: #667eea;">Rp 140.000</strong>
                     </div>
                 </div>

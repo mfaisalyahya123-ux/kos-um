@@ -333,6 +333,53 @@ const html = `<!DOCTYPE html>
             transition: max-height 0.5s ease-in;
             padding: 0 25px 25px 25px;
         }
+
+        .date-inner-collapsible {
+            background: #f8f9fa;
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid #667eea;
+        }
+        .date-inner-collapsible:hover {
+            background: #e8ecf1;
+        }
+        .date-inner-collapsible h4 {
+            color: #667eea;
+            font-size: 1em;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .date-inner-collapsible .arrow {
+            color: #667eea;
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
+        .date-inner-collapsible.active .arrow {
+            transform: rotate(-180deg);
+        }
+        .date-inner-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: #fdfdfd;
+            border-radius: 0 0 10px 10px;
+            margin-top: -4px;
+            margin-bottom: 8px;
+        }
+        .date-inner-content.active {
+            max-height: 2000px;
+            transition: max-height 0.5s ease-in;
+            padding: 15px 20px 15px 20px;
+        }
+
         .footer {
             background: #f8f9fa;
             padding: 20px;
@@ -658,8 +705,8 @@ function generateCategoryCards() {
 
 function generateDateSections() {
     let sections = '';
+    let weekCounter = 0;
     
-    // Helper: get Monday of the week for a given date
     function getWeekStart(dateStr) {
         const d = new Date(dateStr);
         const day = d.getDay();
@@ -669,7 +716,6 @@ function generateDateSections() {
         return mon.toISOString().split('T')[0];
     }
     
-    // Group dates into weeks
     const weekGroups = {};
     sortedDates.forEach(date => {
         const wk = getWeekStart(date);
@@ -677,14 +723,14 @@ function generateDateSections() {
         weekGroups[wk].push(date);
     });
     
-    // Sort weeks (newest first)
     const sortedWeeks = Object.keys(weekGroups).sort().reverse();
+    weekCounter = 0;
     
     sortedWeeks.forEach((weekStart, idx) => {
         const dates = weekGroups[weekStart].sort();
-        const weekNum = sortedWeeks.length - idx;
+        weekCounter++;
+        const weekNum = weekCounter;
         
-        // Calculate week total and count
         let weekTotal = 0;
         let txCount = 0;
         dates.forEach(d => {
@@ -694,16 +740,12 @@ function generateDateSections() {
             });
         });
         
-        // Format date range
         const firstDate = new Date(dates[0]);
         const lastDate = new Date(dates[dates.length - 1]);
         const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
-        let dateRange;
-        if (dates.length === 1) {
-            dateRange = `${firstDate.getDate()} ${months[firstDate.getMonth()]}`;
-        } else {
-            dateRange = `${firstDate.getDate()}-${lastDate.getDate()} ${months[lastDate.getMonth()]}`;
-        }
+        let dateRange = dates.length === 1
+            ? `${firstDate.getDate()} ${months[firstDate.getMonth()]}`
+            : `${firstDate.getDate()}-${lastDate.getDate()} ${months[lastDate.getMonth()]}`;
         
         // Week header
         sections += `
@@ -719,13 +761,35 @@ function generateDateSections() {
                 </div>
                 <div class="date-content">`;
         
-        // Per-date breakdown (oldest first)
-        dates.reverse().forEach(date => {
+        // Per-date mini collapsibles (oldest first)
+        dates.forEach(date => {
             const transactions = transactionsByDate[date];
             const dateTotal = transactions.reduce((sum, tx) => sum + tx.total, 0);
+            const txCountByCat = {};
+            transactions.forEach(tx => {
+                const cat = tx.category === 'Lain-lain' ? 'Jajan' : tx.category;
+                txCountByCat[cat] = (txCountByCat[cat] || 0) + 1;
+            });
+            const catSummary = Object.entries(txCountByCat).map(([k,v]) => `${v}${k[0].toLowerCase()}`).join(', ');
             const workDescription = data.daily_work && data.daily_work[date] ? data.daily_work[date] : '';
+            const workDot = workDescription ? ' 🔨' : '';
             
-            // Group by category
+            // Date mini header
+            sections += `
+                    <div class="date-inner-collapsible">
+                        <h4>
+                            <span>📆 ${formatDate(date)}</span>
+                            <span style="font-size: 0.8em; color: #888;">${transactions.length} tx</span>
+                            <span style="font-size: 0.8em; color: #999;">${catSummary}${workDot}</span>
+                        </h4>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <strong style="color: #764ba2; font-size: 0.95em;">${formatRupiah(dateTotal)}</strong>
+                            <span class="arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="date-inner-content">`;
+            
+            // Transaction details
             const byCategory = {};
             transactions.forEach(tx => {
                 const cat = tx.category === 'Lain-lain' ? 'Jajan' : tx.category;
@@ -733,14 +797,10 @@ function generateDateSections() {
                 byCategory[cat].push(tx);
             });
             
-            sections += `
-                    <div style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid #667eea;">
-                        <h4 style="color: #667eea; margin-bottom: 10px; font-size: 1em;">📆 ${formatDate(date)} — <span style="color: #764ba2;">${formatRupiah(dateTotal)}</span></h4>`;
-            
             if (workDescription) {
                 sections += `
-                        <div style="padding: 8px 12px; margin-bottom: 12px; background: #f0f7ff; border-radius: 6px; font-size: 0.9em;">
-                            📋 <strong>Pekerjaan:</strong> ${workDescription}
+                        <div style="padding: 10px 15px; margin-bottom: 12px; background: #f0f7ff; border-left: 4px solid #667eea; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9em;">📋 <strong>Pekerjaan:</strong> ${workDescription}</p>
                         </div>`;
             }
             
@@ -782,7 +842,7 @@ function generateDateSections() {
         
         // Week total footer
         sections += `
-                    <div style="margin-top: 5px; padding: 12px 15px; background: #667eea10; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="margin-top: 10px; padding: 12px 15px; background: #667eea10; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
                         <span style="color: #667eea; font-weight: 600;">Total Minggu ${weekNum}</span>
                         <strong style="font-size: 1.1em; color: #667eea;">${formatRupiah(weekTotal)}</strong>
                     </div>
