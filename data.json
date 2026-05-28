@@ -954,16 +954,64 @@
       "total": 6000,
       "notes": "",
       "funding_source": "Kas UM"
+    },
+    {
+      "id": 78,
+      "date": "2026-05-28",
+      "category": "Struktur Bangunan",
+      "description": "Beton Ulir TS-420 SNI 13 x 12 (25 btg) (Lantai 1 - Pondasi rumah)",
+      "quantity": 25,
+      "unit": "btg",
+      "price_per_unit": 136500,
+      "total": 3412500,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 79,
+      "date": "2026-05-28",
+      "category": "Struktur Bangunan",
+      "description": "Beton Ulir TS-420 SNI 10 x 12 (25 btg) (Lantai 1 - Pondasi rumah)",
+      "quantity": 25,
+      "unit": "btg",
+      "price_per_unit": 81000,
+      "total": 2025000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 80,
+      "date": "2026-05-28",
+      "category": "Struktur Bangunan",
+      "description": "Beton SNI 8 x 12 (48 btg) (Lantai 1 - Pondasi rumah)",
+      "quantity": 48,
+      "unit": "btg",
+      "price_per_unit": 46500,
+      "total": 2232000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 81,
+      "date": "2026-05-28",
+      "category": "Struktur Bangunan",
+      "description": "Beton SNI 6 x 12 (20 btg) (Lantai 1 - Pondasi rumah)",
+      "quantity": 20,
+      "unit": "btg",
+      "price_per_unit": 27750,
+      "total": 555000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
-    "total_spent": 26738530,
+    "total_spent": 34963030,
     "by_category": {
-      "Upah": 6910000,
+      "Upah": 7050000,
       "Lain-lain": 145000,
       "Material": 1953800,
       "Alat": 360000,
-      "Struktur Bangunan": 16752000,
+      "Struktur Bangunan": 24976500,
       "Jajan": 477730
     },
     "upah_breakdown": {
