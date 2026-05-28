@@ -596,11 +596,39 @@ function generateCategoryCards() {
                         </div>
                         <div class="category-details">
                             <div class="item-list" style="padding: 0 25px 25px 25px;">
-                                ${categoryDetails['Struktur Bangunan'].map(tx => `
-                                <div class="item">
-                                    <span>${tx.description} (${tx.quantity} ${tx.unit})</span>
-                                    <strong>${formatRupiah(tx.total)}</strong>
-                                </div>`).join('')}
+                                ${(() => {
+                                    // Group by Lantai tag in description
+                                    const groups = {};
+                                    categoryDetails['Struktur Bangunan'].forEach(tx => {
+                                        const match = tx.description.match(/\((Lantai \d+ - [^)]+)\)/);
+                                        const key = match ? match[1] : 'Lainnya';
+                                        if (!groups[key]) groups[key] = [];
+                                        groups[key].push(tx);
+                                    });
+                                    const sortedKeys = Object.keys(groups).sort((a,b) => {
+                                        if (a === 'Lainnya') return 1;
+                                        if (b === 'Lainnya') return -1;
+                                        return a.localeCompare(b);
+                                    });
+                                    let html = '';
+                                    sortedKeys.forEach(key => {
+                                        const items = groups[key];
+                                        const subtotal = items.reduce((s,tx) => s + tx.total, 0);
+                                        html += `
+                                    <div style="margin-bottom: 15px;">
+                                        <h4 style="color: #e67e22; font-size: 0.95em; margin-bottom: 8px; padding: 6px 10px; background: #fff8e1; border-radius: 6px;">
+                                            ${key === 'Lainnya' ? '📦 Lainnya' : '🏠 ' + key}
+                                            <span style="float: right; font-weight: 600; font-size: 0.9em;">${'Rp ' + subtotal.toLocaleString('id-ID')}</span>
+                                        </h4>
+                                        ${items.map(tx => `
+                                        <div class="item">
+                                            <span>${tx.description} (${tx.quantity} ${tx.unit})</span>
+                                            <strong>${formatRupiah(tx.total)}</strong>
+                                        </div>`).join('')}
+                                    </div>`;
+                                    });
+                                    return html;
+                                })()}
                             </div>
                         </div>
                     </div>`;
