@@ -614,20 +614,22 @@ function generateCategoryCards() {
                                     sortedKeys.forEach(key => {
                                         const items = groups[key];
                                         const subtotal = items.reduce((s,tx) => s + tx.total, 0);
+                                        const cleanDesc = (desc) => desc.replace(/\s*\(Lantai \d+ - [^)]+\)/, '');
                                         html += `
-                                    <div style="margin-bottom: 15px;">
-                                        <h4 style="color: #e67e22; font-size: 0.95em; margin-bottom: 8px; padding: 6px 10px; background: #fff8e1; border-radius: 6px;">
-                                            ${key === 'Lainnya' ? '📦 Lainnya' : '🏠 ' + key}
-                                            <span style="float: right; font-weight: 600; font-size: 0.9em;">${'Rp ' + subtotal.toLocaleString('id-ID')}</span>
-                                        </h4>
+                                    <div style="margin-bottom: 18px;">
+                                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: #fff8e1; border-radius: 6px; margin-bottom: 10px;">
+                                            <h4 style="color: #e67e22; font-size: 0.95em; margin: 0;">
+                                                ${key === 'Lainnya' ? '📦 Lainnya' : '🏠 ' + key}
+                                            </h4>
+                                            <strong style="color: #e67e22; font-size: 0.95em; white-space: nowrap;">${'Rp ' + subtotal.toLocaleString('id-ID')}</strong>
+                                        </div>
                                         ${items.map(tx => `
-                                        <div class="item">
-                                            <span>${tx.description} (${tx.quantity} ${tx.unit})</span>
-                                            <strong>${formatRupiah(tx.total)}</strong>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 6px 8px 6px 12px; margin-bottom: 2px; gap: 20px;">
+                                            <span style="flex: 1; text-align: left;">${cleanDesc(tx.description)} (${tx.quantity} ${tx.unit})</span>
+                                            <strong style="flex-shrink: 0; text-align: right; white-space: nowrap;">${formatRupiah(tx.total)}</strong>
                                         </div>`).join('')}
                                     </div>`;
-                                    });
-                                    return html;
+                                    });return html;
                                 })()}
                             </div>
                         </div>
