@@ -733,7 +733,7 @@ function generateDateSections() {
         weekGroups[wk].push(date);
     });
     
-    const sortedWeeks = Object.keys(weekGroups).sort().reverse();
+    const sortedWeeks = Object.keys(weekGroups).sort();
     weekCounter = 0;
     
     sortedWeeks.forEach((weekStart, idx) => {
