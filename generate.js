@@ -544,7 +544,17 @@ const html = `<!DOCTYPE html>
             });
         }
 
-        // Collapsible functionality for Category cards
+                // Collapsible functionality for inner Date sections
+        var dateInnerColl = document.getElementsByClassName("date-inner-collapsible");
+        for (var i = 0; i < dateInnerColl.length; i++) {
+            dateInnerColl[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                content.classList.toggle("active");
+            });
+        }
+
+// Collapsible functionality for Category cards
         var catHeaders = document.getElementsByClassName("category-header");
         for (var i = 0; i < catHeaders.length; i++) {
             catHeaders[i].addEventListener("click", function() {
