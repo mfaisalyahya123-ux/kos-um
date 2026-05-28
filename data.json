@@ -922,12 +922,12 @@
       "date": "2026-05-28",
       "category": "Upah",
       "subcategory": "Tukang",
-      "description": "2 tukang full day (Tohir, Tukang Baru)",
-      "quantity": 2,
+      "description": "1 tukang full day (Tohir)",
+      "quantity": 1,
       "unit": "orang",
       "price_per_unit": 135000,
-      "total": 270000,
-      "notes": "",
+      "total": 135000,
+      "notes": "Tukang Baru izin",
       "funding_source": "Uang Ayah"
     },
     {
@@ -957,18 +957,18 @@
     }
   ],
   "summary": {
-    "total_spent": 26867530,
+    "total_spent": 26738530,
     "by_category": {
-      "Upah": 7185000,
+      "Upah": 6910000,
       "Lain-lain": 145000,
       "Material": 1953800,
       "Alat": 360000,
       "Struktur Bangunan": 16752000,
-      "Jajan": 471730
+      "Jajan": 477730
     },
     "upah_breakdown": {
       "Kuli": 3600000,
-      "Tukang": 1485000,
+      "Tukang": 1350000,
       "Mandor": 1350000,
       "Harian": 610000
     }
@@ -1079,7 +1079,7 @@
         "attendance": {
           "2026-05-25": "hadir",
           "2026-05-26": "hadir",
-          "2026-05-28": "hadir"
+          "2026-05-28": "izin"
         }
       }
     ]
