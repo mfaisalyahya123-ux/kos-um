@@ -12,7 +12,8 @@
     "2026-05-25": "Mandor rakit begel. 2 tukang rakit besi. 2 kuli gali pondasi, 1 kuli usung material keluar.",
     "2026-05-27": "Libur",
     "2026-05-28": "2 tukang rakit besi. Mandor dan kuli nyambung besi ke pondasi. Kuli sisanya gali pondasi.",
-    "2026-05-26": "Mandor rakit begel. 2 tukang rakit besi. 2 kuli gali pondasi, 1 kuli usung material keluar."
+    "2026-05-26": "Mandor rakit begel. 2 tukang rakit besi. 2 kuli gali pondasi, 1 kuli usung material keluar.",
+    "2026-05-29": ""
   },
   "transactions": [
     {
@@ -1002,6 +1003,84 @@
       "total": 555000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 82,
+      "date": "2026-05-29",
+      "category": "Upah",
+      "subcategory": "Mandor",
+      "description": "Upah mandor",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 150000,
+      "total": 150000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 83,
+      "date": "2026-05-29",
+      "category": "Upah",
+      "subcategory": "Kuli",
+      "description": "Upah kuli (Rizky, Rudi, Adit)",
+      "quantity": 3,
+      "unit": "orang",
+      "price_per_unit": 120000,
+      "total": 360000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 84,
+      "date": "2026-05-29",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Coral 1 pickup",
+      "quantity": 1,
+      "unit": "pickup",
+      "price_per_unit": 250000,
+      "total": 250000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 85,
+      "date": "2026-05-29",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Semen merah putih",
+      "quantity": 20,
+      "unit": "pcs",
+      "price_per_unit": 46000,
+      "total": 920000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 86,
+      "date": "2026-05-29",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Triplek 9mm",
+      "quantity": 5,
+      "unit": "pcs",
+      "price_per_unit": 95000,
+      "total": 475000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 87,
+      "date": "2026-05-29",
+      "category": "Lain-lain",
+      "subcategory": "",
+      "description": "Jasa buang material",
+      "quantity": 1,
+      "unit": "kali",
+      "price_per_unit": 130000,
+      "total": 130000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
@@ -1040,7 +1119,8 @@
           "2026-05-23": "hadir",
           "2026-05-26": "hadir",
           "2026-05-28": "hadir",
-          "2026-05-25": "hadir"
+          "2026-05-25": "hadir",
+          "2026-05-29": "hadir"
         }
       }
     ],
@@ -1057,7 +1137,8 @@
           "2026-05-23": "hadir",
           "2026-05-25": "hadir",
           "2026-05-26": "hadir",
-          "2026-05-28": "hadir"
+          "2026-05-28": "hadir",
+          "2026-05-29": "izin"
         }
       }
     ],
@@ -1074,7 +1155,8 @@
           "2026-05-23": "hadir",
           "2026-05-25": "hadir",
           "2026-05-26": "hadir",
-          "2026-05-28": "hadir"
+          "2026-05-28": "hadir",
+          "2026-05-29": "izin"
         }
       },
       {
@@ -1089,7 +1171,8 @@
           "2026-05-23": "hadir",
           "2026-05-25": "hadir",
           "2026-05-26": "hadir",
-          "2026-05-28": "hadir"
+          "2026-05-28": "hadir",
+          "2026-05-29": "hadir"
         }
       },
       {
@@ -1104,7 +1187,8 @@
           "2026-05-23": "hadir",
           "2026-05-25": "izin",
           "2026-05-26": "hadir",
-          "2026-05-28": "hadir"
+          "2026-05-28": "hadir",
+          "2026-05-29": "hadir"
         }
       },
       {
@@ -1116,7 +1200,8 @@
           "2026-05-23": "hadir",
           "2026-05-25": "hadir",
           "2026-05-26": "hadir",
-          "2026-05-28": "hadir"
+          "2026-05-28": "hadir",
+          "2026-05-29": "hadir"
         }
       }
     ],
@@ -1127,7 +1212,8 @@
         "attendance": {
           "2026-05-25": "hadir",
           "2026-05-26": "hadir",
-          "2026-05-28": "izin"
+          "2026-05-28": "izin",
+          "2026-05-29": "izin"
         }
       }
     ]
