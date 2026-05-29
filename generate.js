@@ -76,6 +76,7 @@ const html = `<!DOCTYPE html>
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
+            padding-bottom: 100px;
             min-height: 100vh;
         }
         .container {
@@ -84,7 +85,7 @@ const html = `<!DOCTYPE html>
             background: white;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
+            overflow: visible;
         }
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -185,7 +186,7 @@ const html = `<!DOCTYPE html>
             background: white;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
+            overflow: visible;
         }
         .category-header {
             padding: 25px;
