@@ -76,7 +76,6 @@ const html = `<!DOCTYPE html>
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
-            padding-bottom: 100px;
             min-height: 100vh;
         }
         .container {
@@ -85,7 +84,7 @@ const html = `<!DOCTYPE html>
             background: white;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: visible;
+            overflow-y: auto;
         }
         .header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -135,6 +134,7 @@ const html = `<!DOCTYPE html>
         }
         .content {
             padding: 40px;
+            padding-bottom: 80px;
         }
         .section {
             margin-bottom: 40px;
@@ -181,12 +181,13 @@ const html = `<!DOCTYPE html>
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             margin-top: 20px;
+            align-items: start;
         }
         .category-card {
             background: white;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            overflow: visible;
+            overflow: hidden;
         }
         .category-header {
             padding: 25px;
