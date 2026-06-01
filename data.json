@@ -1239,6 +1239,45 @@
       "total": 480000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 100,
+      "date": "2026-06-01",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Koral",
+      "quantity": 1,
+      "unit": "pickup",
+      "price_per_unit": 250000,
+      "total": 250000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 101,
+      "date": "2026-06-01",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Semen Merah Putih",
+      "quantity": 20,
+      "unit": "sak",
+      "price_per_unit": 46000,
+      "total": 920000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 102,
+      "date": "2026-06-01",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Bata merah",
+      "quantity": 200,
+      "unit": "pcs",
+      "price_per_unit": 620,
+      "total": 124000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
