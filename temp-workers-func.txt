@@ -1,0 +1,531 @@
+function generateCategoryCards() {
+    let cards = '';
+    
+    // Struktur Bangunan
+    if (data.summary.by_category['Struktur Bangunan'] > 0) {
+        const percentage = ((data.summary.by_category['Struktur Bangunan'] / data.summary.total_spent) * 100).toFixed(1);
+        cards += `
+                    <div class="category-card">
+                        <div class="category-header">
+                            <h3>
+                                <span>🏗️ Struktur Bangunan</span>
+                                <span class="arrow">▼</span>
+                            </h3>
+                            <div class="total">${formatRupiah(data.summary.by_category['Struktur Bangunan'])}</div>
+                            <div class="percentage">${percentage}% dari total</div>
+                        </div>
+                        <div class="category-details">
+                            <div class="item-list" style="padding: 0 25px 25px 25px;">
+                                ${(() => {
+                                    // Group by Lantai tag in description
+                                    const groups = {};
+                                    categoryDetails['Struktur Bangunan'].forEach(tx => {
+                                        const match = tx.description.match(/\((Lantai \d+ - [^)]+)\)/);
+                                        const key = match ? match[1] : 'Lainnya';
+                                        if (!groups[key]) groups[key] = [];
+                                        groups[key].push(tx);
+                                    });
+                                    const sortedKeys = Object.keys(groups).sort((a,b) => {
+                                        if (a === 'Lainnya') return 1;
+                                        if (b === 'Lainnya') return -1;
+                                        return a.localeCompare(b);
+                                    });
+                                    let html = '';
+                                    sortedKeys.forEach(key => {
+                                        const items = groups[key];
+                                        const subtotal = items.reduce((s,tx) => s + tx.total, 0);
+                                        const cleanDesc = (desc) => desc.replace(/\s*\(Lantai \d+ - [^)]+\)/, '');
+                                        html += `
+                                    <div style="margin-bottom: 18px;">
+                                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; background: #fff8e1; border-radius: 6px; margin-bottom: 10px;">
+                                            <h4 style="color: #e67e22; font-size: 0.95em; margin: 0;">
+                                                ${key === 'Lainnya' ? '📦 Lainnya' : '🏠 ' + key}
+                                            </h4>
+                                            <strong style="color: #e67e22; font-size: 0.95em; white-space: nowrap;">${'Rp ' + subtotal.toLocaleString('id-ID')}</strong>
+                                        </div>
+                                        ${items.map(tx => `
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 6px 8px 6px 12px; margin-bottom: 2px; gap: 20px;">
+                                            <span style="flex: 1; text-align: left;">${cleanDesc(tx.description)} (${tx.quantity} ${tx.unit})</span>
+                                            <strong style="flex-shrink: 0; text-align: right; white-space: nowrap;">${formatRupiah(tx.total)}</strong>
+                                        </div>`).join('')}
+                                    </div>`;
+                                    });return html;
+                                })()}
+                            </div>
+                        </div>
+                    </div>`;
+    }
+    
+    // Upah
+    if (data.summary.by_category.Upah > 0) {
+        const percentage = ((data.summary.by_category.Upah / data.summary.total_spent) * 100).toFixed(1);
+        const kuliTotal = categoryDetails.Upah.Kuli.reduce((sum, tx) => sum + tx.total, 0);
+        const tukangTotal = categoryDetails.Upah.Tukang.reduce((sum, tx) => sum + tx.total, 0);
+        const mandorTotal = categoryDetails.Upah.Mandor.reduce((sum, tx) => sum + tx.total, 0);
+        const harianTotal = categoryDetails.Upah.Harian ? categoryDetails.Upah.Harian.reduce((sum, tx) => sum + tx.total, 0) : 0;
+        
+        cards += `
+                    <div class="category-card">
+                        <div class="category-header">
+                            <h3>
+                                <span>👷 Upah Pekerja</span>
+                                <span class="arrow">▼</span>
+                            </h3>
+                            <div class="total">${formatRupiah(data.summary.by_category.Upah)}</div>
+                            <div class="percentage">${percentage}% dari total</div>
+                        </div>
+                        <div class="category-details">
+                            <div class="item-list" style="padding: 0 25px 25px 25px;">
+                                ${kuliTotal > 0 ? `<div class="item"><span>Kuli</span><strong>${formatRupiah(kuliTotal)}</strong></div>` : ''}
+                                ${tukangTotal > 0 ? `<div class="item"><span>Tukang</span><strong>${formatRupiah(tukangTotal)}</strong></div>` : ''}
+                                ${mandorTotal > 0 ? `<div class="item"><span>Mandor</span><strong>${formatRupiah(mandorTotal)}</strong></div>` : ''}
+                                ${harianTotal > 0 ? `<div class="item"><span>Harian (Jasa)</span><strong>${formatRupiah(harianTotal)}</strong></div>` : ''}
+                            </div>
+                        </div>
+                    </div>`;
+    }
+    
+    // Material
+    if (data.summary.by_category.Material > 0) {
+        const percentage = ((data.summary.by_category.Material / data.summary.total_spent) * 100).toFixed(1);
+        cards += `
+                    <div class="category-card">
+                        <div class="category-header">
+                            <h3>
+                                <span>🧱 Material</span>
+                                <span class="arrow">▼</span>
+                            </h3>
+                            <div class="total">${formatRupiah(data.summary.by_category.Material)}</div>
+                            <div class="percentage">${percentage}% dari total</div>
+                        </div>
+                        <div class="category-details">
+                            <div class="item-list" style="padding: 0 25px 25px 25px;">
+                                ${categoryDetails.Material.map(tx => `
+                                <div class="item">
+                                    <span>${tx.description} (${tx.quantity}${tx.unit})</span>
+                                    <strong>${formatRupiah(tx.total)}</strong>
+                                </div>`).join('')}
+                            </div>
+                        </div>
+                    </div>`;
+    }
+    
+    // Alat
+    if (data.summary.by_category.Alat > 0) {
+        const percentage = ((data.summary.by_category.Alat / data.summary.total_spent) * 100).toFixed(1);
+        cards += `
+                    <div class="category-card">
+                        <div class="category-header">
+                            <h3>
+                                <span>🔧 Alat</span>
+                                <span class="arrow">▼</span>
+                            </h3>
+                            <div class="total">${formatRupiah(data.summary.by_category.Alat)}</div>
+                            <div class="percentage">${percentage}% dari total</div>
+                        </div>
+                        <div class="category-details">
+                            <div class="item-list" style="padding: 0 25px 25px 25px;">
+                                ${categoryDetails.Alat.map(tx => `
+                                <div class="item">
+                                    <span>${tx.description}</span>
+                                    <strong>${formatRupiah(tx.total)}</strong>
+                                </div>`).join('')}
+                            </div>
+                        </div>
+                    </div>`;
+    }
+    
+    // Jajan & Minuman
+    if (data.summary.by_category.Jajan > 0) {
+        const percentage = ((data.summary.by_category.Jajan / data.summary.total_spent) * 100).toFixed(1);
+        cards += `
+                    <div class="category-card">
+                        <div class="category-header">
+                            <h3>
+                                <span>🍔 Jajan & Minuman</span>
+                                <span class="arrow">▼</span>
+                            </h3>
+                            <div class="total">${formatRupiah(data.summary.by_category.Jajan)}</div>
+                            <div class="percentage">${percentage}% dari total</div>
+                        </div>
+                        <div class="category-details">
+                            <div class="item-list" style="padding: 0 25px 25px 25px;">
+                                ${categoryDetails.Jajan.map(tx => `
+                                <div class="item">
+                                    <span>${tx.description}</span>
+                                    <strong>${formatRupiah(tx.total)}</strong>
+                                </div>`).join('')}
+                            </div>
+                        </div>
+                    </div>`;
+    }
+    
+    return cards;
+}
+
+function generateDateSections() {
+    let sections = '';
+    let weekCounter = 0;
+    
+    function getWeekStart(dateStr) {
+        const d = new Date(dateStr);
+        const day = d.getDay();
+        const diff = day === 0 ? 1 : (1 - day);
+        const mon = new Date(d);
+        mon.setDate(d.getDate() + diff);
+        return mon.toISOString().split('T')[0];
+    }
+    
+    const weekGroups = {};
+    sortedDates.forEach(date => {
+        const wk = getWeekStart(date);
+        if (!weekGroups[wk]) weekGroups[wk] = [];
+        weekGroups[wk].push(date);
+    });
+    
+    const sortedWeeks = Object.keys(weekGroups).sort();
+    weekCounter = 0;
+    
+    sortedWeeks.forEach((weekStart, idx) => {
+        const dates = weekGroups[weekStart].sort();
+        weekCounter++;
+        const weekNum = weekCounter;
+        
+        let weekTotal = 0;
+        let txCount = 0;
+        dates.forEach(d => {
+            transactionsByDate[d].forEach(tx => {
+                weekTotal += tx.total;
+                txCount++;
+            });
+        });
+        
+        const firstDate = new Date(dates[0]);
+        const lastDate = new Date(dates[dates.length - 1]);
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+        let dateRange = dates.length === 1
+            ? `${firstDate.getDate()} ${months[firstDate.getMonth()]}`
+            : `${firstDate.getDate()}-${lastDate.getDate()} ${months[lastDate.getMonth()]}`;
+        
+        // Week header
+        sections += `
+                <div class="date-collapsible" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                    <div style="text-align: left;">
+                        <h3 style="color: white; margin: 0;">📅 Minggu ${weekNum} (${dateRange})</h3>
+                        <span style="font-size: 0.85em; opacity: 0.9;">${txCount} transaksi · ${dates.length} hari</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 15px;">
+                        <strong style="font-size: 1.2em;">${formatRupiah(weekTotal)}</strong>
+                        <span class="arrow" style="color: white;">▼</span>
+                    </div>
+                </div>
+                <div class="date-content">`;
+        
+        // Per-date mini collapsibles (oldest first)
+        dates.forEach(date => {
+            const transactions = transactionsByDate[date];
+            const dateTotal = transactions.reduce((sum, tx) => sum + tx.total, 0);
+            const txCountByCat = {};
+            transactions.forEach(tx => {
+                const cat = tx.category === 'Lain-lain' ? 'Jajan' : tx.category;
+                txCountByCat[cat] = (txCountByCat[cat] || 0) + 1;
+            });
+            const catSummary = Object.entries(txCountByCat).map(([k,v]) => `${v}${k[0].toLowerCase()}`).join(', ');
+            const workDescription = data.daily_work && data.daily_work[date] ? data.daily_work[date] : '';
+            const workDot = workDescription ? ' 🔨' : '';
+            
+            // Date mini header
+            sections += `
+                    <div class="date-inner-collapsible">
+                        <h4>
+                            <span>📆 ${formatDate(date)}</span>
+                            <span style="font-size: 0.8em; color: #888;">${transactions.length} tx</span>
+                            <span style="font-size: 0.8em; color: #999;">${catSummary}${workDot}</span>
+                        </h4>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <strong style="color: #764ba2; font-size: 0.95em;">${formatRupiah(dateTotal)}</strong>
+                            <span class="arrow">▼</span>
+                        </div>
+                    </div>
+                    <div class="date-inner-content">`;
+            
+            // Transaction details
+            const byCategory = {};
+            transactions.forEach(tx => {
+                const cat = tx.category === 'Lain-lain' ? 'Jajan' : tx.category;
+                if (!byCategory[cat]) byCategory[cat] = [];
+                byCategory[cat].push(tx);
+            });
+            
+            if (workDescription) {
+                sections += `
+                        <div style="padding: 10px 15px; margin-bottom: 12px; background: #f0f7ff; border-left: 4px solid #667eea; border-radius: 6px;">
+                            <p style="margin: 0; font-size: 0.9em;">📋 <strong>Pekerjaan:</strong> ${workDescription}</p>
+                        </div>`;
+            }
+            
+            Object.keys(byCategory).forEach(category => {
+                const icon = {
+                    'Jajan': '🍔',
+                    'Material': '🧱',
+                    'Upah': '💰',
+                    'Alat': '🔧',
+                    'Struktur Bangunan': '🏗️'
+                }[category] || '📦';
+                
+                sections += `
+                        <div style="padding-left: 10px; margin-bottom: 8px;">
+                            <h5 style="color: #764ba2; margin-bottom: 5px; font-size: 0.9em;">${icon} ${category}</h5>`;
+                
+                byCategory[category].forEach(tx => {
+                    let desc = tx.description;
+                    if (tx.subcategory) {
+                        desc = `${tx.quantity} ${tx.subcategory.toLowerCase()} ${tx.description.includes('full day') ? 'full day' : tx.description} (${tx.quantity} orang @ ${formatRupiah(tx.price_per_unit)})`;
+                    } else if (tx.quantity > 1 || tx.unit !== 'item') {
+                        desc = `${tx.description} (${tx.quantity} ${tx.unit}${tx.price_per_unit ? ' @ ' + formatRupiah(tx.price_per_unit) : ''})`;
+                    }
+                    
+                    sections += `
+                            <div class="item" style="font-size: 0.85em;">
+                                <span>${desc}</span>
+                                <strong>${formatRupiah(tx.total)}</strong>
+                            </div>`;
+                });
+                
+                sections += `
+                        </div>`;
+            });
+            
+            sections += `
+                    </div>`;
+        });
+        
+        // Week total footer
+        sections += `
+                    <div style="margin-top: 10px; padding: 12px 15px; background: #667eea10; border-radius: 8px; display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: #667eea; font-weight: 600;">Total Minggu ${weekNum}</span>
+                        <strong style="font-size: 1.1em; color: #667eea;">${formatRupiah(weekTotal)}</strong>
+                    </div>
+                </div>`;
+    });
+    
+    return sections;
+}
+
+function generateTransactionRows() {
+    // Reverse transactions to show newest first
+    const reversedTransactions = [...data.transactions].reverse();
+    return reversedTransactions.map((tx, index) => {
+        const category = tx.subcategory ? `${tx.category} - ${tx.subcategory}` : tx.category;
+        const rowNumber = data.transactions.length - index; // Keep original numbering
+        const fundingSource = tx.funding_source || 'Kas UM'; // default
+        return `
+                        <tr>
+                            <td>${rowNumber}</td>
+                            <td>${formatDate(tx.date)}</td>
+                            <td>${category}</td>
+                            <td>${tx.description}</td>
+                            <td>${tx.quantity} ${tx.unit}</td>
+                            <td>${tx.notes || '-'}</td>
+                            <td>${formatRupiah(tx.price_per_unit)}</td>
+                            <td><strong>${formatRupiah(tx.total)}</strong></td>
+                            <td><span style="padding: 4px 8px; background: ${fundingSource === 'Uang Ayah' ? '#e3f2fd' : '#fff3e0'}; border-radius: 4px; font-size: 0.9em;">${fundingSource}</span></td>
+                        </tr>`;
+    }).join('');
+}
+
+function generateFundingSourceBreakdown() {
+    // Calculate total per funding source
+    const byFundingSource = {};
+    data.transactions.forEach(tx => {
+        const source = tx.funding_source || 'Kas UM';
+        if (!byFundingSource[source]) {
+            byFundingSource[source] = { total: 0, transactions: [] };
+        }
+        byFundingSource[source].total += tx.total;
+        byFundingSource[source].transactions.push(tx);
+    });
+    
+    const totalAll = data.summary.total_spent;
+    
+    let html = '<div class="category-breakdown">';
+    
+    Object.keys(byFundingSource).sort().forEach(source => {
+        const total = byFundingSource[source].total;
+        const percentage = ((total / totalAll) * 100).toFixed(1);
+        const bgColor = source === 'Uang Ayah' ? '#e3f2fd' : '#fff3e0';
+        // Sort transactions by total (descending)
+        const transactions = byFundingSource[source].transactions.sort((a, b) => b.total - a.total);
+        
+        html += `
+                    <div class="category-card">
+                        <div class="category-header">
+                            <h3>
+                                <span style="padding: 6px 12px; background: ${bgColor}; border-radius: 6px;">${source}</span>
+                                <span class="arrow">▼</span>
+                            </h3>
+                            <div class="total">${formatRupiah(total)}</div>
+                            <div class="percentage">${percentage}% dari total</div>
+                        </div>
+                        <div class="category-details">
+                            <div class="item-list" style="padding: 0 25px 25px 25px;">
+                                ${transactions.map(tx => {
+                                    const category = tx.subcategory ? `${tx.category} - ${tx.subcategory}` : tx.category;
+                                    return `
+                                    <div class="item">
+                                        <span>${formatDate(tx.date)} | ${category} | ${tx.description}</span>
+                                        <strong>${formatRupiah(tx.total)}</strong>
+                                    </div>`;
+                                }).join('')}
+                            </div>
+                        </div>
+                    </div>`;
+    });
+    
+    html += '</div>';
+    return html;
+}
+
+function generateWeeklyPayroll() {
+    const wageTransactions = data.transactions.filter(tx => tx.category === 'Upah');
+    const weeks = {};
+    
+    // Group by week
+    wageTransactions.forEach(tx => {
+        const date = new Date(tx.date);
+        const dayOfWeek = date.getDay();
+        const daysUntilSaturday = dayOfWeek === 0 ? 6 : (6 - dayOfWeek);
+        const saturday = new Date(date);
+        saturday.setDate(date.getDate() + daysUntilSaturday);
+        const saturdayStr = saturday.toISOString().split('T')[0];
+        
+        if (!weeks[saturdayStr]) {
+            weeks[saturdayStr] = { kuli: [], tukang: [], mandor: [] };
+        }
+        
+        if (tx.subcategory) {
+            const key = tx.subcategory.toLowerCase();
+            if (weeks[saturdayStr][key]) {
+                weeks[saturdayStr][key].push(tx);
+            }
+        }
+    });
+    
+    const sortedWeeks = Object.keys(weeks).sort().reverse();
+    let html = '';
+    
+    sortedWeeks.forEach((saturdayStr, index) => {
+        const week = weeks[saturdayStr];
+        const saturday = new Date(saturdayStr);
+        const monday = new Date(saturday);
+        monday.setDate(saturday.getDate() - 5);
+        
+        // Calculate totals
+        const kuliTotal = week.kuli.reduce((sum, tx) => sum + tx.total, 0);
+        const tukangTotal = week.tukang.reduce((sum, tx) => sum + tx.total, 0);
+        const mandorTotal = week.mandor.reduce((sum, tx) => sum + tx.total, 0);
+        const weekTotal = kuliTotal + tukangTotal + mandorTotal;
+        
+        // Count total attendance (sum of quantities)
+        const kuliAbsensi = week.kuli.reduce((sum, tx) => sum + tx.quantity, 0);
+        const tukangAbsensi = week.tukang.reduce((sum, tx) => sum + tx.quantity, 0);
+        const mandorAbsensi = week.mandor.reduce((sum, tx) => sum + tx.quantity, 0);
+        
+        // Format tanggal singkat
+        const mondayDate = monday.getDate();
+        const saturdayDate = saturday.getDate();
+        const monthName = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'][saturday.getMonth()];
+        
+        html += `
+                <div class="category-card">
+                    <div class="category-header">
+                        <h3>
+                            <span>📅 Minggu ${sortedWeeks.length - index} (${mondayDate}-${saturdayDate} ${monthName})</span>
+                            <span class="arrow">▼</span>
+                        </h3>
+                        <div class="total">${formatRupiah(weekTotal)}</div>
+                        <div class="percentage">Dibayar Sabtu ${saturdayDate} ${monthName}</div>
+                    </div>
+                    <div class="category-details">
+                        <div class="item-list" style="padding: 0 25px 25px 25px;">`;
+        
+        // Kuli section with nested details
+        if (kuliTotal > 0) {
+            html += `
+                            <div class="category-card" style="margin-bottom: 10px;">
+                                <div class="category-header" style="padding: 10px 15px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                        <span>Kuli (${kuliAbsensi} Absensi × ${formatRupiah(data.wage_rates.kuli_full_day)})</span>
+                                        <strong>${formatRupiah(kuliTotal)}</strong>
+                                        <span class="arrow" style="margin-left: 10px;">▼</span>
+                                    </div>
+                                </div>
+                                <div class="category-details">
+                                    <div style="padding: 10px 15px; font-size: 0.9em;">
+                                        ${week.kuli.map(tx => `
+                                        <div class="item" style="padding: 5px 0;">
+                                            <span>${formatDate(tx.date)}: ${tx.quantity} kuli</span>
+                                            <strong>${formatRupiah(tx.total)}</strong>
+                                        </div>`).join('')}
+                                    </div>
+                                </div>
+                            </div>`;
+        }
+        
+        // Tukang section with nested details
+        if (tukangTotal > 0) {
+            html += `
+                            <div class="category-card" style="margin-bottom: 10px;">
+                                <div class="category-header" style="padding: 10px 15px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                        <span>Tukang (${tukangAbsensi} Absensi × ${formatRupiah(data.wage_rates.tukang_full_day)})</span>
+                                        <strong>${formatRupiah(tukangTotal)}</strong>
+                                        <span class="arrow" style="margin-left: 10px;">▼</span>
+                                    </div>
+                                </div>
+                                <div class="category-details">
+                                    <div style="padding: 10px 15px; font-size: 0.9em;">
+                                        ${week.tukang.map(tx => `
+                                        <div class="item" style="padding: 5px 0;">
+                                            <span>${formatDate(tx.date)}: ${tx.quantity} tukang</span>
+                                            <strong>${formatRupiah(tx.total)}</strong>
+                                        </div>`).join('')}
+                                    </div>
+                                </div>
+                            </div>`;
+        }
+        
+        // Mandor section with nested details
+        if (mandorTotal > 0) {
+            html += `
+                            <div class="category-card" style="margin-bottom: 10px;">
+                                <div class="category-header" style="padding: 10px 15px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                                        <span>Mandor (${mandorAbsensi} Absensi × ${formatRupiah(data.wage_rates.mandor_full_day)})</span>
+                                        <strong>${formatRupiah(mandorTotal)}</strong>
+                                        <span class="arrow" style="margin-left: 10px;">▼</span>
+                                    </div>
+                                </div>
+                                <div class="category-details">
+                                    <div style="padding: 10px 15px; font-size: 0.9em;">
+                                        ${week.mandor.map(tx => `
+                                        <div class="item" style="padding: 5px 0;">
+                                            <span>${formatDate(tx.date)}: ${tx.quantity} mandor</span>
+                                            <strong>${formatRupiah(tx.total)}</strong>
+                                        </div>`).join('')}
+                                    </div>
+                                </div>
+                            </div>`;
+        }
+        
+        html += `
+                        </div>
+                    </div>
+                </div>`;
+    });
+    
+    return html;
+}
+
+
+
