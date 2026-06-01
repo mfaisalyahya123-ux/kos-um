@@ -14,7 +14,8 @@
     "2026-05-28": "2 tukang rakit besi. Mandor dan kuli nyambung besi ke pondasi. Kuli sisanya gali pondasi.",
     "2026-05-26": "Mandor rakit begel. 2 tukang rakit besi. 2 kuli gali pondasi, 1 kuli usung material keluar.",
     "2026-05-29": "Persiapan ngecor - kuli dan mandor",
-    "2026-05-30": "Kuli 4 ngecor, tukang baru 2 dan mandor buat bekesting"
+    "2026-05-30": "Kuli 4 ngecor, tukang baru 2 dan mandor buat bekesting",
+    "2026-06-01": ""
   },
   "transactions": [
     {
@@ -1186,6 +1187,19 @@
       "total": 19000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 96,
+      "date": "2026-06-01",
+      "category": "Alat",
+      "subcategory": "",
+      "description": "Linggis",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 65000,
+      "total": 65000,
+      "notes": "",
+      "funding_source": "Uang UM"
     }
   ],
   "summary": {
@@ -1205,7 +1219,7 @@
       "Harian": 610000
     },
     "start_date": "2026-05-16",
-    "end_date": "2026-05-30"
+    "end_date": "2026-06-01"
   },
   "wage_rates": {
     "kuli_full_day": 120000,
@@ -1234,41 +1248,12 @@
     ],
     "tukang": [
       {
-        "name": "Tohir",
+        "name": "Rojin",
         "rate": 135000,
-        "attendance": {
-          "2026-05-18": "hadir",
-          "2026-05-19": "hadir",
-          "2026-05-20": "izin",
-          "2026-05-21": "hadir",
-          "2026-05-22": "hadir",
-          "2026-05-23": "hadir",
-          "2026-05-25": "hadir",
-          "2026-05-26": "hadir",
-          "2026-05-28": "hadir",
-          "2026-05-29": "izin",
-          "2026-05-30": "izin"
-        }
+        "attendance": {}
       }
     ],
     "kuli": [
-      {
-        "name": "Zaky",
-        "rate": 120000,
-        "attendance": {
-          "2026-05-18": "hadir",
-          "2026-05-19": "hadir",
-          "2026-05-20": "izin",
-          "2026-05-21": "hadir",
-          "2026-05-22": "hadir",
-          "2026-05-23": "hadir",
-          "2026-05-25": "hadir",
-          "2026-05-26": "hadir",
-          "2026-05-28": "hadir",
-          "2026-05-29": "izin",
-          "2026-05-30": "hadir"
-        }
-      },
       {
         "name": "Rizky",
         "rate": 120000,
@@ -1316,6 +1301,61 @@
           "2026-05-29": "hadir",
           "2026-05-30": "hadir"
         }
+      },
+      {
+        "name": "Adi",
+        "rate": 120000,
+        "attendance": {}
+      }
+    ],
+    "tukang_baru": [
+      {
+        "name": "Supar",
+        "rate": 135000,
+        "attendance": {
+          "2026-05-30": "hadir"
+        }
+      }
+    ]
+  },
+  "former_workers": {
+    "mandor": [],
+    "tukang": [
+      {
+        "name": "Tohir",
+        "rate": 135000,
+        "attendance": {
+          "2026-05-18": "hadir",
+          "2026-05-19": "hadir",
+          "2026-05-20": "izin",
+          "2026-05-21": "hadir",
+          "2026-05-22": "hadir",
+          "2026-05-23": "hadir",
+          "2026-05-25": "hadir",
+          "2026-05-26": "hadir",
+          "2026-05-28": "hadir",
+          "2026-05-29": "izin",
+          "2026-05-30": "izin"
+        }
+      }
+    ],
+    "kuli": [
+      {
+        "name": "Zaky",
+        "rate": 120000,
+        "attendance": {
+          "2026-05-18": "hadir",
+          "2026-05-19": "hadir",
+          "2026-05-20": "izin",
+          "2026-05-21": "hadir",
+          "2026-05-22": "hadir",
+          "2026-05-23": "hadir",
+          "2026-05-25": "hadir",
+          "2026-05-26": "hadir",
+          "2026-05-28": "hadir",
+          "2026-05-29": "izin",
+          "2026-05-30": "hadir"
+        }
       }
     ],
     "tukang_baru": [
@@ -1328,13 +1368,6 @@
           "2026-05-28": "izin",
           "2026-05-29": "izin",
           "2026-05-30": "izin"
-        }
-      },
-      {
-        "name": "Tukang Baru 2",
-        "rate": 135000,
-        "attendance": {
-          "2026-05-30": "hadir"
         }
       }
     ]
