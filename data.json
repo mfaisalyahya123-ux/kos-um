@@ -1200,6 +1200,45 @@
       "total": 65000,
       "notes": "",
       "funding_source": "Uang UM"
+    },
+    {
+      "id": 97,
+      "date": "2026-06-01",
+      "category": "Upah",
+      "subcategory": "Mandor",
+      "description": "Upah mandor Heri",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 150000,
+      "total": 150000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 98,
+      "date": "2026-06-01",
+      "category": "Upah",
+      "subcategory": "Tukang",
+      "description": "Upah tukang (Rojin, Supar)",
+      "quantity": 2,
+      "unit": "orang",
+      "price_per_unit": 135000,
+      "total": 270000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 99,
+      "date": "2026-06-01",
+      "category": "Upah",
+      "subcategory": "Kuli",
+      "description": "Upah kuli (Rizky, Rudi, Adit, Adi)",
+      "quantity": 4,
+      "unit": "orang",
+      "price_per_unit": 120000,
+      "total": 480000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
@@ -1242,7 +1281,8 @@
           "2026-05-28": "hadir",
           "2026-05-25": "hadir",
           "2026-05-29": "hadir",
-          "2026-05-30": "hadir"
+          "2026-05-30": "hadir",
+          "2026-06-01": "hadir"
         }
       }
     ],
@@ -1250,7 +1290,9 @@
       {
         "name": "Rojin",
         "rate": 135000,
-        "attendance": {}
+        "attendance": {
+          "2026-06-01": "hadir"
+        }
       }
     ],
     "kuli": [
@@ -1268,7 +1310,8 @@
           "2026-05-26": "hadir",
           "2026-05-28": "hadir",
           "2026-05-29": "hadir",
-          "2026-05-30": "hadir"
+          "2026-05-30": "hadir",
+          "2026-06-01": "hadir"
         }
       },
       {
@@ -1285,7 +1328,8 @@
           "2026-05-26": "hadir",
           "2026-05-28": "hadir",
           "2026-05-29": "hadir",
-          "2026-05-30": "hadir"
+          "2026-05-30": "hadir",
+          "2026-06-01": "hadir"
         }
       },
       {
@@ -1299,13 +1343,16 @@
           "2026-05-26": "hadir",
           "2026-05-28": "hadir",
           "2026-05-29": "hadir",
-          "2026-05-30": "hadir"
+          "2026-05-30": "hadir",
+          "2026-06-01": "hadir"
         }
       },
       {
         "name": "Adi",
         "rate": 120000,
-        "attendance": {}
+        "attendance": {
+          "2026-06-01": "hadir"
+        }
       }
     ],
     "tukang_baru": [
@@ -1313,7 +1360,8 @@
         "name": "Supar",
         "rate": 135000,
         "attendance": {
-          "2026-05-30": "hadir"
+          "2026-05-30": "hadir",
+          "2026-06-01": "hadir"
         }
       }
     ]
