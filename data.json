@@ -15,7 +15,8 @@
     "2026-05-26": "Mandor rakit begel. 2 tukang rakit besi. 2 kuli gali pondasi, 1 kuli usung material keluar.",
     "2026-05-29": "Persiapan ngecor - kuli dan mandor",
     "2026-05-30": "Kuli 4 ngecor, tukang baru 2 dan mandor buat bekesting",
-    "2026-06-01": ""
+    "2026-06-01": "",
+    "2026-06-02": ""
   },
   "transactions": [
     {
@@ -1278,6 +1279,84 @@
       "total": 124000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 103,
+      "date": "2026-06-02",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Paku reng",
+      "quantity": 2,
+      "unit": "kg",
+      "price_per_unit": 19000,
+      "total": 38000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 104,
+      "date": "2026-06-02",
+      "category": "Jajan",
+      "subcategory": "",
+      "description": "Tepung",
+      "quantity": 2,
+      "unit": "kg",
+      "price_per_unit": 12000,
+      "total": 24000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 105,
+      "date": "2026-06-02",
+      "category": "Jajan",
+      "subcategory": "",
+      "description": "Gula",
+      "quantity": 1,
+      "unit": "kg",
+      "price_per_unit": 17500,
+      "total": 17500,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 106,
+      "date": "2026-06-02",
+      "category": "Upah",
+      "subcategory": "Mandor",
+      "description": "Upah mandor Heri",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 150000,
+      "total": 150000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 107,
+      "date": "2026-06-02",
+      "category": "Upah",
+      "subcategory": "Tukang",
+      "description": "Upah tukang (Rojin, Supar)",
+      "quantity": 2,
+      "unit": "orang",
+      "price_per_unit": 135000,
+      "total": 270000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 108,
+      "date": "2026-06-02",
+      "category": "Upah",
+      "subcategory": "Kuli",
+      "description": "Upah kuli (Rizky, Rudi, Adit, Adi)",
+      "quantity": 4,
+      "unit": "orang",
+      "price_per_unit": 120000,
+      "total": 480000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
@@ -1321,7 +1400,8 @@
           "2026-05-25": "hadir",
           "2026-05-29": "hadir",
           "2026-05-30": "hadir",
-          "2026-06-01": "hadir"
+          "2026-06-01": "hadir",
+          "2026-06-02": "hadir"
         }
       }
     ],
@@ -1330,7 +1410,8 @@
         "name": "Rojin",
         "rate": 135000,
         "attendance": {
-          "2026-06-01": "hadir"
+          "2026-06-01": "hadir",
+          "2026-06-02": "hadir"
         }
       },
       {
@@ -1386,7 +1467,8 @@
           "2026-05-28": "hadir",
           "2026-05-29": "hadir",
           "2026-05-30": "hadir",
-          "2026-06-01": "hadir"
+          "2026-06-01": "hadir",
+          "2026-06-02": "hadir"
         }
       },
       {
@@ -1404,7 +1486,8 @@
           "2026-05-28": "hadir",
           "2026-05-29": "hadir",
           "2026-05-30": "hadir",
-          "2026-06-01": "hadir"
+          "2026-06-01": "hadir",
+          "2026-06-02": "hadir"
         }
       },
       {
@@ -1419,14 +1502,16 @@
           "2026-05-28": "hadir",
           "2026-05-29": "hadir",
           "2026-05-30": "hadir",
-          "2026-06-01": "hadir"
+          "2026-06-01": "hadir",
+          "2026-06-02": "hadir"
         }
       },
       {
         "name": "Adi",
         "rate": 120000,
         "attendance": {
-          "2026-06-01": "hadir"
+          "2026-06-01": "hadir",
+          "2026-06-02": "hadir"
         }
       }
     ],
@@ -1448,7 +1533,8 @@
         "rate": 135000,
         "attendance": {
           "2026-05-30": "hadir",
-          "2026-06-01": "hadir"
+          "2026-06-01": "hadir",
+          "2026-06-02": "hadir"
         }
       }
     ]
