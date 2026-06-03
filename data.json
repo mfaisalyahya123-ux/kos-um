@@ -16,7 +16,8 @@
     "2026-05-29": "Persiapan ngecor - kuli dan mandor",
     "2026-05-30": "Kuli 4 ngecor, tukang baru 2 dan mandor buat bekesting",
     "2026-06-01": "",
-    "2026-06-02": ""
+    "2026-06-02": "",
+    "2026-06-03": ""
   },
   "transactions": [
     {
@@ -1357,6 +1358,45 @@
       "total": 480000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 109,
+      "date": "2026-06-03",
+      "category": "Upah",
+      "subcategory": "Mandor",
+      "description": "Upah mandor Heri",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 150000,
+      "total": 150000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 110,
+      "date": "2026-06-03",
+      "category": "Upah",
+      "subcategory": "Tukang",
+      "description": "Upah tukang (Rojin, Supar)",
+      "quantity": 2,
+      "unit": "orang",
+      "price_per_unit": 135000,
+      "total": 270000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 111,
+      "date": "2026-06-03",
+      "category": "Upah",
+      "subcategory": "Kuli",
+      "description": "Upah kuli (Rizky, Rudi, Adit, Adi)",
+      "quantity": 4,
+      "unit": "orang",
+      "price_per_unit": 120000,
+      "total": 480000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
@@ -1401,7 +1441,8 @@
           "2026-05-29": "hadir",
           "2026-05-30": "hadir",
           "2026-06-01": "hadir",
-          "2026-06-02": "hadir"
+          "2026-06-02": "hadir",
+          "2026-06-03": "hadir"
         }
       }
     ],
@@ -1411,7 +1452,8 @@
         "rate": 135000,
         "attendance": {
           "2026-06-01": "hadir",
-          "2026-06-02": "hadir"
+          "2026-06-02": "hadir",
+          "2026-06-03": "hadir"
         }
       },
       {
@@ -1468,7 +1510,8 @@
           "2026-05-29": "hadir",
           "2026-05-30": "hadir",
           "2026-06-01": "hadir",
-          "2026-06-02": "hadir"
+          "2026-06-02": "hadir",
+          "2026-06-03": "hadir"
         }
       },
       {
@@ -1487,7 +1530,8 @@
           "2026-05-29": "hadir",
           "2026-05-30": "hadir",
           "2026-06-01": "hadir",
-          "2026-06-02": "hadir"
+          "2026-06-02": "hadir",
+          "2026-06-03": "hadir"
         }
       },
       {
@@ -1503,7 +1547,8 @@
           "2026-05-29": "hadir",
           "2026-05-30": "hadir",
           "2026-06-01": "hadir",
-          "2026-06-02": "hadir"
+          "2026-06-02": "hadir",
+          "2026-06-03": "hadir"
         }
       },
       {
@@ -1511,7 +1556,8 @@
         "rate": 120000,
         "attendance": {
           "2026-06-01": "hadir",
-          "2026-06-02": "hadir"
+          "2026-06-02": "hadir",
+          "2026-06-03": "hadir"
         }
       }
     ],
@@ -1534,7 +1580,8 @@
         "attendance": {
           "2026-05-30": "hadir",
           "2026-06-01": "hadir",
-          "2026-06-02": "hadir"
+          "2026-06-02": "hadir",
+          "2026-06-03": "hadir"
         }
       }
     ]
