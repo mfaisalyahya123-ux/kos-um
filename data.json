@@ -1397,6 +1397,32 @@
       "total": 480000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 112,
+      "date": "2026-06-03",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Paku cor 3dm",
+      "quantity": 1,
+      "unit": "dus",
+      "price_per_unit": 20000,
+      "total": 20000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 113,
+      "date": "2026-06-03",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Paku pring",
+      "quantity": 2,
+      "unit": "kg",
+      "price_per_unit": 17000,
+      "total": 34000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
