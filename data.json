@@ -1433,9 +1433,9 @@
       "description": "Jasa buang material",
       "quantity": 1,
       "unit": "item",
-      "price_per_unit": 0,
-      "total": 0,
-      "notes": "Belum ada nilai nominal",
+      "price_per_unit": 130000,
+      "total": 130000,
+      "notes": "",
       "funding_source": "Uang Ayah"
     },
     {
