@@ -17,7 +17,8 @@
     "2026-05-30": "Kuli 4 ngecor, tukang baru 2 dan mandor buat bekesting",
     "2026-06-01": "",
     "2026-06-02": "",
-    "2026-06-03": ""
+    "2026-06-03": "",
+    "2026-06-04": ""
   },
   "transactions": [
     {
@@ -1423,6 +1424,162 @@
       "total": 34000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 114,
+      "date": "2026-06-04",
+      "category": "Upah",
+      "subcategory": "Harian",
+      "description": "Jasa buang material",
+      "quantity": 1,
+      "unit": "item",
+      "price_per_unit": 0,
+      "total": 0,
+      "notes": "Belum ada nilai nominal",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 115,
+      "date": "2026-06-04",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Pasir hitam Dhuhri",
+      "quantity": 1,
+      "unit": "pickup",
+      "price_per_unit": 280000,
+      "total": 280000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 116,
+      "date": "2026-06-04",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Semen Gresik",
+      "quantity": 10,
+      "unit": "sak",
+      "price_per_unit": 60000,
+      "total": 600000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 117,
+      "date": "2026-06-04",
+      "category": "Jajan",
+      "subcategory": "",
+      "description": "Minuman Kuku Bima",
+      "quantity": 1,
+      "unit": "item",
+      "price_per_unit": 9000,
+      "total": 9000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 118,
+      "date": "2026-06-04",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Koral",
+      "quantity": 1,
+      "unit": "pickup",
+      "price_per_unit": 250000,
+      "total": 250000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 119,
+      "date": "2026-06-04",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Semen Merah Putih",
+      "quantity": 10,
+      "unit": "sak",
+      "price_per_unit": 46000,
+      "total": 460000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 120,
+      "date": "2026-06-04",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Adibond",
+      "quantity": 5,
+      "unit": "kg",
+      "price_per_unit": 65000,
+      "total": 325000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 121,
+      "date": "2026-06-04",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Triplek 9mm",
+      "quantity": 5,
+      "unit": "lembar",
+      "price_per_unit": 95000,
+      "total": 475000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 122,
+      "date": "2026-06-04",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Bata merah",
+      "quantity": 175,
+      "unit": "pcs",
+      "price_per_unit": 629,
+      "total": 110000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 123,
+      "date": "2026-06-04",
+      "category": "Upah",
+      "subcategory": "Mandor",
+      "description": "Upah mandor Heri",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 150000,
+      "total": 150000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 124,
+      "date": "2026-06-04",
+      "category": "Upah",
+      "subcategory": "Tukang",
+      "description": "Upah tukang (Rojin, Supar)",
+      "quantity": 2,
+      "unit": "orang",
+      "price_per_unit": 135000,
+      "total": 270000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 125,
+      "date": "2026-06-04",
+      "category": "Upah",
+      "subcategory": "Kuli",
+      "description": "Upah kuli (Rizky, Rudi, Adit, Adi)",
+      "quantity": 4,
+      "unit": "orang",
+      "price_per_unit": 120000,
+      "total": 480000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
@@ -1468,7 +1625,8 @@
           "2026-05-30": "hadir",
           "2026-06-01": "hadir",
           "2026-06-02": "hadir",
-          "2026-06-03": "hadir"
+          "2026-06-03": "hadir",
+          "2026-06-04": "hadir"
         }
       }
     ],
@@ -1479,7 +1637,8 @@
         "attendance": {
           "2026-06-01": "hadir",
           "2026-06-02": "hadir",
-          "2026-06-03": "hadir"
+          "2026-06-03": "hadir",
+          "2026-06-04": "hadir"
         }
       },
       {
@@ -1537,7 +1696,8 @@
           "2026-05-30": "hadir",
           "2026-06-01": "hadir",
           "2026-06-02": "hadir",
-          "2026-06-03": "hadir"
+          "2026-06-03": "hadir",
+          "2026-06-04": "hadir"
         }
       },
       {
@@ -1557,7 +1717,8 @@
           "2026-05-30": "hadir",
           "2026-06-01": "hadir",
           "2026-06-02": "hadir",
-          "2026-06-03": "hadir"
+          "2026-06-03": "hadir",
+          "2026-06-04": "hadir"
         }
       },
       {
@@ -1574,7 +1735,8 @@
           "2026-05-30": "hadir",
           "2026-06-01": "hadir",
           "2026-06-02": "hadir",
-          "2026-06-03": "hadir"
+          "2026-06-03": "hadir",
+          "2026-06-04": "hadir"
         }
       },
       {
@@ -1583,7 +1745,8 @@
         "attendance": {
           "2026-06-01": "hadir",
           "2026-06-02": "hadir",
-          "2026-06-03": "hadir"
+          "2026-06-03": "hadir",
+          "2026-06-04": "hadir"
         }
       }
     ],
@@ -1607,7 +1770,8 @@
           "2026-05-30": "hadir",
           "2026-06-01": "hadir",
           "2026-06-02": "hadir",
-          "2026-06-03": "hadir"
+          "2026-06-03": "hadir",
+          "2026-06-04": "hadir"
         }
       }
     ]
