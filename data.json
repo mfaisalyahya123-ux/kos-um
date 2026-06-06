@@ -1686,6 +1686,56 @@
       "total": 480000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 134,
+      "date": "2026-06-06",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Coral",
+      "quantity": 1,
+      "unit": "pickup",
+      "price_per_unit": 280000,
+      "total": 280000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 135,
+      "date": "2026-06-06",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Pasir hitam Dhuhri",
+      "quantity": 1,
+      "unit": "truk",
+      "price_per_unit": 1850000,
+      "total": 1850000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 136,
+      "date": "2026-06-05",
+      "category": "Material",
+      "description": "Paku pring Dhuhri",
+      "quantity": 5,
+      "unit": "kg",
+      "price_per_unit": 18000,
+      "total": 90000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 137,
+      "date": "2026-06-05",
+      "category": "Material",
+      "description": "Paku cor Dhuhri",
+      "quantity": 2,
+      "unit": "dus",
+      "price_per_unit": 20000,
+      "total": 40000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
