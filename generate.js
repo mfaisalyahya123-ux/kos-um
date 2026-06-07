@@ -15,6 +15,9 @@ function formatNumber(num) {
     return num.toLocaleString('id-ID');
 }
 
+// ----- Dynamic Grand Total -----
+const GRAND_TOTAL = data.transactions.reduce((sum, tx) => sum + (tx.total || 0), 0);
+
 // Group transactions by date
 const transactionsByDate = {};
 data.transactions.forEach(tx => {
@@ -35,30 +38,9 @@ function formatDate(dateStr) {
     return `${days[date.getDay()]}, ${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
 }
 
-// Calculate category breakdown with details
+// ----- Category breakdown with fallback -----
 const categoryDetails = {
-    'Struktur Bangunan': [],
-    'Upah': { Kuli: [], Tukang: [], Mandor: [] },
-    'Material': [],
-    'Alat': [],
-    'Jajan': []
-};
-
-data.transactions.forEach(tx => {
-    if (tx.category === 'Upah' && tx.subcategory) {
-        if (!categoryDetails.Upah[tx.subcategory]) {
-            categoryDetails.Upah[tx.subcategory] = [];
-        }
-        categoryDetails.Upah[tx.subcategory].push(tx);
-    } else {
-        const category = tx.category === 'Lain-lain' ? 'Jajan' : tx.category;
-        if (!Array.isArray(categoryDetails[category])) {
-            categoryDetails[category] = [];
-        }
-        categoryDetails[category].push(tx);
-    }
-});
-
+    '
 // Generate HTML
 const html = `<!DOCTYPE html>
 <html lang="id">
