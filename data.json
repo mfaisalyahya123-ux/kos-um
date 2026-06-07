@@ -1739,20 +1739,22 @@
     }
   ],
   "summary": {
-    "total_spent": 34963030,
+    "total_spent": 35093030,
     "by_category": {
       "Upah": 7050000,
       "Lain-lain": 145000,
-      "Material": 1953800,
+      "Material": 2083800,
       "Alat": 360000,
       "Struktur Bangunan": 24976500,
       "Jajan": 477730
     },
     "upah_breakdown": {
-      "Kuli": 3600000,
-      "Tukang": 1350000,
-      "Mandor": 1350000,
-      "Harian": 610000
+            "Kuli": 7320000,
+            "Tukang": 2970000,
+            "Mandor": 2550000,
+            "Harian": 0,
+            "total": 12840000
+
     },
     "start_date": "2026-05-16",
     "end_date": "2026-06-01"
