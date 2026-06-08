@@ -27,6 +27,7 @@
       "id": 1,
       "date": "2026-05-16",
       "category": "Upah",
+      "subcategory": "Harian",
       "description": "2 kuli setengah hari",
       "quantity": 2,
       "unit": "orang",
@@ -1736,6 +1737,54 @@
       "total": 40000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 138,
+      "date": "2026-06-08",
+      "category": "Material",
+      "description": "Isolasi listrik",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 4000,
+      "total": 4000,
+      "notes": "",
+      "funding_source": "Kas UM"
+    },
+    {
+      "id": 139,
+      "date": "2026-06-08",
+      "category": "Material",
+      "description": "Inbow dus listrik",
+      "quantity": 2,
+      "unit": "pcs",
+      "price_per_unit": 9000,
+      "total": 18000,
+      "notes": "",
+      "funding_source": "Kas UM"
+    },
+    {
+      "id": 140,
+      "date": "2026-06-08",
+      "category": "Material",
+      "description": "Paku pring Dhuhri",
+      "quantity": 5,
+      "unit": "kg",
+      "price_per_unit": 18000,
+      "total": 90000,
+      "notes": "",
+      "funding_source": "Kas UM"
+    },
+    {
+      "id": 141,
+      "date": "2026-06-08",
+      "category": "Material",
+      "description": "Adibond Dhuhri",
+      "quantity": 1,
+      "unit": "kg",
+      "price_per_unit": 69000,
+      "total": 69000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
