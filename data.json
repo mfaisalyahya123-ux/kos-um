@@ -22,7 +22,8 @@
     "2026-06-05": "",
     "2026-06-06": "",
     "2026-06-08": "Semua tukang hadir kecuali Adi izin",
-    "2026-06-09": "Adi dan Rizky izin, sisanya masuk"
+    "2026-06-09": "Adi dan Rizky izin, sisanya masuk",
+    "2026-06-10": "Adi berhenti kerja (end date 9 Jun)"
   },
   "transactions": [
     {
@@ -2071,7 +2072,8 @@
           "2026-06-06": "hadir",
           "2026-06-08": "izin",
           "2026-06-09": "izin"
-        }
+        },
+        "end_date": "2026-06-09"
       }
     ],
     "tukang_baru": [
