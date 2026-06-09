@@ -1865,6 +1865,18 @@
       "total": 150000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 148,
+      "date": "2026-06-09",
+      "category": "Jajan",
+      "description": "Tepung",
+      "quantity": 2,
+      "unit": "kg",
+      "price_per_unit": 10000,
+      "total": 20000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
