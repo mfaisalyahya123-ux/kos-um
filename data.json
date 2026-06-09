@@ -21,7 +21,8 @@
     "2026-06-04": "",
     "2026-06-05": "",
     "2026-06-06": "",
-    "2026-06-08": "Semua tukang hadir kecuali Adi izin"
+    "2026-06-08": "Semua tukang hadir kecuali Adi izin",
+    "2026-06-09": "Adi dan Rizky izin, sisanya masuk"
   },
   "transactions": [
     {
@@ -1825,6 +1826,45 @@
       "total": 150000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 145,
+      "date": "2026-06-09",
+      "category": "Upah",
+      "subcategory": "Kuli",
+      "description": "Upah kuli (Rudi, Adit)",
+      "quantity": 2,
+      "unit": "orang",
+      "price_per_unit": 120000,
+      "total": 240000,
+      "notes": "Adi & Rizky izin",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 146,
+      "date": "2026-06-09",
+      "category": "Upah",
+      "subcategory": "Tukang",
+      "description": "Upah tukang (Rojin, Supar)",
+      "quantity": 2,
+      "unit": "orang",
+      "price_per_unit": 135000,
+      "total": 270000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 147,
+      "date": "2026-06-09",
+      "category": "Upah",
+      "subcategory": "Mandor",
+      "description": "Upah mandor Heri",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 150000,
+      "total": 150000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
@@ -1875,7 +1915,8 @@
           "2026-06-04": "hadir",
           "2026-06-05": "hadir",
           "2026-06-06": "hadir",
-          "2026-06-08": "hadir"
+          "2026-06-08": "hadir",
+          "2026-06-09": "hadir"
         }
       }
     ],
@@ -1890,7 +1931,8 @@
           "2026-06-04": "hadir",
           "2026-06-05": "izin",
           "2026-06-06": "hadir",
-          "2026-06-08": "hadir"
+          "2026-06-08": "hadir",
+          "2026-06-09": "hadir"
         }
       },
       {
@@ -1907,7 +1949,8 @@
           "2026-05-26": "hadir",
           "2026-05-28": "hadir",
           "2026-05-29": "izin",
-          "2026-05-30": "izin"
+          "2026-05-30": "izin",
+          "2026-06-09": "hadir"
         },
         "end_date": "2026-05-31"
       }
@@ -1927,7 +1970,8 @@
           "2026-05-26": "hadir",
           "2026-05-28": "hadir",
           "2026-05-29": "izin",
-          "2026-05-30": "hadir"
+          "2026-05-30": "hadir",
+          "2026-06-09": "hadir"
         },
         "end_date": "2026-05-31"
       },
@@ -1952,7 +1996,8 @@
           "2026-06-04": "hadir",
           "2026-06-05": "hadir",
           "2026-06-06": "hadir",
-          "2026-06-08": "hadir"
+          "2026-06-08": "hadir",
+          "2026-06-09": "izin"
         }
       },
       {
@@ -1976,7 +2021,8 @@
           "2026-06-04": "hadir",
           "2026-06-05": "hadir",
           "2026-06-06": "hadir",
-          "2026-06-08": "hadir"
+          "2026-06-08": "hadir",
+          "2026-06-09": "hadir"
         }
       },
       {
@@ -1997,7 +2043,8 @@
           "2026-06-04": "hadir",
           "2026-06-05": "hadir",
           "2026-06-06": "hadir",
-          "2026-06-08": "hadir"
+          "2026-06-08": "hadir",
+          "2026-06-09": "hadir"
         }
       },
       {
@@ -2010,7 +2057,8 @@
           "2026-06-04": "hadir",
           "2026-06-05": "hadir",
           "2026-06-06": "hadir",
-          "2026-06-08": "izin"
+          "2026-06-08": "izin",
+          "2026-06-09": "izin"
         }
       }
     ],
@@ -2023,7 +2071,8 @@
           "2026-05-26": "hadir",
           "2026-05-28": "izin",
           "2026-05-29": "izin",
-          "2026-05-30": "izin"
+          "2026-05-30": "izin",
+          "2026-06-09": "hadir"
         },
         "end_date": "2026-05-31"
       },
@@ -2038,7 +2087,8 @@
           "2026-06-04": "hadir",
           "2026-06-05": "hadir",
           "2026-06-06": "hadir",
-          "2026-06-08": "hadir"
+          "2026-06-08": "hadir",
+          "2026-06-09": "hadir"
         }
       }
     ]
