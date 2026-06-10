@@ -1917,6 +1917,18 @@
       "total": 150000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 152,
+      "date": "2026-06-10",
+      "category": "Alat",
+      "description": "Linggis",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 85000,
+      "total": 85000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
