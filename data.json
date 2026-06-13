@@ -2049,6 +2049,66 @@
       "total": 150000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 162,
+      "date": "2026-06-12",
+      "category": "Material",
+      "description": "Triplek 9mm Hendra",
+      "quantity": 5,
+      "unit": "lembar",
+      "price_per_unit": 95000,
+      "total": 475000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 163,
+      "date": "2026-06-12",
+      "category": "Material",
+      "description": "Besi 6 SNI Hendra",
+      "quantity": 10,
+      "unit": "btg",
+      "price_per_unit": 29000,
+      "total": 290000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 164,
+      "date": "2026-06-12",
+      "category": "Material",
+      "description": "Koral Hendra",
+      "quantity": 1,
+      "unit": "pickup",
+      "price_per_unit": 250000,
+      "total": 250000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 165,
+      "date": "2026-06-12",
+      "category": "Material",
+      "description": "Semen Gresik Hendra",
+      "quantity": 10,
+      "unit": "pcs",
+      "price_per_unit": 60000,
+      "total": 600000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 166,
+      "date": "2026-06-12",
+      "category": "Material",
+      "description": "Semen Merah Putih Hendra",
+      "quantity": 10,
+      "unit": "pcs",
+      "price_per_unit": 46000,
+      "total": 460000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
