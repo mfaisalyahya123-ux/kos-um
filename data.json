@@ -25,7 +25,8 @@
     "2026-06-09": "Adi dan Rizky izin, sisanya masuk",
     "2026-06-10": "Semua masuk, Fadil kuli baru",
     "2026-06-11": "Semua masuk, Ahmad kuli baru",
-    "2026-06-12": "Fadil izin, sisanya masuk"
+    "2026-06-12": "Fadil izin, sisanya masuk",
+    "2026-06-13": "Fadil berhenti kerja (terakhir 12 Jun)"
   },
   "transactions": [
     {
@@ -2226,7 +2227,8 @@
           "2026-06-10": "hadir",
           "2026-06-11": "hadir",
           "2026-06-12": "izin"
-        }
+        },
+        "end_date": "2026-06-12"
       },
       {
         "name": "Ahmad",
