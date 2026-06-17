@@ -26,7 +26,8 @@
     "2026-06-10": "Semua masuk, Fadil kuli baru",
     "2026-06-11": "Semua masuk, Ahmad kuli baru",
     "2026-06-12": "Fadil izin, sisanya masuk",
-    "2026-06-13": "Semua masuk"
+    "2026-06-13": "Semua masuk",
+    "2026-06-15": "Semua masuk"
   },
   "transactions": [
     {
@@ -2109,6 +2110,129 @@
       "total": 460000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 167,
+      "date": "2026-06-15",
+      "category": "Material",
+      "description": "PVC 4 Rucika",
+      "quantity": 3,
+      "unit": "pcs",
+      "price_per_unit": 167000,
+      "total": 501000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 168,
+      "date": "2026-06-15",
+      "category": "Material",
+      "description": "PVC 2 Rucika",
+      "quantity": 2,
+      "unit": "pcs",
+      "price_per_unit": 70000,
+      "total": 140000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 169,
+      "date": "2026-06-15",
+      "category": "Material",
+      "description": "Usuk 4x6 (104 biji - 8)",
+      "quantity": 1,
+      "unit": "m3",
+      "price_per_unit": 2400000,
+      "total": 2400000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 170,
+      "date": "2026-06-15",
+      "category": "Material",
+      "description": "Paku 3",
+      "quantity": 10,
+      "unit": "kg",
+      "price_per_unit": 20000,
+      "total": 200000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 171,
+      "date": "2026-06-15",
+      "category": "Material",
+      "description": "Paku 1 1/4",
+      "quantity": 2,
+      "unit": "kg",
+      "price_per_unit": 20000,
+      "total": 40000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 172,
+      "date": "2026-06-15",
+      "category": "Material",
+      "description": "Bambu 4m",
+      "quantity": 50,
+      "unit": "pcs",
+      "price_per_unit": 15000,
+      "total": 750000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 173,
+      "date": "2026-06-15",
+      "category": "Material",
+      "description": "Triplek 9mm",
+      "quantity": 10,
+      "unit": "lembar",
+      "price_per_unit": 95000,
+      "total": 950000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 174,
+      "date": "2026-06-15",
+      "category": "Upah",
+      "subcategory": "Kuli",
+      "description": "Upah kuli (Rizky, Rudi, Adit, Ahmad)",
+      "quantity": 4,
+      "unit": "orang",
+      "price_per_unit": 120000,
+      "total": 480000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 175,
+      "date": "2026-06-15",
+      "category": "Upah",
+      "subcategory": "Tukang",
+      "description": "Upah tukang (Rojin, Supar)",
+      "quantity": 2,
+      "unit": "orang",
+      "price_per_unit": 135000,
+      "total": 270000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 176,
+      "date": "2026-06-15",
+      "category": "Upah",
+      "subcategory": "Mandor",
+      "description": "Upah mandor Heri",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 150000,
+      "total": 150000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
@@ -2164,7 +2288,8 @@
           "2026-06-10": "hadir",
           "2026-06-11": "hadir",
           "2026-06-12": "hadir",
-          "2026-06-13": "hadir"
+          "2026-06-13": "hadir",
+          "2026-06-15": "hadir"
         }
       }
     ],
@@ -2184,7 +2309,8 @@
           "2026-06-10": "hadir",
           "2026-06-11": "hadir",
           "2026-06-12": "hadir",
-          "2026-06-13": "hadir"
+          "2026-06-13": "hadir",
+          "2026-06-15": "hadir"
         }
       },
       {
@@ -2251,7 +2377,8 @@
           "2026-06-10": "hadir",
           "2026-06-11": "hadir",
           "2026-06-12": "hadir",
-          "2026-06-13": "hadir"
+          "2026-06-13": "hadir",
+          "2026-06-15": "hadir"
         }
       },
       {
@@ -2280,7 +2407,8 @@
           "2026-06-10": "hadir",
           "2026-06-11": "hadir",
           "2026-06-12": "hadir",
-          "2026-06-13": "hadir"
+          "2026-06-13": "hadir",
+          "2026-06-15": "hadir"
         }
       },
       {
@@ -2306,7 +2434,8 @@
           "2026-06-10": "hadir",
           "2026-06-11": "hadir",
           "2026-06-12": "hadir",
-          "2026-06-13": "hadir"
+          "2026-06-13": "hadir",
+          "2026-06-15": "hadir"
         }
       },
       {
@@ -2340,7 +2469,8 @@
         "attendance": {
           "2026-06-11": "hadir",
           "2026-06-12": "hadir",
-          "2026-06-13": "hadir"
+          "2026-06-13": "hadir",
+          "2026-06-15": "hadir"
         }
       }
     ],
@@ -2373,7 +2503,8 @@
           "2026-06-10": "hadir",
           "2026-06-11": "hadir",
           "2026-06-12": "hadir",
-          "2026-06-13": "hadir"
+          "2026-06-13": "hadir",
+          "2026-06-15": "hadir"
         }
       }
     ]
