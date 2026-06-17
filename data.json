@@ -2233,6 +2233,31 @@
       "total": 150000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 177,
+      "date": "2026-06-15",
+      "category": "Upah",
+      "subcategory": "Harian",
+      "description": "Jasa buang material",
+      "quantity": 1,
+      "unit": "item",
+      "price_per_unit": 140000,
+      "total": 140000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 178,
+      "date": "2026-06-15",
+      "category": "Material",
+      "description": "Bata merah",
+      "quantity": 300,
+      "unit": "pcs",
+      "price_per_unit": 650,
+      "total": 195000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
