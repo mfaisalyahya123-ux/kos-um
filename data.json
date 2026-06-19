@@ -2386,11 +2386,11 @@
       "date": "2026-06-19",
       "category": "Upah",
       "subcategory": "Tukang",
-      "description": "Upah tukang (Sugeng, Paidi, Habib, Supar)",
-      "quantity": 4,
+      "description": "Upah tukang (Sugeng, Habib, Supar)",
+      "quantity": 3,
       "unit": "orang",
       "price_per_unit": 175000,
-      "total": 700000,
+      "total": 525000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2581,7 +2581,6 @@
         "rate": 175000,
         "attendance": {
           "2026-06-15": "hadir",
-          "2026-06-19": "hadir",
           "2026-06-18": "hadir"
         }
       },
