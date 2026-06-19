@@ -2208,8 +2208,8 @@
       "description": "Upah kuli (Rizky, Rudi, Adit, Ahmad)",
       "quantity": 4,
       "unit": "orang",
-      "price_per_unit": 120000,
-      "total": 480000,
+      "price_per_unit": 160000,
+      "total": 640000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2221,8 +2221,8 @@
       "description": "Upah tukang (Rojin, Supar)",
       "quantity": 2,
       "unit": "orang",
-      "price_per_unit": 135000,
-      "total": 270000,
+      "price_per_unit": 180000,
+      "total": 360000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2234,8 +2234,8 @@
       "description": "Upah mandor Heri",
       "quantity": 1,
       "unit": "orang",
-      "price_per_unit": 150000,
-      "total": 150000,
+      "price_per_unit": 200000,
+      "total": 200000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
