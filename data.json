@@ -2208,8 +2208,8 @@
       "description": "Upah kuli (Riski, Adit, Achmad, Wari)",
       "quantity": 4,
       "unit": "orang",
-      "price_per_unit": 160000,
-      "total": 640000,
+      "price_per_unit": 155000,
+      "total": 620000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2221,8 +2221,8 @@
       "description": "Upah tukang (Supar, Sugeng, Habib)",
       "quantity": 3,
       "unit": "orang",
-      "price_per_unit": 180000,
-      "total": 540000,
+      "price_per_unit": 175000,
+      "total": 525000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2234,8 +2234,8 @@
       "description": "Upah mandor Heri",
       "quantity": 1,
       "unit": "orang",
-      "price_per_unit": 200000,
-      "total": 200000,
+      "price_per_unit": 195000,
+      "total": 195000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2272,8 +2272,8 @@
       "description": "Upah kuli (Riski, Adit, Achmad, Wari)",
       "quantity": 4,
       "unit": "orang",
-      "price_per_unit": 160000,
-      "total": 640000,
+      "price_per_unit": 155000,
+      "total": 620000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2285,8 +2285,8 @@
       "description": "Upah tukang (Sugeng, Habib, Supar)",
       "quantity": 3,
       "unit": "orang",
-      "price_per_unit": 180000,
-      "total": 540000,
+      "price_per_unit": 175000,
+      "total": 525000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2298,8 +2298,8 @@
       "description": "Upah mandor (Heri)",
       "quantity": 1,
       "unit": "orang",
-      "price_per_unit": 200000,
-      "total": 200000,
+      "price_per_unit": 195000,
+      "total": 195000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2311,8 +2311,8 @@
       "description": "Upah kuli (Riski, Adit, Achmad, Wari)",
       "quantity": 4,
       "unit": "orang",
-      "price_per_unit": 160000,
-      "total": 640000,
+      "price_per_unit": 155000,
+      "total": 620000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2324,8 +2324,8 @@
       "description": "Upah tukang (Sugeng, Habib, Supar)",
       "quantity": 3,
       "unit": "orang",
-      "price_per_unit": 180000,
-      "total": 540000,
+      "price_per_unit": 175000,
+      "total": 525000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2337,8 +2337,8 @@
       "description": "Upah mandor (Heri)",
       "quantity": 1,
       "unit": "orang",
-      "price_per_unit": 200000,
-      "total": 200000,
+      "price_per_unit": 195000,
+      "total": 195000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2389,8 +2389,8 @@
       "description": "Upah kuli (Riski, Adit, Achmad, Wari)",
       "quantity": 4,
       "unit": "orang",
-      "price_per_unit": 160000,
-      "total": 640000,
+      "price_per_unit": 155000,
+      "total": 620000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2402,8 +2402,8 @@
       "description": "Upah tukang (Sugeng, Paidi, Habib, Supar)",
       "quantity": 4,
       "unit": "orang",
-      "price_per_unit": 180000,
-      "total": 720000,
+      "price_per_unit": 175000,
+      "total": 700000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2415,8 +2415,8 @@
       "description": "Upah mandor (Heri)",
       "quantity": 1,
       "unit": "orang",
-      "price_per_unit": 200000,
-      "total": 200000,
+      "price_per_unit": 195000,
+      "total": 195000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2428,8 +2428,8 @@
       "description": "Upah kuli (Riski, Adit, Achmad, Wari)",
       "quantity": 4,
       "unit": "orang",
-      "price_per_unit": 160000,
-      "total": 640000,
+      "price_per_unit": 155000,
+      "total": 620000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2441,8 +2441,8 @@
       "description": "Upah tukang (Sugeng, Habib, Supar)",
       "quantity": 3,
       "unit": "orang",
-      "price_per_unit": 180000,
-      "total": 540000,
+      "price_per_unit": 175000,
+      "total": 525000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2454,8 +2454,8 @@
       "description": "Upah mandor (Heri)",
       "quantity": 1,
       "unit": "orang",
-      "price_per_unit": 200000,
-      "total": 200000,
+      "price_per_unit": 195000,
+      "total": 195000,
       "notes": "",
       "funding_source": "Uang Ayah"
     }
@@ -2483,13 +2483,16 @@
   "wage_rates": {
     "kuli_full_day": 120000,
     "tukang_full_day": 135000,
-    "mandor_full_day": 150000
+    "mandor_full_day": 150000,
+    "kuli_2x": 155000,
+    "tukang_2x": 175000,
+    "mandor_2x": 195000
   },
   "workers": {
     "mandor": [
       {
         "name": "Heri",
-        "rate": 200000,
+        "rate": 195000,
         "attendance": {
           "2026-05-18": "hadir",
           "2026-05-19": "hadir",
@@ -2563,7 +2566,7 @@
       },
       {
         "name": "Sugeng",
-        "rate": 180000,
+        "rate": 175000,
         "attendance": {
           "2026-06-15": "hadir",
           "2026-06-16": "hadir",
@@ -2575,7 +2578,7 @@
       },
       {
         "name": "Paidi",
-        "rate": 180000,
+        "rate": 175000,
         "attendance": {
           "2026-06-15": "hadir",
           "2026-06-19": "hadir"
@@ -2583,7 +2586,7 @@
       },
       {
         "name": "Habib",
-        "rate": 180000,
+        "rate": 175000,
         "attendance": {
           "2026-06-15": "hadir",
           "2026-06-16": "hadir",
@@ -2615,7 +2618,7 @@
       },
       {
         "name": "Riski",
-        "rate": 160000,
+        "rate": 155000,
         "attendance": {
           "2026-05-18": "hadir",
           "2026-05-19": "hadir",
@@ -2680,7 +2683,7 @@
       },
       {
         "name": "Adit",
-        "rate": 160000,
+        "rate": 155000,
         "attendance": {
           "2026-05-21": "hadir",
           "2026-05-22": "hadir",
@@ -2737,7 +2740,7 @@
       },
       {
         "name": "Achmad",
-        "rate": 160000,
+        "rate": 155000,
         "attendance": {
           "2026-06-11": "hadir",
           "2026-06-12": "hadir",
@@ -2752,7 +2755,7 @@
       },
       {
         "name": "Wari",
-        "rate": 160000,
+        "rate": 155000,
         "attendance": {
           "2026-06-15": "hadir",
           "2026-06-16": "hadir",
@@ -2778,7 +2781,7 @@
       },
       {
         "name": "Supar",
-        "rate": 180000,
+        "rate": 175000,
         "attendance": {
           "2026-05-30": "hadir",
           "2026-06-01": "hadir",
