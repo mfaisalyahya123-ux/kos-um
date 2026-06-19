@@ -2389,8 +2389,8 @@
       "description": "Upah kuli (Riski, Adit, Achmad, Wari)",
       "quantity": 4,
       "unit": "orang",
-      "price_per_unit": 120000,
-      "total": 480000,
+      "price_per_unit": 160000,
+      "total": 640000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2402,8 +2402,8 @@
       "description": "Upah tukang (Sugeng, Paidi, Habib, Supar)",
       "quantity": 4,
       "unit": "orang",
-      "price_per_unit": 135000,
-      "total": 540000,
+      "price_per_unit": 180000,
+      "total": 720000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2415,8 +2415,8 @@
       "description": "Upah mandor (Heri)",
       "quantity": 1,
       "unit": "orang",
-      "price_per_unit": 150000,
-      "total": 150000,
+      "price_per_unit": 200000,
+      "total": 200000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2428,8 +2428,8 @@
       "description": "Upah kuli (Riski, Adit, Achmad, Wari)",
       "quantity": 4,
       "unit": "orang",
-      "price_per_unit": 120000,
-      "total": 480000,
+      "price_per_unit": 160000,
+      "total": 640000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2441,8 +2441,8 @@
       "description": "Upah tukang (Sugeng, Habib, Supar)",
       "quantity": 3,
       "unit": "orang",
-      "price_per_unit": 135000,
-      "total": 405000,
+      "price_per_unit": 180000,
+      "total": 540000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -2454,8 +2454,8 @@
       "description": "Upah mandor (Heri)",
       "quantity": 1,
       "unit": "orang",
-      "price_per_unit": 150000,
-      "total": 150000,
+      "price_per_unit": 200000,
+      "total": 200000,
       "notes": "",
       "funding_source": "Uang Ayah"
     }
