@@ -2286,15 +2286,15 @@
     "end_date": "2026-06-01"
   },
   "wage_rates": {
-    "kuli_full_day": 120000,
-    "tukang_full_day": 135000,
-    "mandor_full_day": 150000
+    "kuli_full_day": 160000,
+    "tukang_full_day": 180000,
+    "mandor_full_day": 200000
   },
   "workers": {
     "mandor": [
       {
         "name": "Heri",
-        "rate": 150000,
+        "rate": 200000,
         "attendance": {
           "2026-05-18": "hadir",
           "2026-05-19": "hadir",
@@ -2368,7 +2368,7 @@
       },
       {
         "name": "Sugeng",
-        "rate": 135000,
+        "rate": 180000,
         "attendance": {
           "2026-06-15": "hadir",
           "2026-06-16": "hadir",
@@ -2380,7 +2380,7 @@
       },
       {
         "name": "Paidi",
-        "rate": 135000,
+        "rate": 180000,
         "attendance": {
           "2026-06-15": "hadir",
           "2026-06-19": "hadir"
@@ -2388,7 +2388,7 @@
       },
       {
         "name": "Habib",
-        "rate": 135000,
+        "rate": 180000,
         "attendance": {
           "2026-06-15": "hadir",
           "2026-06-16": "hadir",
@@ -2420,7 +2420,7 @@
       },
       {
         "name": "Riski",
-        "rate": 120000,
+        "rate": 160000,
         "attendance": {
           "2026-05-18": "hadir",
           "2026-05-19": "hadir",
@@ -2485,7 +2485,7 @@
       },
       {
         "name": "Adit",
-        "rate": 120000,
+        "rate": 160000,
         "attendance": {
           "2026-05-21": "hadir",
           "2026-05-22": "hadir",
@@ -2542,7 +2542,7 @@
       },
       {
         "name": "Achmad",
-        "rate": 120000,
+        "rate": 160000,
         "attendance": {
           "2026-06-11": "hadir",
           "2026-06-12": "hadir",
@@ -2557,7 +2557,7 @@
       },
       {
         "name": "Wari",
-        "rate": 120000,
+        "rate": 160000,
         "attendance": {
           "2026-06-15": "hadir",
           "2026-06-16": "hadir",
@@ -2583,7 +2583,7 @@
       },
       {
         "name": "Supar",
-        "rate": 135000,
+        "rate": 180000,
         "attendance": {
           "2026-05-30": "hadir",
           "2026-06-01": "hadir",
