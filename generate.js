@@ -1112,8 +1112,8 @@ const rawData  = JSON.parse(fs.readFileSync(path.join(__dirname, 'data.json'), '
 const pData    = processData(rawData);
 const outDir   = __dirname;
 
-fs.writeFileSync(path.join(outDir, 'style.css'),  CSS,                        'utf8');
+// fs.writeFileSync(path.join(outDir, 'style.css'),  CSS,                        'utf8'); // CSS managed externally
 fs.writeFileSync(path.join(outDir, 'index.html'), buildHtml(rawData, pData),  'utf8');
 
 console.log('✅ index.html generated successfully!');
-console.log('✅ style.css  written  successfully!');
+// console.log('✅ style.css  written  successfully!'); // CSS managed externally
