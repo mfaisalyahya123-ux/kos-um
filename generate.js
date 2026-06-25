@@ -299,10 +299,16 @@ function renderCategoryCards({ grandTotal, knownCategories, categoryTotals, cate
             const groups   = {};
             const cleanDesc = desc => esc(desc.replace(/\s*\(Lantai \d+ - [^)]+\)/g, ''));
             categoryDetails[cat].forEach(tx => {
-                const match = tx.description.match(/\((Lantai \d+ - [^)]+)\)/);
-                const key   = match ? match[1] : 'Lainnya';
-                if (!groups[key]) groups[key] = [];
-                groups[key].push(tx);
+                if (tx.subcategory) {
+                    const key = tx.subcategory;
+                    if (!groups[key]) groups[key] = [];
+                    groups[key].push(tx);
+                } else {
+                    const match = tx.description.match(/\((Lantai \d+ - [^)]+)\)/);
+                    const key   = match ? match[1] : 'Lainnya';
+                    if (!groups[key]) groups[key] = [];
+                    groups[key].push(tx);
+                }
             });
             const sortedKeys = Object.keys(groups).sort((a, b) => {
                 if (a === 'Lainnya') return 1;
@@ -316,7 +322,7 @@ function renderCategoryCards({ grandTotal, knownCategories, categoryTotals, cate
                 <div style="margin-bottom:18px;">
                     <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:#fff8e1;border-radius:6px;margin-bottom:10px;">
                         <h4 style="color:#e67e22;font-size:.95em;margin:0;">
-                            ${key === 'Lainnya' ? '📦 Lainnya' : '🏠 ' + esc(key)}
+                            ${key === 'Lainnya' ? '📦 Lainnya' : key === 'Cor Dak' ? '🏗️ Cor Dak' : '🏠 ' + esc(key)}
                         </h4>
                         <strong style="color:#e67e22;font-size:.95em;white-space:nowrap;">${formatRupiah(subtotal)}</strong>
                     </div>
