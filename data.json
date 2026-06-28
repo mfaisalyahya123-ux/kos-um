@@ -3345,6 +3345,18 @@
       "total": 70000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 279,
+      "date": "2026-06-22",
+      "category": "Jajan",
+      "description": "Kuku Bima Anggur",
+      "quantity": 8,
+      "unit": "pcs",
+      "price_per_unit": 8000,
+      "total": 64000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
