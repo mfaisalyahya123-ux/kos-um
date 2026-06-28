@@ -2453,19 +2453,6 @@
       "funding_source": "Uang Ayah"
     },
     {
-      "id": 209,
-      "date": "2026-06-18",
-      "category": "Upah",
-      "subcategory": "Tukang",
-      "description": "Upah tukang (Sugeng, Habib, Supar, Paidi)",
-      "quantity": 4,
-      "unit": "orang",
-      "price_per_unit": 135000,
-      "total": 540000,
-      "notes": "",
-      "funding_source": "Uang Ayah"
-    },
-    {
       "id": 210,
       "date": "2026-06-16",
       "category": "Material",
@@ -3294,6 +3281,19 @@
       "unit": "orang",
       "price_per_unit": 135000,
       "total": 135000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 274,
+      "date": "2026-06-18",
+      "category": "Upah",
+      "subcategory": "Tukang",
+      "description": "Upah tukang (Sugeng, Habib, Supar)",
+      "quantity": 3,
+      "unit": "orang",
+      "price_per_unit": 135000,
+      "total": 405000,
       "notes": "",
       "funding_source": "Uang Ayah"
     }
