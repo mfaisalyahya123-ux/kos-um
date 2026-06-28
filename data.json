@@ -3478,6 +3478,18 @@
       "total": 150000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 290,
+      "date": "2026-06-10",
+      "category": "Lain-lain",
+      "description": "Jasa membuat tempat sampah",
+      "quantity": 1,
+      "unit": "unit",
+      "price_per_unit": 150000,
+      "total": 150000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
