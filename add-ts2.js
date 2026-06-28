@@ -3,9 +3,8 @@ let lastId = Math.max(...d.transactions.map(t => t.id));
 
 d.transactions.push({
     id: ++lastId,
-    date: '2026-06-06',
+    date: '2026-06-09',
     category: 'Lain-lain',
-    subcategory: null,
     description: 'Jasa membuat tempat sampah',
     quantity: 1,
     unit: 'unit',
@@ -16,4 +15,4 @@ d.transactions.push({
 });
 
 require('fs').writeFileSync('kos-um/data.json', JSON.stringify(d, null, 2));
-console.log('Added ID:', lastId, '| Rp 150.000');
+console.log('Added ID:', lastId);
