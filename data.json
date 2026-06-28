@@ -3357,6 +3357,18 @@
       "total": 64000,
       "notes": "",
       "funding_source": "Kas UM"
+    },
+    {
+      "id": 280,
+      "date": "2026-06-22",
+      "category": "Jajan",
+      "description": "Aqua Galon (1 minggu)",
+      "quantity": 1,
+      "unit": "galon",
+      "price_per_unit": 30000,
+      "total": 30000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
