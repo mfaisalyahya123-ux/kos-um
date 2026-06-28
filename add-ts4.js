@@ -3,7 +3,7 @@ let lastId = Math.max(...d.transactions.map(t => t.id));
 
 d.transactions.push({
     id: ++lastId,
-    date: '2026-06-10',
+    date: '2026-06-12',
     category: 'Lain-lain',
     description: 'Jasa membuat tempat sampah',
     quantity: 1,
