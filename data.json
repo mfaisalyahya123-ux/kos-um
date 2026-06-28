@@ -3369,6 +3369,42 @@
       "total": 30000,
       "notes": "",
       "funding_source": "Kas UM"
+    },
+    {
+      "id": 281,
+      "date": "2026-06-22",
+      "category": "Alat",
+      "description": "Spidol",
+      "quantity": 2,
+      "unit": "biji",
+      "price_per_unit": 2000,
+      "total": 4000,
+      "notes": "",
+      "funding_source": "Kas UM"
+    },
+    {
+      "id": 282,
+      "date": "2026-06-22",
+      "category": "Alat",
+      "description": "Gergaji besi",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 25000,
+      "total": 25000,
+      "notes": "",
+      "funding_source": "Kas UM"
+    },
+    {
+      "id": 283,
+      "date": "2026-06-22",
+      "category": "Alat",
+      "description": "Benang tampar",
+      "quantity": 2,
+      "unit": "biji",
+      "price_per_unit": 4000,
+      "total": 8000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
