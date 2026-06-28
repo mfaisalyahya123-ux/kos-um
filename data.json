@@ -3429,6 +3429,30 @@
       "total": 36000,
       "notes": "",
       "funding_source": "Kas UM"
+    },
+    {
+      "id": 286,
+      "date": "2026-06-22",
+      "category": "Material",
+      "description": "Lakban listrik",
+      "quantity": 4,
+      "unit": "biji",
+      "price_per_unit": 27860,
+      "total": 111440,
+      "notes": "",
+      "funding_source": "Kas UM"
+    },
+    {
+      "id": 287,
+      "date": "2026-06-22",
+      "category": "Material",
+      "description": "Kabel listrik 1.5mm 50m",
+      "quantity": 2,
+      "unit": "biji",
+      "price_per_unit": 222500,
+      "total": 445000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
