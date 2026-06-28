@@ -3320,7 +3320,7 @@
       "price_per_unit": 95000,
       "total": 95000,
       "notes": "",
-      "funding_source": "Uang Ayah"
+      "funding_source": "Kas UM"
     },
     {
       "id": 277,
@@ -3332,7 +3332,7 @@
       "price_per_unit": 11250,
       "total": 45000,
       "notes": "",
-      "funding_source": "Uang Ayah"
+      "funding_source": "Kas UM"
     },
     {
       "id": 278,
@@ -3344,7 +3344,7 @@
       "price_per_unit": 17500,
       "total": 70000,
       "notes": "",
-      "funding_source": "Uang Ayah"
+      "funding_source": "Kas UM"
     },
     {
       "id": 279,
@@ -3356,7 +3356,7 @@
       "price_per_unit": 8000,
       "total": 64000,
       "notes": "",
-      "funding_source": "Uang Ayah"
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
