@@ -3296,6 +3296,19 @@
       "total": 405000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 275,
+      "date": "2026-06-25",
+      "category": "Upah",
+      "subcategory": "Arsitek",
+      "description": "Upah arsitek Lito",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 1000000,
+      "total": 1000000,
+      "notes": "1x gaji",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
