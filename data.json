@@ -3309,6 +3309,42 @@
       "total": 1000000,
       "notes": "1x gaji",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 276,
+      "date": "2026-06-22",
+      "category": "Jajan",
+      "description": "Kopi",
+      "quantity": 1,
+      "unit": "kg",
+      "price_per_unit": 95000,
+      "total": 95000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 277,
+      "date": "2026-06-22",
+      "category": "Jajan",
+      "description": "Tepung",
+      "quantity": 4,
+      "unit": "kg",
+      "price_per_unit": 11250,
+      "total": 45000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 278,
+      "date": "2026-06-22",
+      "category": "Jajan",
+      "description": "Gula",
+      "quantity": 4,
+      "unit": "kg",
+      "price_per_unit": 17500,
+      "total": 70000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
