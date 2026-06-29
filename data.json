@@ -3509,11 +3509,11 @@
       "category": "Material",
       "description": "Paku cor 3\"",
       "quantity": 1,
-      "unit": "kg",
+      "unit": "dus",
       "price_per_unit": 18000,
       "total": 18000,
       "notes": "",
-      "funding_source": "Uang Ayah"
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
