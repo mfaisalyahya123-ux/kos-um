@@ -3502,6 +3502,18 @@
       "total": 150000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 292,
+      "date": "2026-06-29",
+      "category": "Material",
+      "description": "Paku cor 3\"",
+      "quantity": 1,
+      "unit": "kg",
+      "price_per_unit": 18000,
+      "total": 18000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
