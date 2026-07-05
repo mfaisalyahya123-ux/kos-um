@@ -4392,6 +4392,66 @@
       "total": 26000,
       "notes": "",
       "funding_source": "Kas UM"
+    },
+    {
+      "id": 362,
+      "date": "2026-06-30",
+      "category": "Material",
+      "description": "Bambu 4m",
+      "quantity": 20,
+      "unit": "pcs",
+      "price_per_unit": 15000,
+      "total": 300000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 363,
+      "date": "2026-06-30",
+      "category": "Material",
+      "description": "Triplek 9mm",
+      "quantity": 10,
+      "unit": "pcs",
+      "price_per_unit": 97000,
+      "total": 970000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 364,
+      "date": "2026-06-30",
+      "category": "Material",
+      "description": "Usuk 4x6 semi",
+      "quantity": 70,
+      "unit": "pcs",
+      "price_per_unit": 21000,
+      "total": 1470000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 365,
+      "date": "2026-06-30",
+      "category": "Material",
+      "description": "Bambu 8m",
+      "quantity": 15,
+      "unit": "pcs",
+      "price_per_unit": 22000,
+      "total": 330000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 366,
+      "date": "2026-06-30",
+      "category": "Lain-lain",
+      "description": "Jasa buang sampah",
+      "quantity": 2,
+      "unit": "kali",
+      "price_per_unit": 225000,
+      "total": 450000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
