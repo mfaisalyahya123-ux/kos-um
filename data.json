@@ -4452,6 +4452,58 @@
       "total": 450000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 367,
+      "date": "2026-07-02",
+      "category": "Struktur Bangunan",
+      "subcategory": "Cor Dak",
+      "description": "Wiremesh Lembar M 10 (9.7) TU",
+      "quantity": 23,
+      "unit": "lembar",
+      "price_per_unit": 1057500,
+      "total": 24322500,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 368,
+      "date": "2026-07-02",
+      "category": "Struktur Bangunan",
+      "subcategory": "Cor Dak",
+      "description": "Beton SNI 6 x 12",
+      "quantity": 20,
+      "unit": "pcs",
+      "price_per_unit": 28000,
+      "total": 560000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 369,
+      "date": "2026-07-02",
+      "category": "Struktur Bangunan",
+      "subcategory": "Cor Dak",
+      "description": "Beton Ulir TS-280 SNI 10 x 12",
+      "quantity": 20,
+      "unit": "pcs",
+      "price_per_unit": 74000,
+      "total": 1480000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 370,
+      "date": "2026-07-02",
+      "category": "Struktur Bangunan",
+      "subcategory": "Cor Dak",
+      "description": "Bendrat Roll",
+      "quantity": 1,
+      "unit": "roll",
+      "price_per_unit": 272000,
+      "total": 272000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {

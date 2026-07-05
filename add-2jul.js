@@ -2,24 +2,24 @@ const fs = require('fs');
 const d = JSON.parse(fs.readFileSync('kos-um/data.json','utf8'));
 
 let lastId = Math.max(...d.transactions.map(t => t.id));
-const date = '2026-06-30';
+const date = '2026-07-02';
 const source = 'Uang Ayah';
+const category = 'Struktur Bangunan';
+const subcategory = 'Cor Dak';
 
 const items = [
-  // Material
-  {cat:'Material', desc:'Bambu 4m', qty:20, unit:'pcs', price:15000, total:300000},
-  {cat:'Material', desc:'Triplek 9mm', qty:10, unit:'pcs', price:97000, total:970000},
-  {cat:'Material', desc:'Usuk 4x6 semi', qty:70, unit:'pcs', price:21000, total:1470000},
-  {cat:'Material', desc:'Bambu 8m', qty:15, unit:'pcs', price:22000, total:330000},
-  // Jasa
-  {cat:'Lain-lain', desc:'Jasa buang sampah', qty:2, unit:'kali', price:225000, total:450000}
+  {desc:'Wiremesh Lembar M 10 (9.7) TU', qty:23, unit:'lembar', price:1057500, total:24322500},
+  {desc:'Beton SNI 6 x 12', qty:20, unit:'pcs', price:28000, total:560000},
+  {desc:'Beton Ulir TS-280 SNI 10 x 12', qty:20, unit:'pcs', price:74000, total:1480000},
+  {desc:'Bendrat Roll', qty:1, unit:'roll', price:272000, total:272000}
 ];
 
 items.forEach(it => {
   d.transactions.push({
     id: ++lastId,
     date,
-    category: it.cat,
+    category,
+    subcategory,
     description: it.desc,
     quantity: it.qty,
     unit: it.unit,
@@ -33,6 +33,6 @@ items.forEach(it => {
 fs.writeFileSync('kos-um/data.json', JSON.stringify(d, null, 2));
 
 const total = items.reduce((s,it) => s+it.total, 0);
-console.log('Added', items.length, 'transactions');
+console.log('Added', items.length, 'transactions (Struktur Bangunan - Cor Dak)');
 console.log('Total:', total.toLocaleString('id-ID'));
 console.log('Last ID:', lastId);
