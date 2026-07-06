@@ -4504,6 +4504,42 @@
       "total": 272000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 371,
+      "date": "2026-07-06",
+      "category": "Jajan",
+      "description": "Minyak goreng 2 liter",
+      "quantity": 1,
+      "unit": "botol",
+      "price_per_unit": 44000,
+      "total": 44000,
+      "notes": "",
+      "funding_source": "Kas UM"
+    },
+    {
+      "id": 372,
+      "date": "2026-07-06",
+      "category": "Material",
+      "description": "Kabel NYM 1.5mm 100m",
+      "quantity": 1,
+      "unit": "roll",
+      "price_per_unit": 454000,
+      "total": 454000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 373,
+      "date": "2026-07-06",
+      "category": "Material",
+      "description": "Pipa conduit boss 20mm",
+      "quantity": 30,
+      "unit": "batang",
+      "price_per_unit": 12500,
+      "total": 375000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
