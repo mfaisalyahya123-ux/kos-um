@@ -4540,6 +4540,19 @@
       "total": 375000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 374,
+      "date": "2026-07-08",
+      "category": "Upah",
+      "subcategory": "",
+      "description": "Tukang kuli harian (Jenggan) - 1 hari",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 155000,
+      "total": 155000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
