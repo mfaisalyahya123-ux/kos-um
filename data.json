@@ -4553,6 +4553,32 @@
       "total": 155000,
       "notes": "",
       "funding_source": "Kas UM"
+    },
+    {
+      "id": 375,
+      "date": "2026-07-09",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Koral 2 truk",
+      "quantity": 2,
+      "unit": "truk",
+      "price_per_unit": 2000000,
+      "total": 4000000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 376,
+      "date": "2026-07-09",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Pasir Lumajang 2 truk",
+      "quantity": 2,
+      "unit": "truk",
+      "price_per_unit": 1950000,
+      "total": 3900000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
