@@ -4730,6 +4730,19 @@
       "total": 72000,
       "notes": "",
       "funding_source": "Kas UM"
+    },
+    {
+      "id": 388,
+      "date": "2026-07-10",
+      "category": "Upah",
+      "subcategory": "",
+      "description": "Jasa ngecor lift",
+      "quantity": 1,
+      "unit": "kali",
+      "price_per_unit": 3500000,
+      "total": 3500000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
