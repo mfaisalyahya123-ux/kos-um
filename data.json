@@ -4743,6 +4743,19 @@
       "total": 3500000,
       "notes": "",
       "funding_source": "Kas UM"
+    },
+    {
+      "id": 389,
+      "date": "2026-07-12",
+      "category": "Upah",
+      "subcategory": "Gaji Mingguan",
+      "description": "Gaji minggu 8-12 Juli (Senin-Jumat)",
+      "quantity": 1,
+      "unit": "minggu",
+      "price_per_unit": 8400000,
+      "total": 8400000,
+      "notes": "1 Mandor, 5 Tukang, 5 Kuli. Sabtu libur. Jumat special Rp 170rb semua.",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
