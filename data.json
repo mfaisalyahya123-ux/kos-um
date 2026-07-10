@@ -4625,7 +4625,7 @@
       "price_per_unit": 17000,
       "total": 170000,
       "notes": "",
-      "funding_source": "Uang Ayah"
+      "funding_source": "Kas UM"
     },
     {
       "id": 380,
@@ -4638,7 +4638,7 @@
       "price_per_unit": 6000,
       "total": 30000,
       "notes": "",
-      "funding_source": "Uang Ayah"
+      "funding_source": "Kas UM"
     },
     {
       "id": 381,
@@ -4678,6 +4678,58 @@
       "total": 2100000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 384,
+      "date": "2026-07-10",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Semen Gresik",
+      "quantity": 200,
+      "unit": "pcs",
+      "price_per_unit": 59000,
+      "total": 11800000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 385,
+      "date": "2026-07-10",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Aditon",
+      "quantity": 10,
+      "unit": "pcs",
+      "price_per_unit": 45000,
+      "total": 450000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 386,
+      "date": "2026-07-10",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Adibond",
+      "quantity": 2,
+      "unit": "pcs",
+      "price_per_unit": 70000,
+      "total": 140000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 387,
+      "date": "2026-07-10",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Paku",
+      "quantity": 3,
+      "unit": "kg",
+      "price_per_unit": 24000,
+      "total": 72000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
