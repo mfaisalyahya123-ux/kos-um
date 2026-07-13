@@ -5419,6 +5419,54 @@
       "total": 170000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 441,
+      "date": "2026-07-13",
+      "category": "Material",
+      "description": "Kawat ayakan 1 meter",
+      "quantity": 1,
+      "unit": "meter",
+      "price_per_unit": 15000,
+      "total": 15000,
+      "notes": "",
+      "funding_source": "Kas UM"
+    },
+    {
+      "id": 442,
+      "date": "2026-07-13",
+      "category": "Material",
+      "description": "Paku 3\" 2kg",
+      "quantity": 2,
+      "unit": "kg",
+      "price_per_unit": 20000,
+      "total": 40000,
+      "notes": "",
+      "funding_source": "Kas UM"
+    },
+    {
+      "id": 443,
+      "date": "2026-07-13",
+      "category": "Alat",
+      "description": "Ember",
+      "quantity": 4,
+      "unit": "pcs",
+      "price_per_unit": 8000,
+      "total": 32000,
+      "notes": "",
+      "funding_source": "Kas UM"
+    },
+    {
+      "id": 444,
+      "date": "2026-07-13",
+      "category": "Material",
+      "description": "Benang tali",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 5000,
+      "total": 5000,
+      "notes": "",
+      "funding_source": "Kas UM"
     }
   ],
   "summary": {
