@@ -7585,6 +7585,19 @@
       "total": 32000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 614,
+      "date": "2026-07-20",
+      "category": "Jajan",
+      "subcategory": "",
+      "description": "Gula 3kg",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 17500,
+      "total": 17500,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
