@@ -6611,6 +6611,18 @@
       "total": 16000,
       "notes": "",
       "funding_source": "Uang UM"
+    },
+    {
+      "id": 539,
+      "date": "2026-07-21",
+      "category": "Material",
+      "description": "Keni 2 1/2 inch",
+      "quantity": 2,
+      "unit": "pcs",
+      "price_per_unit": 9000,
+      "total": 18000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
