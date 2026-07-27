@@ -7572,6 +7572,19 @@
       "total": 30000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 613,
+      "date": "2026-07-20",
+      "category": "Jajan",
+      "subcategory": "",
+      "description": "Tepung 3kg",
+      "quantity": 1,
+      "unit": "item",
+      "price_per_unit": 32000,
+      "total": 32000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
