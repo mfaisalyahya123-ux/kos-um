@@ -7611,6 +7611,19 @@
       "total": 30000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 616,
+      "date": "2026-07-20",
+      "category": "Jajan",
+      "subcategory": "",
+      "description": "Galon isi ulang",
+      "quantity": 5,
+      "unit": "pcs",
+      "price_per_unit": 4000,
+      "total": 20000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
