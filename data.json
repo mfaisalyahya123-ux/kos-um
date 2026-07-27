@@ -7533,6 +7533,19 @@
       "total": 1000000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 610,
+      "date": "2026-07-21",
+      "category": "Struktur Bangunan",
+      "subcategory": "Lantai 2",
+      "description": "Besi 6 (Lantai 2)",
+      "quantity": 30,
+      "unit": "biji",
+      "price_per_unit": 29000,
+      "total": 870000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
