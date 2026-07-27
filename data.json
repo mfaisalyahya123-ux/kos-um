@@ -7598,6 +7598,19 @@
       "total": 17500,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 615,
+      "date": "2026-07-20",
+      "category": "Jajan",
+      "subcategory": "",
+      "description": "Kuku Bima",
+      "quantity": 5,
+      "unit": "pcs",
+      "price_per_unit": 6000,
+      "total": 30000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
