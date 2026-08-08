@@ -7962,6 +7962,19 @@
       "total": 13200,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 643,
+      "date": "2026-08-07",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Exhaust 6\" sekai",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 156000,
+      "total": 156000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
