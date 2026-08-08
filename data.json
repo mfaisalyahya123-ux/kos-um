@@ -7624,6 +7624,32 @@
       "total": 20000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 617,
+      "date": "2026-08-03",
+      "category": "Alat",
+      "subcategory": "",
+      "description": "Saklar",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 19000,
+      "total": 19000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 618,
+      "date": "2026-08-03",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Tali nylon",
+      "quantity": 2,
+      "unit": "pcs",
+      "price_per_unit": 5000,
+      "total": 10000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
