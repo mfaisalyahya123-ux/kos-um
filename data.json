@@ -7650,6 +7650,19 @@
       "total": 10000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 619,
+      "date": "2026-08-03",
+      "category": "Jajan",
+      "subcategory": "",
+      "description": "Galon",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 20000,
+      "total": 20000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
