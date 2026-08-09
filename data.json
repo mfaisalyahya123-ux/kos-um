@@ -8774,11 +8774,11 @@
       "date": "2026-07-27",
       "category": "Upah",
       "subcategory": "Kuli",
-      "description": "Ahmat, Risky, Adit, Izzut, Samsul, Rudi",
-      "quantity": 6,
+      "description": "Ahmat, Risky, Adit, Izzut, Samsul",
+      "quantity": 5,
       "unit": "orang",
       "price_per_unit": 155000,
-      "total": 930000,
+      "total": 775000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -8861,19 +8861,6 @@
       "funding_source": "Uang Ayah"
     },
     {
-      "id": 877,
-      "date": "2026-07-30",
-      "category": "Upah",
-      "subcategory": "Mandor",
-      "description": "Heri",
-      "quantity": 1,
-      "unit": "orang",
-      "price_per_unit": 150000,
-      "total": 150000,
-      "notes": "",
-      "funding_source": "Uang Ayah"
-    },
-    {
       "id": 878,
       "date": "2026-07-30",
       "category": "Upah",
@@ -8904,24 +8891,11 @@
       "date": "2026-07-30",
       "category": "Upah",
       "subcategory": "Kuli",
-      "description": "Ahmat, Risky, Adit, Izzut, Samsul, Nanto, Arif, Rudi",
-      "quantity": 8,
+      "description": "Ahmat, Risky, Adit, Izzut, Samsul, Nanto, Arif",
+      "quantity": 7,
       "unit": "orang",
       "price_per_unit": 120000,
-      "total": 960000,
-      "notes": "",
-      "funding_source": "Uang Ayah"
-    },
-    {
-      "id": 881,
-      "date": "2026-07-30",
-      "category": "Upah",
-      "subcategory": "Kuli",
-      "description": "Arif",
-      "quantity": 1,
-      "unit": "orang",
-      "price_per_unit": 155000,
-      "total": 155000,
+      "total": 840000,
       "notes": "",
       "funding_source": "Uang Ayah"
     },
@@ -9110,7 +9084,7 @@
           "2026-07-27": "hadir",
           "2026-07-28": "hadir",
           "2026-07-29": "hadir",
-          "2026-07-30": "hadir",
+          "2026-07-30": "tidak",
           "2026-07-31": "hadir",
           "2026-08-01": "hadir"
         }
@@ -9525,10 +9499,10 @@
           "2026-08-06": "hadir",
           "2026-08-07": "hadir",
           "2026-08-08": "absent",
-          "2026-07-27": "absent",
+          "2026-07-27": "tidak",
           "2026-07-28": "hadir",
           "2026-07-29": "hadir",
-          "2026-07-30": "absent",
+          "2026-07-30": "tidak",
           "2026-07-31": "hadir",
           "2026-08-01": "hadir"
         }
