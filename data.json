@@ -7002,19 +7002,6 @@
       "funding_source": "Uang Ayah"
     },
     {
-      "id": 569,
-      "date": "2026-07-22",
-      "category": "Upah",
-      "subcategory": "Kuli",
-      "description": "Ahmad",
-      "quantity": 1,
-      "unit": "orang",
-      "price_per_unit": 120000,
-      "total": 120000,
-      "notes": "Rabu",
-      "funding_source": "Uang Ayah"
-    },
-    {
       "id": 570,
       "date": "2026-07-22",
       "category": "Upah",
@@ -8989,6 +8976,19 @@
       "total": 135000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 889,
+      "date": "2026-07-24",
+      "category": "Upah",
+      "subcategory": "Kuli",
+      "description": "Ahmad",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 120000,
+      "total": 120000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
@@ -9657,7 +9657,9 @@
           "2026-07-15": "hadir",
           "2026-07-16": "hadir",
           "2026-07-17": "hadir",
-          "2026-07-18": "hadir"
+          "2026-07-18": "hadir",
+          "2026-07-22": "tidak",
+          "2026-07-24": "hadir"
         }
       },
       {
