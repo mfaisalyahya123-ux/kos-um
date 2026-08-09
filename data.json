@@ -9002,6 +9002,19 @@
       "total": 960000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 888,
+      "date": "2026-08-06",
+      "category": "Upah",
+      "subcategory": "Tukang",
+      "description": "Gendut",
+      "quantity": 1,
+      "unit": "orang",
+      "price_per_unit": 135000,
+      "total": 135000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
@@ -9376,7 +9389,8 @@
           "2026-07-29": "hadir",
           "2026-07-30": "hadir",
           "2026-07-31": "hadir",
-          "2026-08-01": "hadir"
+          "2026-08-01": "hadir",
+          "2026-08-06": "hadir"
         }
       }
     ],
