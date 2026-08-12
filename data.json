@@ -9067,6 +9067,45 @@
       "total": 21000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 896,
+      "date": "2026-07-27",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Bata ringan 7,5",
+      "quantity": 3,
+      "unit": "kibik",
+      "price_per_unit": 710000,
+      "total": 2130000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 897,
+      "date": "2026-07-29",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Glasblok",
+      "quantity": 16,
+      "unit": "pcs",
+      "price_per_unit": 25000,
+      "total": 400000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 898,
+      "date": "2026-07-29",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Pipa 3\" (Rucika)",
+      "quantity": 1,
+      "unit": "pcs",
+      "price_per_unit": 108000,
+      "total": 108000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
