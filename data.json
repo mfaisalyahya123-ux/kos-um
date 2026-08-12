@@ -9106,6 +9106,19 @@
       "total": 108000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 899,
+      "date": "2026-07-29",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Keramik BIG",
+      "quantity": 13,
+      "unit": "dus",
+      "price_per_unit": 94050,
+      "total": 1222650,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
