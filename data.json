@@ -6433,8 +6433,8 @@
     {
       "id": 524,
       "date": "2026-07-13",
-      "category": "Material",
-      "subcategory": "",
+      "category": "Struktur Bangunan",
+      "subcategory": "Lantai 2 - Kamar",
       "description": "Bata ringan",
       "quantity": 11.8,
       "unit": "kibik",
@@ -6550,8 +6550,8 @@
     {
       "id": 534,
       "date": "2026-07-18",
-      "category": "Material",
-      "subcategory": "",
+      "category": "Struktur Bangunan",
+      "subcategory": "Lantai 2 - Kamar",
       "description": "Bata ringan",
       "quantity": 11.8,
       "unit": "kibik",
@@ -9071,8 +9071,8 @@
     {
       "id": 896,
       "date": "2026-07-27",
-      "category": "Material",
-      "subcategory": "",
+      "category": "Struktur Bangunan",
+      "subcategory": "Lantai 2 - Kamar",
       "description": "Bata ringan 7,5",
       "quantity": 3,
       "unit": "kibik",
@@ -9149,8 +9149,8 @@
     {
       "id": 902,
       "date": "2026-07-30",
-      "category": "Material",
-      "subcategory": "",
+      "category": "Struktur Bangunan",
+      "subcategory": "Lantai 2 - Kamar",
       "description": "Bata ringan 3 kibik",
       "quantity": 3,
       "unit": "kibik",
