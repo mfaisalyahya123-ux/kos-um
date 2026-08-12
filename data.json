@@ -2085,14 +2085,15 @@
     {
       "id": 163,
       "date": "2026-06-12",
-      "category": "Material",
+      "category": "Struktur Bangunan",
       "description": "Besi 6 SNI Hendra",
       "quantity": 10,
       "unit": "btg",
       "price_per_unit": 29000,
       "total": 290000,
       "notes": "",
-      "funding_source": "Uang Ayah"
+      "funding_source": "Uang Ayah",
+      "subcategory": "Lantai 2"
     },
     {
       "id": 164,
