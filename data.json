@@ -513,7 +513,7 @@
       "total": 460000,
       "notes": "",
       "funding_source": "Uang Ayah",
-      "subcategory": "Cor Dak"
+      "subcategory": "Lantai 2"
     },
     {
       "id": 39,
@@ -526,7 +526,7 @@
       "total": 150000,
       "notes": "",
       "funding_source": "Uang Ayah",
-      "subcategory": "Cor Dak"
+      "subcategory": "Lantai 2"
     },
     {
       "id": 40,
@@ -1070,7 +1070,7 @@
       "id": 84,
       "date": "2026-05-29",
       "category": "Struktur Bangunan",
-      "subcategory": "Cor Dak",
+      "subcategory": "Lantai 2",
       "description": "Coral 1 pickup",
       "quantity": 1,
       "unit": "pickup",
@@ -1083,7 +1083,7 @@
       "id": 85,
       "date": "2026-05-29",
       "category": "Struktur Bangunan",
-      "subcategory": "Cor Dak",
+      "subcategory": "Lantai 2",
       "description": "Semen merah putih",
       "quantity": 20,
       "unit": "pcs",
@@ -1278,7 +1278,7 @@
       "id": 100,
       "date": "2026-06-01",
       "category": "Struktur Bangunan",
-      "subcategory": "Cor Dak",
+      "subcategory": "Lantai 2",
       "description": "Koral",
       "quantity": 1,
       "unit": "pickup",
@@ -1291,7 +1291,7 @@
       "id": 101,
       "date": "2026-06-01",
       "category": "Struktur Bangunan",
-      "subcategory": "Cor Dak",
+      "subcategory": "Lantai 2",
       "description": "Semen Merah Putih",
       "quantity": 20,
       "unit": "sak",
@@ -1473,7 +1473,7 @@
       "id": 115,
       "date": "2026-06-04",
       "category": "Struktur Bangunan",
-      "subcategory": "Cor Dak",
+      "subcategory": "Lantai 2",
       "description": "Pasir hitam Dhuhri",
       "quantity": 1,
       "unit": "pickup",
@@ -1486,7 +1486,7 @@
       "id": 116,
       "date": "2026-06-04",
       "category": "Struktur Bangunan",
-      "subcategory": "Cor Dak",
+      "subcategory": "Lantai 2",
       "description": "Semen Gresik",
       "quantity": 10,
       "unit": "sak",
@@ -1512,7 +1512,7 @@
       "id": 118,
       "date": "2026-06-04",
       "category": "Struktur Bangunan",
-      "subcategory": "Cor Dak",
+      "subcategory": "Lantai 2",
       "description": "Koral",
       "quantity": 1,
       "unit": "pickup",
@@ -1525,7 +1525,7 @@
       "id": 119,
       "date": "2026-06-04",
       "category": "Struktur Bangunan",
-      "subcategory": "Cor Dak",
+      "subcategory": "Lantai 2",
       "description": "Semen Merah Putih",
       "quantity": 10,
       "unit": "sak",
@@ -1720,7 +1720,7 @@
       "id": 134,
       "date": "2026-06-06",
       "category": "Struktur Bangunan",
-      "subcategory": "Cor Dak",
+      "subcategory": "Lantai 2",
       "description": "Coral",
       "quantity": 1,
       "unit": "pickup",
@@ -1733,7 +1733,7 @@
       "id": 135,
       "date": "2026-06-06",
       "category": "Struktur Bangunan",
-      "subcategory": "Cor Dak",
+      "subcategory": "Lantai 2",
       "description": "Pasir hitam Dhuhri",
       "quantity": 1,
       "unit": "truk",
@@ -2108,7 +2108,7 @@
       "total": 250000,
       "notes": "",
       "funding_source": "Uang Ayah",
-      "subcategory": "Cor Dak"
+      "subcategory": "Lantai 2"
     },
     {
       "id": 165,
@@ -2121,7 +2121,7 @@
       "total": 600000,
       "notes": "",
       "funding_source": "Uang Ayah",
-      "subcategory": "Cor Dak"
+      "subcategory": "Lantai 2"
     },
     {
       "id": 166,
@@ -2134,7 +2134,7 @@
       "total": 460000,
       "notes": "",
       "funding_source": "Uang Ayah",
-      "subcategory": "Cor Dak"
+      "subcategory": "Lantai 2"
     },
     {
       "id": 167,
@@ -2640,7 +2640,7 @@
       "id": 223,
       "date": "2026-06-23",
       "category": "Struktur Bangunan",
-      "subcategory": "Cor Dak",
+      "subcategory": "Lantai 2",
       "description": "Koral",
       "quantity": 1,
       "unit": "pickup",
