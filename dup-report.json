@@ -1,0 +1,75 @@
+{
+  "duplicates": [
+    {
+      "count": 3,
+      "key": "kopi ya 750gr|2026-06-29|60000",
+      "items": [
+        {
+          "id": 358,
+          "unit": "pcs",
+          "qty": 1,
+          "ppu": 60000,
+          "total": 60000
+        },
+        {
+          "id": 359,
+          "unit": "pcs",
+          "qty": 1,
+          "ppu": 60000,
+          "total": 60000
+        },
+        {
+          "id": 360,
+          "unit": "pcs",
+          "qty": 1,
+          "ppu": 60000,
+          "total": 60000
+        }
+      ],
+      "double_count_total": 180000
+    },
+    {
+      "count": 2,
+      "key": "koral 2 truk|2026-07-09|4000000",
+      "items": [
+        {
+          "id": 375,
+          "unit": "truk",
+          "qty": 2,
+          "ppu": 2000000,
+          "total": 4000000
+        },
+        {
+          "id": 377,
+          "unit": "truk",
+          "qty": 2,
+          "ppu": 2000000,
+          "total": 4000000
+        }
+      ],
+      "double_count_total": 8000000
+    },
+    {
+      "count": 2,
+      "key": "pasir lumajang 2 truk|2026-07-09|3900000",
+      "items": [
+        {
+          "id": 376,
+          "unit": "truk",
+          "qty": 2,
+          "ppu": 1950000,
+          "total": 3900000
+        },
+        {
+          "id": 378,
+          "unit": "truk",
+          "qty": 2,
+          "ppu": 1950000,
+          "total": 3900000
+        }
+      ],
+      "double_count_total": 7800000
+    }
+  ],
+  "git_msg": "ignore"
+}
