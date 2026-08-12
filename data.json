@@ -2158,14 +2158,15 @@
     {
       "id": 169,
       "date": "2026-06-15",
-      "category": "Material",
+      "category": "Struktur Bangunan",
       "description": "Usuk 4x6 (104 biji - 8)",
       "quantity": 1,
       "unit": "m3",
       "price_per_unit": 2400000,
       "total": 2400000,
       "notes": "",
-      "funding_source": "Uang Ayah"
+      "funding_source": "Uang Ayah",
+      "subcategory": "Cor Dak"
     },
     {
       "id": 170,
@@ -2464,8 +2465,8 @@
     {
       "id": 210,
       "date": "2026-06-16",
-      "category": "Material",
-      "subcategory": "",
+      "category": "Struktur Bangunan",
+      "subcategory": "Cor Dak",
       "description": "Usuk 4x6",
       "quantity": 50,
       "unit": "biji",
@@ -2503,8 +2504,8 @@
     {
       "id": 213,
       "date": "2026-06-19",
-      "category": "Material",
-      "subcategory": "",
+      "category": "Struktur Bangunan",
+      "subcategory": "Cor Dak",
       "description": "Usuk 4x6",
       "quantity": 50,
       "unit": "biji",
@@ -2529,8 +2530,8 @@
     {
       "id": 215,
       "date": "2026-06-20",
-      "category": "Material",
-      "subcategory": "",
+      "category": "Struktur Bangunan",
+      "subcategory": "Cor Dak",
       "description": "Usuk 4x6",
       "quantity": 50,
       "unit": "biji",
@@ -2620,8 +2621,8 @@
     {
       "id": 222,
       "date": "2026-06-23",
-      "category": "Material",
-      "subcategory": "",
+      "category": "Struktur Bangunan",
+      "subcategory": "Cor Dak",
       "description": "Usuk 4x6",
       "quantity": 102,
       "unit": "biji",
@@ -2659,8 +2660,8 @@
     {
       "id": 225,
       "date": "2026-06-25",
-      "category": "Material",
-      "subcategory": "",
+      "category": "Struktur Bangunan",
+      "subcategory": "Cor Dak",
       "description": "Usuk 4x6",
       "quantity": 50,
       "unit": "biji",
@@ -4429,14 +4430,15 @@
     {
       "id": 364,
       "date": "2026-06-30",
-      "category": "Material",
+      "category": "Struktur Bangunan",
       "description": "Usuk 4x6 semi",
       "quantity": 70,
       "unit": "pcs",
       "price_per_unit": 21000,
       "total": 1470000,
       "notes": "",
-      "funding_source": "Uang Ayah"
+      "funding_source": "Uang Ayah",
+      "subcategory": "Cor Dak"
     },
     {
       "id": 365,
