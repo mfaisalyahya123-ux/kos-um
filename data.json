@@ -9361,6 +9361,58 @@
       "total": 783000,
       "notes": "",
       "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 918,
+      "date": "2026-08-03",
+      "category": "Struktur Bangunan",
+      "subcategory": "",
+      "description": "Usuk 3x5 (1 m3)",
+      "quantity": 1,
+      "unit": "m3",
+      "price_per_unit": 2400000,
+      "total": 2400000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 919,
+      "date": "2026-08-10",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Bambu",
+      "quantity": 15,
+      "unit": "pcs",
+      "price_per_unit": 25000,
+      "total": 375000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 920,
+      "date": "2026-08-10",
+      "category": "Material",
+      "subcategory": "",
+      "description": "Semen Gresik",
+      "quantity": 30,
+      "unit": "sak",
+      "price_per_unit": 59000,
+      "total": 1770000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
+    },
+    {
+      "id": 921,
+      "date": "2026-08-10",
+      "category": "Struktur Bangunan",
+      "subcategory": "",
+      "description": "Usuk 3x5",
+      "quantity": 140,
+      "unit": "pcs",
+      "price_per_unit": 22000,
+      "total": 3080000,
+      "notes": "",
+      "funding_source": "Uang Ayah"
     }
   ],
   "summary": {
